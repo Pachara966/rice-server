@@ -1,0 +1,212 @@
+{
+    "evalproduct": {
+        "cost": {
+            "value": 4474
+        },
+        "product": {
+            "value": 700
+        },
+        "price": {
+            "value": 5913
+        },
+        "profit": {
+            "value": 2398
+        }
+    },
+    "timelineFuture": [
+        {
+            "order": 14,
+            "activitiesDate": "2020-11-15T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 4
+                },
+                {
+                    "code": 7
+                },
+                {
+                    "code": 8
+                }
+            ],
+            "bugs": [
+                {
+                    "code": 11
+                },
+                {
+                    "code": 12
+                }
+            ]
+        },
+        {
+            "order": 20,
+            "activitiesDate": "2020-11-21T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 9
+                }
+            ]
+        },
+        {
+            "order": 21,
+            "activitiesDate": "2020-11-22T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 4
+                }
+            ]
+        },
+        {
+            "order": 26,
+            "activitiesDate": "2020-11-27T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 4
+                }
+            ]
+        },
+        {
+            "order": 29,
+            "activitiesDate": "2020-11-30T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 4
+                }
+            ]
+        },
+        {
+            "order": 34,
+            "activitiesDate": "2020-12-05T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 4
+                },
+                {
+                    "code": 7
+                },
+                {
+                    "code": 8
+                }
+            ]
+        },
+        {
+            "order": 38,
+            "activitiesDate": "2020-12-09T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 4
+                }
+            ]
+        },
+        {
+            "order": 42,
+            "activitiesDate": "2020-12-13T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 4
+                }
+            ]
+        },
+        {
+            "order": 45,
+            "activitiesDate": "2020-12-16T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 6
+                }
+            ]
+        },
+        {
+            "order": 48,
+            "activitiesDate": "2020-12-19T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 5
+                },
+                {
+                    "code": 10
+                }
+            ]
+        },
+        {
+            "order": 52,
+            "activitiesDate": "2020-12-23T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 5
+                }
+            ]
+        },
+        {
+            "order": 60,
+            "activitiesDate": "2020-12-31T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 5
+                },
+                {
+                    "code": 8
+                }
+            ]
+        },
+        {
+            "order": 66,
+            "activitiesDate": "2021-01-06T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 5
+                }
+            ]
+        },
+        {
+            "order": 71,
+            "activitiesDate": "2021-01-11T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 5
+                },
+                {
+                    "code": 8
+                }
+            ]
+        },
+        {
+            "order": 76,
+            "activitiesDate": "2021-01-16T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 5
+                }
+            ]
+        },
+        {
+            "order": 81,
+            "activitiesDate": "2021-01-21T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 5
+                }
+            ]
+        },
+        {
+            "order": 86,
+            "activitiesDate": "2021-01-26T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 6
+                },
+                {
+                    "code": 8
+                }
+            ]
+        },
+        {
+            "order": 95,
+            "activitiesDate": "2021-02-04T00:00:00.000000Z",
+            "activities": [
+                {
+                    "code": 2
+                }
+            ]
+        }
+    ]
+}

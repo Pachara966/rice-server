@@ -3,22 +3,26 @@
         "varieties": 37,
         "evalproduct": {
             "cost": {
-                "value": 4474
+                "value": 4461,
+                "status": "2"
             },
             "product": {
-                "value": 700
+                "value": 489.99999999999994,
+                "status": "1"
             },
             "price": {
-                "value": 7934
+                "value": 5913,
+                "status": "3"
             },
             "profit": {
-                "value": 3460
+                "value": 1007.3,
+                "status": "1"
             }
         },
         "timelineFuture": [
             {
-                "order": 0,
-                "activitiesDate": "2020-10-20T00:00:00Z",
+                "order": 1,
+                "activitiesDate": "2020-11-02T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 1
@@ -26,65 +30,106 @@
                     {
                         "code": 3
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 6,
-                "activitiesDate": "2020-10-26T00:00:00Z",
+                "activitiesDate": "2020-11-06T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 7
+                    }
+                ],
+                "bugs": [
+                    {
+                        "code": 13
+                    }
+                ]
+            },
+            {
+                "order": 17,
+                "activitiesDate": "2020-11-17T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 18,
-                "activitiesDate": "2020-11-07T00:00:00Z",
+                "activitiesDate": "2020-11-19T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 8
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 25,
-                "activitiesDate": "2020-11-14T00:00:00Z",
+                "activitiesDate": "2020-11-26T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 9
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 26,
-                "activitiesDate": "2020-11-15T00:00:00Z",
+                "activitiesDate": "2020-11-27T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 4
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 28,
+                "activitiesDate": "2020-11-28T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 32,
-                "activitiesDate": "2020-11-21T00:00:00Z",
+                "activitiesDate": "2020-12-03T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 4
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 37,
-                "activitiesDate": "2020-11-26T00:00:00Z",
+                "activitiesDate": "2020-12-08T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 4
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 39,
+                "activitiesDate": "2020-12-09T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 43,
-                "activitiesDate": "2020-12-02T00:00:00Z",
+                "activitiesDate": "2020-12-14T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 4
@@ -95,38 +140,52 @@
                     {
                         "code": 8
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 48,
-                "activitiesDate": "2020-12-07T00:00:00Z",
+                "activitiesDate": "2020-12-19T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 4
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 50,
+                "activitiesDate": "2020-12-20T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 53,
-                "activitiesDate": "2020-12-12T00:00:00Z",
+                "activitiesDate": "2020-12-24T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 4
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 56,
-                "activitiesDate": "2020-12-15T00:00:00Z",
+                "activitiesDate": "2020-12-27T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 6
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 60,
-                "activitiesDate": "2020-12-19T00:00:00Z",
+                "activitiesDate": "2020-12-31T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 5
@@ -134,41 +193,75 @@
                     {
                         "code": 10
                     }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 61,
+                "activitiesDate": "2020-12-31T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
+                    }
                 ]
             },
             {
                 "order": 66,
-                "activitiesDate": "2020-12-25T00:00:00Z",
+                "activitiesDate": "2021-01-06T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 5
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 72,
+                "activitiesDate": "2021-01-11T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 76,
-                "activitiesDate": "2021-01-04T00:00:00Z",
+                "activitiesDate": "2021-01-16T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 5
                     },
                     {
                         "code": 8
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 83,
+                "activitiesDate": "2021-01-22T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 84,
-                "activitiesDate": "2021-01-12T00:00:00Z",
+                "activitiesDate": "2021-01-24T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 5
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 90,
-                "activitiesDate": "2021-01-18T00:00:00Z",
+                "activitiesDate": "2021-01-30T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 5
@@ -176,29 +269,52 @@
                     {
                         "code": 8
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
-                "order": 96,
-                "activitiesDate": "2021-01-24T00:00:00Z",
-                "activities": [
+                "order": 94,
+                "activitiesDate": "2021-02-02T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
                     {
-                        "code": 5
+                        "code": 13
                     }
                 ]
             },
             {
-                "order": 102,
-                "activitiesDate": "2021-01-30T00:00:00Z",
+                "order": 96,
+                "activitiesDate": "2021-02-05T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 5
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 102,
+                "activitiesDate": "2021-02-11T00:00:00.000000Z",
+                "activities": [
+                    {
+                        "code": 5
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 105,
+                "activitiesDate": "2021-02-13T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 109,
-                "activitiesDate": "2021-02-06T00:00:00Z",
+                "activitiesDate": "2021-02-18T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 6
@@ -206,16 +322,18 @@
                     {
                         "code": 8
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 120,
-                "activitiesDate": "2021-02-17T00:00:00Z",
+                "activitiesDate": "2021-03-01T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 2
                     }
-                ]
+                ],
+                "bugs": []
             }
         ]
     },
@@ -223,22 +341,26 @@
         "varieties": 29,
         "evalproduct": {
             "cost": {
-                "value": 4461
+                "value": 4474,
+                "status": "2"
             },
             "product": {
-                "value": 812
+                "value": 617.12,
+                "status": "1"
             },
             "price": {
-                "value": 6100
+                "value": 6859,
+                "status": "3"
             },
             "profit": {
-                "value": 1639
+                "value": 1822.48,
+                "status": "1"
             }
         },
         "timelineFuture": [
             {
-                "order": 0,
-                "activitiesDate": "2020-10-20T00:00:00Z",
+                "order": 1,
+                "activitiesDate": "2020-11-02T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 1
@@ -246,65 +368,102 @@
                     {
                         "code": 3
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 5,
-                "activitiesDate": "2020-10-25T00:00:00Z",
+                "activitiesDate": "2020-11-06T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 7
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 6,
+                "activitiesDate": "2020-11-06T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 14,
-                "activitiesDate": "2020-11-03T00:00:00Z",
+                "activitiesDate": "2020-11-15T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 8
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 17,
+                "activitiesDate": "2020-11-17T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 20,
-                "activitiesDate": "2020-11-09T00:00:00Z",
+                "activitiesDate": "2020-11-21T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 9
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 21,
-                "activitiesDate": "2020-11-10T00:00:00Z",
+                "activitiesDate": "2020-11-22T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 4
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 26,
-                "activitiesDate": "2020-11-15T00:00:00Z",
+                "activitiesDate": "2020-11-27T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 4
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 28,
+                "activitiesDate": "2020-11-28T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 29,
-                "activitiesDate": "2020-11-18T00:00:00Z",
+                "activitiesDate": "2020-11-30T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 4
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 34,
-                "activitiesDate": "2020-11-23T00:00:00Z",
+                "activitiesDate": "2020-12-05T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 4
@@ -315,38 +474,52 @@
                     {
                         "code": 8
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 38,
-                "activitiesDate": "2020-11-27T00:00:00Z",
+                "activitiesDate": "2020-12-09T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 4
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 39,
+                "activitiesDate": "2020-12-09T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 42,
-                "activitiesDate": "2020-12-01T00:00:00Z",
+                "activitiesDate": "2020-12-13T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 4
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 45,
-                "activitiesDate": "2020-12-04T00:00:00Z",
+                "activitiesDate": "2020-12-16T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 6
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 48,
-                "activitiesDate": "2020-12-07T00:00:00Z",
+                "activitiesDate": "2020-12-19T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 5
@@ -354,41 +527,65 @@
                     {
                         "code": 10
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
-                "order": 52,
-                "activitiesDate": "2020-12-11T00:00:00Z",
-                "activities": [
+                "order": 50,
+                "activitiesDate": "2020-12-20T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
                     {
-                        "code": 5
+                        "code": 13
                     }
                 ]
             },
             {
+                "order": 52,
+                "activitiesDate": "2020-12-23T00:00:00.000000Z",
+                "activities": [
+                    {
+                        "code": 5
+                    }
+                ],
+                "bugs": []
+            },
+            {
                 "order": 60,
-                "activitiesDate": "2020-12-19T00:00:00Z",
+                "activitiesDate": "2020-12-31T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 5
                     },
                     {
                         "code": 8
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 61,
+                "activitiesDate": "2020-12-31T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 66,
-                "activitiesDate": "2020-12-25T00:00:00Z",
+                "activitiesDate": "2021-01-06T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 5
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 71,
-                "activitiesDate": "2020-12-30T00:00:00Z",
+                "activitiesDate": "2021-01-11T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 5
@@ -396,29 +593,52 @@
                     {
                         "code": 8
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
-                "order": 76,
-                "activitiesDate": "2021-01-04T00:00:00Z",
-                "activities": [
+                "order": 72,
+                "activitiesDate": "2021-01-11T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
                     {
-                        "code": 5
+                        "code": 13
                     }
                 ]
             },
             {
-                "order": 81,
-                "activitiesDate": "2021-01-09T00:00:00Z",
+                "order": 76,
+                "activitiesDate": "2021-01-16T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 5
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 81,
+                "activitiesDate": "2021-01-21T00:00:00.000000Z",
+                "activities": [
+                    {
+                        "code": 5
+                    }
+                ],
+                "bugs": []
+            },
+            {
+                "order": 83,
+                "activitiesDate": "2021-01-22T00:00:00.000000Z",
+                "activities": [],
+                "bugs": [
+                    {
+                        "code": 13
                     }
                 ]
             },
             {
                 "order": 86,
-                "activitiesDate": "2021-01-14T00:00:00Z",
+                "activitiesDate": "2021-01-26T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 6
@@ -426,16 +646,18 @@
                     {
                         "code": 8
                     }
-                ]
+                ],
+                "bugs": []
             },
             {
                 "order": 95,
-                "activitiesDate": "2021-01-23T00:00:00Z",
+                "activitiesDate": "2021-02-04T00:00:00.000000Z",
                 "activities": [
                     {
                         "code": 2
                     }
-                ]
+                ],
+                "bugs": []
             }
         ]
     }

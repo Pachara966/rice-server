@@ -7,6 +7,7 @@ const user = User.userModel;
 
 async function user_register(req, res, next) {
   await connectDB.connect_db();
+  console.log("request user_register");
   const name = req.body.name;
   const phonenumber = req.body.phonenumber;
   const password = req.body.password;
@@ -28,6 +29,7 @@ async function user_login(req, res, next) {
   await connectDB.connect_db();
   const phonenumber = req.body.phonenumber;
   const password = req.body.password;
+  console.log("request login");
   user
     .findOne({ phonenumber: phonenumber })
     .then(async function (logindata) {

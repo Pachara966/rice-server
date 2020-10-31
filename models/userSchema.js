@@ -25,7 +25,7 @@ const userSchema = new schema({
         enum: ["farm", "operation"],
       },
       feedDate: Date,
-      content: [String],
+      content: [Number],
       active: Boolean,
     },
   ],
