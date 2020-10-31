@@ -2,17 +2,13 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
-const http = require("http");
-const request = require("request");
 const ai = require("./controllers/ai-controller");
 const mid = require("./controllers/init-controller");
 
-var dateFormat = require("dateformat");
 
 const user = require("./routes/user-router");
 const farm = require("./routes/farm-router");
 const sys = require("./routes/sys-router");
-const { json } = require("express");
 
 const corsOptions = {
   origin: process.env.CORS_ORIGIN,
@@ -65,7 +61,7 @@ app.use(farm);
 app.use(user);
 app.use(sys);
 
-const port = process.env.port || 3000;
+const port = process.env.port || 4444;
 app.listen(port, function () {
   console.log("Listenning on port: ", port);
 });
