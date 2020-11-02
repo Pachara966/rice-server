@@ -78,13 +78,10 @@ async function midnight_demo(req, res, next) {
         { _id: farms[i]._id },
         { $push: { timelinePast: farms[i].timelineFuture[0] } }
       );
-      await farm.updateOne(
-        { _id: farms[i]._id },
-        { $pop: { timelineFuture: -1 } }
-      );
+      
     }
-    for (let j = 0; j < farms[i].timelineFuture.length; j++) {
-      timeline[j] = {
+    for (let j = 1; j < farms[i].timelineFuture.length; j++) {
+      timeline[j-1] = {
         order: farms[i].timelineFuture[j].order,
         activitiesDate: farms[i].timelineFuture[j].activitiesDate,
         activities: farms[i].timelineFuture[j].activities,
@@ -104,7 +101,7 @@ async function midnight_demo(req, res, next) {
       evalproduct: evalproduct[i],
       timelineFuture: timeline,
     };
-    /*current_date =
+    /* var current_date =
       dateFormat(now.setDate(now.getDate() + 1), "isoDate").toString() +
       "T" +
       dateFormat(now.setDate(now.getDate() + 1), "isoTime").toString() +
@@ -129,6 +126,10 @@ async function midnight_demo(req, res, next) {
       JSON.stringify(old_timeline[i]),
       test_mode,
       test_data
+    );
+    await farm.updateOne(
+      { _id: farms[i]._id },
+      { $pop: { timelineFuture: -1 } }
     );
     await farm.updateOne(
       { _id: farms[i]._id },
