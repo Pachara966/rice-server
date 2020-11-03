@@ -1,12 +1,10 @@
-const bcry = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 const User = require('../models/userSchema');
-const config = require('config');
 const user = User.userModel;
 
 async function user_register(req, res, next) {
   // await connectDB.connect_db();
-  console.log('request user_register');
+  console.log('request user register');
   const { name, phonenumber, password } = req.body;
   // const name = req.body.name;
   // const phonenumber = req.body.phonenumber;
@@ -42,17 +40,9 @@ async function user_register(req, res, next) {
       bcrypt.hash(newUser.password, salt, (err, hash) => {
         if (err) throw err;
         newUser.password = hash;
-        newUser.save();
+        newUser.save().then(() => res.json({ status: 'success' }));
       });
     });
-
-    const passbcry = bcry.hash(password, 10);
-    const pass = bcry.compare(password, passbcry);
-    if (pass) {
-      // let userdata = new user(data);
-      newUser.save();
-      res.json({ status: 'success' });
-    }
   });
 }
 
