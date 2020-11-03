@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 const userSchema = new schema({
   name: String,
@@ -14,7 +14,7 @@ const userSchema = new schema({
   farms: [
     {
       type: schema.Types.ObjectId,
-      ref: "farms",
+      ref: 'farms',
     },
   ],
   feed: [
@@ -22,14 +22,14 @@ const userSchema = new schema({
       name: String,
       feedType: {
         type: String,
-        enum: ["farm", "operation"],
+        enum: ['farm', 'operation'],
       },
       feedDate: Date,
-      content: [Number],
+      content: [String], // เนื้อหา feed
       active: Boolean,
     },
   ],
   active: { type: Boolean, default: true },
 });
 
-module.exports.userModel = mongoose.model("users", userSchema);
+module.exports.userModel = mongoose.model('users', userSchema);

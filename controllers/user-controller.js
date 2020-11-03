@@ -1,77 +1,109 @@
-const bcry = require("bcrypt");
-
-const connectDB = require("../connectdb");
-const User = require("../models/userSchema");
-
+const bcry = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const User = require('../models/userSchema');
+const config = require('config');
 const user = User.userModel;
 
 async function user_register(req, res, next) {
-  await connectDB.connect_db();
-  console.log("request user_register");
-  const name = req.body.name;
-  const phonenumber = req.body.phonenumber;
-  const password = req.body.password;
-  const passbcry = await bcry.hash(password, 10);
-  const pass = await bcry.compare(password, passbcry);
-  if (pass) {
-    const data = {
-      name: name,
-      phonenumber: phonenumber,
-      password: passbcry,
-    };
-    let userdata = new user(data);
-    await userdata.save();
-    res.send("ok");
+  // await connectDB.connect_db();
+  console.log('request user_register');
+  const { name, phonenumber, password } = req.body;
+  // const name = req.body.name;
+  // const phonenumber = req.body.phonenumber;
+  // const password = req.body.password;
+
+  // Validation
+  if (!name || !phonenumber || !password) {
+    return res.json({
+      status: 'fail',
+      msg: 'กรอกข้อมูลให้ครบทุกช่อง',
+    });
   }
+
+  if (password.length < 6) {
+    return res.json({
+      status: 'fail',
+      msg: 'รหัสผ่านอย่างน้อย 6 ตัวอักษร',
+    });
+  }
+
+  await user.findOne({ phonenumber }).then((userinfo) => {
+    if (userinfo)
+      return res.json({ status: 'fail', msg: 'หมายเลขโทรศัพท์ถูกใช้แล้ว' });
+
+    const newUser = new user({
+      name,
+      phonenumber,
+      password,
+    });
+
+    //Create salt & hash
+    bcrypt.genSalt(10, (err, salt) => {
+      bcrypt.hash(newUser.password, salt, (err, hash) => {
+        if (err) throw err;
+        newUser.password = hash;
+        newUser.save();
+      });
+    });
+
+    const passbcry = bcry.hash(password, 10);
+    const pass = bcry.compare(password, passbcry);
+    if (pass) {
+      // let userdata = new user(data);
+      newUser.save();
+      res.json({ status: 'success' });
+    }
+  });
 }
 
 async function user_login(req, res, next) {
-  await connectDB.connect_db();
-  const phonenumber = req.body.phonenumber;
-  const password = req.body.password;
-  console.log("request login");
+  const { phonenumber, password } = req.body;
+  console.log('request login');
+
+  // Validation
+  if (!phonenumber || !password) {
+    return res.json({ status: 'fail', msg: 'กรอกข้อมูลให้ครบทุกช่อง' });
+  }
+
   user
-    .findOne({ phonenumber: phonenumber })
+    .findOne({ phonenumber })
     .then(async function (logindata) {
       const pass = await bcry.compare(password, logindata.password);
       if (pass) {
-        let ret = {
-          uid: logindata._id,
-          status: "ok",
-        };
-        res.send(ret);
+        res.json({
+          status: 'success',
+          userData: {
+            uid: logindata._id,
+            name: logindata.name,
+            surname: logindata.surname,
+            phonenumber: logindata.phonenumber,
+            address: logindata.address,
+          },
+        });
       } else {
-        let ret = {
-          status: "password incorrect",
-        };
-        res.send(ret);
+        res.json({ status: 'fail', msg: 'รหัสผ่านไม่ถูกต้อง' });
       }
     })
     .catch(() => {
-      let ret = {
-        status: "phonenumber incorrect",
-      };
-      res.send(ret);
+      res.json({ status: 'fail', msg: 'หมายเลขโทรศัพท์ไม่ถูกต้อง' });
     });
 }
 
 async function user_information(req, res, next) {
-  await connectDB.connect_db();
+  // await connectDB.connect_db();
   const uid = req.body.uid;
   user
     .findOne({ _id: uid })
     .then(async function (logindata) {
-      
-        let ret = {
-          uid: logindata,
-          status: "ok",
-        };
-        res.send(ret);
-      
+      let ret = {
+        uid: logindata,
+        status: 'success',
+      };
+      res.send(ret);
     })
     .catch(() => {
       let ret = {
-        status: "phonenumber incorrect",
+        status: 'phonenumber incorrect',
       };
       res.send(ret);
     });

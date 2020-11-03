@@ -1,24 +1,24 @@
-const connectDB = require("../connectdb");
-const User = require("../models/userSchema");
-const Farm = require("../models/FarmSchema");
-const AIdemo = require("../temp/eval_demo.json");
-const ai = require("./ai-controller");
-const mongoose = require("mongoose");
+const connectDB = require('../connectdb');
+const User = require('../models/userSchema');
+const Farm = require('../models/FarmSchema');
+const AIdemo = require('../temp/eval_demo.json');
+const ai = require('./ai-controller');
+const mongoose = require('mongoose');
 const schema = mongoose.Schema;
-var dateFormat = require("dateformat");
+var dateFormat = require('dateformat');
 
 const user = User.userModel;
 const farm = Farm.farmModel;
 
 async function farm_begin_process() {
-  const farmsWait = await farm.find({ activate: "wait" });
+  const farmsWait = await farm.find({ activate: 'wait' });
   for (let index = 0; index < farmsWait.length; index++) {
     const element = Date.now();
     if (element == farmsWait[index].startDate) {
       await farm.findOneAndUpdate(
         { _id: farmsWait[index]._id },
         {
-          activate: "process",
+          activate: 'process',
         }
       );
     }
@@ -30,7 +30,7 @@ async function midnight_demo(req, res, next) {
   // user
   const uid = req.body.uid; //req.body.uid;
   const today = req.body.today;
-  const u = await user.findOne({ _id: uid }).populate("farms");
+  const u = await user.findOne({ _id: uid }).populate('farms');
   const farms = u.farms;
   const feeds = u.feeds;
   // wait --> process
@@ -44,7 +44,7 @@ async function midnight_demo(req, res, next) {
       activate == "process"
   */
   console.log(feeds);
-  console.log("update timelineFuture");
+  console.log('update timelineFuture');
   //const farms = await farm.find();
   //console.log(farms);
   //var now = new Date();
@@ -56,10 +56,10 @@ async function midnight_demo(req, res, next) {
   var rice_id = [];
   var start_date = [];
   var current_date =
-  dateFormat(today, "isoDate").toString() +
-  "T" +
-  dateFormat(today, "isoTime").toString() +
-  ".000Z"; //var current_date = dateFormat(now, "isoUtcDateTime");
+    dateFormat(today, 'isoDate').toString() +
+    'T' +
+    dateFormat(today, 'isoTime').toString() +
+    '.000Z'; //var current_date = dateFormat(now, "isoUtcDateTime");
   var next_day = [];
   var test_mode = 1;
   var test_data = 0;
@@ -78,10 +78,9 @@ async function midnight_demo(req, res, next) {
         { _id: farms[i]._id },
         { $push: { timelinePast: farms[i].timelineFuture[0] } }
       );
-      
     }
     for (let j = 1; j < farms[i].timelineFuture.length; j++) {
-      timeline[j-1] = {
+      timeline[j - 1] = {
         order: farms[i].timelineFuture[j].order,
         activitiesDate: farms[i].timelineFuture[j].activitiesDate,
         activities: farms[i].timelineFuture[j].activities,
@@ -92,10 +91,10 @@ async function midnight_demo(req, res, next) {
     province_id[i] = farms[i].location.province;
     rice_id[i] = farms[i].varieties;
     start_date[i] =
-      dateFormat(farms[i].startDate, "isoDate").toString() +
-      "T" +
-      dateFormat(farms[i].startDate, "isoTime").toString() +
-      ".000Z";
+      dateFormat(farms[i].startDate, 'isoDate').toString() +
+      'T' +
+      dateFormat(farms[i].startDate, 'isoTime').toString() +
+      '.000Z';
     evalproduct[i] = farms[i].evalproduct;
     old_timeline[i] = {
       evalproduct: evalproduct[i],
@@ -146,14 +145,14 @@ async function midnight_demo(req, res, next) {
       var week =
         dateFormat(
           thisday.setDate(thisday.getDate() + 7),
-          "isoDate"
+          'isoDate'
         ).toString() +
-        "T" +
+        'T' +
         dateFormat(
           thisday.setDate(thisday.getDate() + 7),
-          "isoTime"
+          'isoTime'
         ).toString() +
-        ".000Z";
+        '.000Z';
       if (week > new_timeline[i].timelineFuture[k].activitiesDate) {
         console.log(farms[i].name);
         console.log(k + 1);
@@ -166,7 +165,7 @@ async function midnight_demo(req, res, next) {
         var content = activitiesCode.concat(bugsCode);
         var feed = {
           name: farms[i].name,
-          feedType: "farm",
+          feedType: 'farm',
           feedDate: new_timeline[i].timelineFuture[k].activitiesDate,
           content: content,
           active: false,
@@ -191,7 +190,7 @@ async function midnight_demo(req, res, next) {
   console.log("res update timelineFuture 3");
   console.log(new_timeline);
   console.log(feed);*/
-  let ret = { feed: feed, data: new_timeline, status: "ok" };
+  let ret = { feed: feed, data: new_timeline, status: 'ok' };
 
   res.send(ret);
 }
@@ -208,7 +207,7 @@ async function midnight(req, res, next) {
     condition
       activate == "process"
   */
-  console.log("update timelineFuture");
+  console.log('update timelineFuture');
   const farms = await farm.find();
   console.log(farms);
   //var now = new Date();
@@ -239,20 +238,20 @@ async function midnight(req, res, next) {
     province_id[i] = farms[i].location.province;
     rice_id[i] = farms[i].varieties;
     start_date[i] =
-      dateFormat(farms[i].startDate, "isoDate").toString() +
-      "T" +
-      dateFormat(farms[i].startDate, "isoTime").toString() +
-      ".000Z";
+      dateFormat(farms[i].startDate, 'isoDate').toString() +
+      'T' +
+      dateFormat(farms[i].startDate, 'isoTime').toString() +
+      '.000Z';
     evalproduct[i] = farms[i].evalproduct;
     old_timeline[i] = {
       evalproduct: evalproduct[i],
       timelineFuture: timeline,
     };
     current_date =
-      dateFormat(now.setDate(now.getDate() + 1), "isoDate").toString() +
-      "T" +
-      dateFormat(now.setDate(now.getDate() + 1), "isoTime").toString() +
-      ".000Z";
+      dateFormat(now.setDate(now.getDate() + 1), 'isoDate').toString() +
+      'T' +
+      dateFormat(now.setDate(now.getDate() + 1), 'isoTime').toString() +
+      '.000Z';
 
     packet[i] = {
       next_day: next_day[i],
@@ -275,39 +274,42 @@ async function midnight(req, res, next) {
       test_data
     );
   }
-  console.log("res update timelineFuture 1");
+  console.log('res update timelineFuture 1');
 
   console.log(packet);
-  console.log("res update timelineFuture 3");
+  console.log('res update timelineFuture 3');
   console.log(new_timeline);
-  console.log(dateFormat(now, "isoUtcDateTime"));
+  console.log(dateFormat(now, 'isoUtcDateTime'));
   let ret = new_timeline;
   res.send(ret);
 }
 
 async function init_data(req, res, next) {
-  await connectDB.connect_db();
-  const _id = req.body._id;
+  const _id = req.body;
+  const farms = await user.findOne(_id).populate('farms');
+  const feed = await user.findOne(_id).populate('feed');
 
-  const username = await user.findOne({ _id: _id }, "name");
-  const useraddress = await user.findOne(
-    { _id: _id },
-    "address.formattedAddress"
-  );
-
-  const farms = await user.findOne({ _id: _id }).populate("farms");
-  const feed = await user.findOne({ _id: _id }).populate("feed");
-
-  let ret = {
-    userData: { name: username, address: useraddress },
-    farms: farms,
-    feed: feed,
-  };
-  //console.log(ret);
-  console.log(ret.userData);
-  console.log(ret);
-  console.log(ret.feed);
-  res.send(ret);
+  user.findById(_id, '-password', (error, userInfo) => {
+    if (error) {
+      return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
+    }
+    if (userInfo) {
+      res.json({
+        status: 'success',
+        userData: {
+          uid: userInfo._id,
+          name: userInfo.name,
+          surname: userInfo.surname,
+          phonenumber: userInfo.phonenumber,
+          address: userInfo.address,
+        },
+        farms: farms,
+        feed: feed,
+      });
+    } else {
+      return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
+    }
+  });
 }
 
 module.exports.init_data = init_data;
