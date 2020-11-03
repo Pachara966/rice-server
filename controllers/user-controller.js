@@ -67,39 +67,14 @@ async function user_login(req, res, next) {
 
       res.json({
         status: 'success',
-        userData: {
-          uid: logindata._id,
-          name: logindata.name,
-          surname: logindata.surname,
-          phonenumber: logindata.phonenumber,
-          address: logindata.address,
-        },
+        uid: logindata._id,
+        name: logindata.name,
+        surname: logindata.surname,
+        phonenumber: logindata.phonenumber,
+        address: logindata.address,
       });
     });
   });
-
-  // user
-  //   .findOne({ phonenumber })
-  //   .then(async function (logindata) {
-  //     const pass = await bcry.compare(password, logindata.password);
-  //     if (pass) {
-  //       res.json({
-  //         status: 'success',
-  //         userData: {
-  //           uid: logindata._id,
-  //           name: logindata.name,
-  //           surname: logindata.surname,
-  //           phonenumber: logindata.phonenumber,
-  //           address: logindata.address,
-  //         },
-  //       });
-  //     } else {
-  //       res.json({ status: 'fail', msg: 'รหัสผ่านไม่ถูกต้อง' });
-  //     }
-  //   })
-  //   .catch(() => {
-  //     res.json({ status: 'fail', msg: 'หมายเลขโทรศัพท์ไม่ถูกต้อง' });
-  //   });
 }
 
 async function user_information(req, res, next) {
