@@ -1,7 +1,8 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 const farmSchema = new schema({
   name: String,
+  farmPicture: { type: String, default: '' },
   size: Number,
   location: {
     formattedAddress: String,
@@ -15,28 +16,28 @@ const farmSchema = new schema({
       value: Number,
       status: {
         type: String,
-        enum: ["1", "2", "3"],
+        enum: ['1', '2', '3'],
       },
     },
     product: {
       value: Number,
       status: {
         type: String,
-        enum: ["1", "2", "3"],
+        enum: ['1', '2', '3'],
       },
     },
     price: {
       value: Number,
       status: {
         type: String,
-        enum: ["1", "2", "3"],
+        enum: ['1', '2', '3'],
       },
     },
     profit: {
       value: Number,
       status: {
         type: String,
-        enum: ["1", "2", "3"],
+        enum: ['1', '2', '3'],
       },
     },
   },
@@ -46,28 +47,28 @@ const farmSchema = new schema({
       value: Number,
       status: {
         type: String,
-        enum: ["1", "2", "3"],
+        enum: ['1', '2', '3'],
       },
     },
     product: {
       value: Number,
       status: {
         type: String,
-        enum: ["1", "2", "3"],
+        enum: ['1', '2', '3'],
       },
     },
     price: {
       value: Number,
       status: {
         type: String,
-        enum: ["1", "2", "3"],
+        enum: ['1', '2', '3'],
       },
     },
     profit: {
       value: Number,
       status: {
         type: String,
-        enum: ["1", "2", "3"],
+        enum: ['1', '2', '3'],
       },
     },
   },
@@ -95,7 +96,7 @@ const farmSchema = new schema({
   ],
   timelineFuture: [
     {
-      order: Number,
+      order: { type: Number, default: 0 },
       activitiesDate: Date,
       activities: [
         {
@@ -112,6 +113,30 @@ const farmSchema = new schema({
       ],
     },
   ],
+  timeline: [
+    {
+      order: { type: Number, default: 0 },
+      caption: { type: String, default: '' },
+      status: { type: Boolean, default: false }, // เปลี่ยนเมื่อกดใช้งานหรือผ่านไปแล้ว
+      activitiesDate: Date,
+      timelineType: { type: Number, enum: [0, 1, 2], default: 0 }, // 1(1,2) = farm, 2(3,4,5) = Admin
+      activities: [
+        {
+          code_type: { type: Number, enum: [0, 1, 2], default: 0 }, // 1 = กิจกรรม , 2 = warning
+          array_code: [
+            {
+              code: { type: Number, default: 0 }, // 001 - 299
+              activity: { type: String, default: '' }, // Map with code from db
+              picture_url: { type: String, default: '' },
+              activate: { type: Boolean, default: false },
+            },
+          ],
+        },
+      ],
+      activityLenght: { type: Number, default: 0 }, // Count from code_type = 1
+      warningLenght: { type: Number, default: 0 }, // Count from code_type = 2
+    },
+  ],
   note: [
     {
       order: Number,
@@ -121,7 +146,7 @@ const farmSchema = new schema({
       cost: Number,
     },
   ],
-  activate: { type: String, enum: ["wait", "process", "end"], default: "wait" }, // wait รอเริ่มการปลูก, process ระหว่างการปลูก, end เสร็จสิ้นการปลูก
+  activate: { type: String, enum: ['wait', 'process', 'end'], default: 'wait' }, // wait รอเริ่มการปลูก, process ระหว่างการปลูก, end เสร็จสิ้นการปลูก
 });
 
-module.exports.farmModel = mongoose.model("farms", farmSchema);
+module.exports.farmModel = mongoose.model('farms', farmSchema);

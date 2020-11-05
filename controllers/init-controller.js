@@ -26,6 +26,7 @@ async function farm_begin_process() {
 }
 
 async function midnight_demo(req, res, next) {
+  // Update Timeline farm and feed
   await connectDB.connect_db();
   // user
   const uid = req.body.uid; //req.body.uid;
@@ -163,6 +164,7 @@ async function midnight_demo(req, res, next) {
           (ele) => ele.code
         );
         var content = activitiesCode.concat(bugsCode);
+
         var feed = {
           name: farms[i].name,
           feedType: 'farm',
@@ -285,7 +287,10 @@ async function midnight(req, res, next) {
 }
 
 async function init_data(req, res, next) {
+  console.log('request initial user data');
+
   const _id = req.body;
+
   const farms = await user.findOne(_id).populate('farms');
   const feed = await user.findOne(_id).populate('feed');
 

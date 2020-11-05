@@ -6,10 +6,10 @@ const userSchema = new schema({
   phonenumber: { type: String, unique: true },
   password: String,
   address: {
-    formattedAddress: String,
-    province: Number,
-    latt: Number, // or String
-    long: Number, // or String
+    formattedAddress: { type: String, default: '' },
+    province: { type: Number, default: 0 },
+    latt: { type: Number, default: 0 }, // or String
+    long: { type: Number, default: 0 }, // or String
   },
   farms: [
     {

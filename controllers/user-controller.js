@@ -3,12 +3,8 @@ const User = require('../models/userSchema');
 const user = User.userModel;
 
 async function user_register(req, res, next) {
-  // await connectDB.connect_db();
   console.log('request user register');
   const { name, phonenumber, password } = req.body;
-  // const name = req.body.name;
-  // const phonenumber = req.body.phonenumber;
-  // const password = req.body.password;
 
   // Validation
   if (!name || !phonenumber || !password) {
@@ -40,7 +36,11 @@ async function user_register(req, res, next) {
       bcrypt.hash(newUser.password, salt, (err, hash) => {
         if (err) throw err;
         newUser.password = hash;
-        newUser.save().then(() => res.json({ status: 'success' }));
+        newUser
+          .save()
+          .then(() =>
+            res.json({ status: 'success', msg: 'ยืนยันการสมัครสมาชิก' })
+          );
       });
     });
   });
@@ -77,26 +77,55 @@ async function user_login(req, res, next) {
   });
 }
 
-async function user_information(req, res, next) {
-  // await connectDB.connect_db();
-  const uid = req.body.uid;
+async function user_update_information(req, res, next) {
+  const { _id, name, formattedAddress, province, latt, long } = req.body;
+
+  console.log('request user update');
+
+  let address = {
+    formattedAddress: formattedAddress,
+    province: province,
+    latt: latt, // or String
+    long: long, // or String
+  };
+
   user
-    .findOne({ _id: uid })
-    .then(async function (logindata) {
-      let ret = {
-        uid: logindata,
+    .findOneAndUpdate({ _id }, { name, address }, { new: true })
+    .then((userData) => {
+      if (!userData)
+        return res.json({ status: 'fail', msg: 'ไม่สามารถแก้ไขข้อมูลได้' });
+
+      res.json({
         status: 'success',
-      };
-      res.send(ret);
-    })
-    .catch(() => {
-      let ret = {
-        status: 'phonenumber incorrect',
-      };
-      res.send(ret);
+        uid: userData._id,
+        name: userData.name,
+        surname: userData.surname,
+        phonenumber: userData.phonenumber,
+        address: userData.address,
+      });
     });
 }
+// async function user_information(req, res, next) {
+//   // await connectDB.connect_db();
+//   const uid = req.body.uid;
+//   user
+//     .findOne({ _id: uid })
+//     .then(async function (logindata) {
+//       let ret = {
+//         uid: logindata,
+//         status: 'success',
+//       };
+//       res.send(ret);
+//     })
+//     .catch(() => {
+//       let ret = {
+//         status: 'phonenumber incorrect',
+//       };
+//       res.send(ret);
+//     });
+// }
 
 module.exports.user_register = user_register;
 module.exports.user_login = user_login;
-module.exports.user_information = user_information;
+// module.exports.user_information = user_information;
+module.exports.user_update_information = user_update_information;

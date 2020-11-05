@@ -1,12 +1,12 @@
-const connectDB = require("../connectdb");
-const User = require("../models/userSchema");
-const Farm = require("../models/FarmSchema");
-const AIdemo = require("../temp/eval_demo.json");
-const mongoose = require("mongoose");
+const connectDB = require('../connectdb');
+const User = require('../models/userSchema');
+const Farm = require('../models/FarmSchema');
+const AIdemo = require('../temp/eval_demo.json');
+const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
-const ai = require("./ai-controller");
-const { json } = require("express");
+const ai = require('./ai-controller');
+const { json } = require('express');
 
 const varieties = new schema({
   ID: Number,
@@ -14,16 +14,16 @@ const varieties = new schema({
 });
 
 const Varieties = mongoose.model(
-  "rice_varieties_data",
+  'rice_varieties_data',
   varieties,
-  "rice_varieties_data"
+  'rice_varieties_data'
 );
 
 const user = User.userModel;
 const farm = Farm.farmModel;
 
 async function varieties_eval_only(req, res, next) {
-  console.log("request");
+  console.log('request');
   await connectDB.connect_db();
   const province = req.body.location;
   const varietie = req.body.varietie;
@@ -37,7 +37,7 @@ async function varieties_eval_only(req, res, next) {
   console.log(result.varieties);
   for (let index = 0; index < result.length; index++) {
     v[index] = await Varieties.findOne({ ID: result[index].varieties }).select([
-      "rice_varieties_name",
+      'rice_varieties_name',
     ]);
     console.log(result[index]);
     ret[index] = {
@@ -68,7 +68,6 @@ async function varieties_eval_only(req, res, next) {
 }
 
 async function farm_create(req, res, next) {
-  await connectDB.connect_db();
   const uid = req.body.uid;
   const name = req.body.name;
   const size = req.body.size;
@@ -76,7 +75,7 @@ async function farm_create(req, res, next) {
   const province = req.body.province;
   const latt = req.body.latt; // or String
   const long = req.body.long; // or String
-  const activate = "wait";
+  const activate = 'wait';
 
   let location = {
       formattedAddress: formattedAddress,
@@ -108,7 +107,7 @@ async function farm_create(req, res, next) {
       let ret = {
         farm: farmdata,
         detail: success,
-        status: "ok",
+        status: 'ok',
       };
       res.send(ret);
     })
@@ -116,13 +115,14 @@ async function farm_create(req, res, next) {
       console.log(err);
       let ret = {
         detail: err,
-        status: "err",
+        status: 'err',
       };
       res.send(ret);
     });
 }
 
 async function farm_create_tl(req, res, next) {
+  //Timeline
   await connectDB.connect_db();
   const uid = req.body.uid;
   const name = req.body.name;
@@ -142,7 +142,7 @@ async function farm_create_tl(req, res, next) {
   const productS = req.body.productS;
   const priceS = req.body.priceS;
   const profitS = req.body.profitS;
-  const activate = "wait";
+  const activate = 'wait';
 
   let location = {
       formattedAddress: formattedAddress,
@@ -185,7 +185,7 @@ async function farm_create_tl(req, res, next) {
       let ret = {
         farm: farmdata,
         detail: success,
-        status: "ok",
+        status: 'ok',
       };
       res.send(ret);
     })
@@ -193,30 +193,30 @@ async function farm_create_tl(req, res, next) {
       console.log(err);
       let ret = {
         detail: err,
-        status: "err",
+        status: 'err',
       };
       res.send(ret);
     });
 }
 
 async function varieties_get_name(req, res, next) {
-  console.log("get varirties id / name");
+  console.log('get varirties id / name');
   await connectDB.connect_db();
 
-  const v = await Varieties.find().select(["ID", "rice_varieties_name"]);
+  const v = await Varieties.find().select(['ID', 'rice_varieties_name']);
   console.log(v);
   res.send(v);
 }
 
 async function farm_information(req, res, next) {
   await connectDB.connect_db();
-  console.log("farm information");
+  console.log('farm information');
   const fid = req.body.fid;
   const f = await farm.findOne({ _id: fid });
 
   const v = await Varieties.findOne({ ID: f.varieties }).select([
-    "ID",
-    "rice_varieties_name",
+    'ID',
+    'rice_varieties_name',
   ]);
   let ret = {
     farm: f,
@@ -227,22 +227,23 @@ async function farm_information(req, res, next) {
 }
 
 async function farm_informationByname(req, res, next) {
+  // read farm to profile
   await connectDB.connect_db();
-  console.log("farm information");
+  console.log('farm information');
   const uid = req.body.uid;
   const farmname = req.body.farmname;
   const u = await user.findOne({ _id: uid }).populate({
     path: 'farms',
     match: { name: farmname },
     // Explicitly exclude `_id`, see http://bit.ly/2aEfTdB
-    select: '_id'
+    select: '_id',
   });
   fid = u.farms[0]._id;
   const f = await farm.findOne({ _id: fid });
 
   const v = await Varieties.findOne({ ID: f.varieties }).select([
-    "ID",
-    "rice_varieties_name",
+    'ID',
+    'rice_varieties_name',
   ]);
   let ret = {
     farm: f,
@@ -253,9 +254,9 @@ async function farm_informationByname(req, res, next) {
 }
 
 async function farm_remove(req, res, next) {
-  await connectDB.connect_db();
-  const fid = req.body.fid;
-  const uid = req.body.uid;
+  console.log('request remove farm');
+
+  const { fid, uid } = req.body;
 
   await user.updateOne(
     { _id: uid },
@@ -265,6 +266,7 @@ async function farm_remove(req, res, next) {
       },
     }
   );
+  // .catch((err) => console.error(`Failed to add review: ${err}`));
 }
 
 module.exports.varieties_eval_only = varieties_eval_only;
