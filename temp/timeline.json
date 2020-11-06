@@ -1,841 +1,102 @@
-[
-  {
-    "varieties": 5,
-    "evalproduct": {
-      "cost": { "value": 4461, "status": "2" },
-      "product": { "value": 489.99999999999994, "status": "1" },
-      "price": { "value": 6102, "status": "3" },
-      "profit": { "value": 1139.6, "status": "1" }
+{
+  "farmPicture": null,
+  "farmID": null,
+  "name": "farm1",
+  "timeline": [
+    {
+      "order": 1,
+      "activitiesDate": "2020-11-15T00:00:00.000000Z",
+      "caption": null,
+      "status": false,
+      "timelineType": 1,
+      "activities": [
+        {
+          "code_type": 1,
+          "array_code": [
+            {
+              "activityCode": 101,
+              "activity": "เริ่มปลูกข้าว",
+              "picture": "http://ricepedia.org/images/seed-selection.jpg",
+              "activate": false
+            },
+            {
+              "activityCode": 102,
+              "activity": "ตรวจสอบระดับน้ำ 3 เซนติเมตร",
+              "picture": "http://ricepedia.org/images/transplanting.jpg",
+              "activate": false
+            },
+            {
+              "activityCode": 103,
+              "activity": "ให้ปู๋ยสูตร xx-xx-xx",
+              "picture": "http://ricepedia.org/images/nutrient-management.jpg",
+              "activate": false
+            }
+          ]
+        },
+        {
+          "code_type": 2,
+          "array_code": [
+            {
+              "activityCode": 202,
+              "activity": "ตรวจสอบเพลี้ยไฟ",
+              "picture": "http://www.ricethailand.go.th/rkb3/bug_001.jpg",
+              "activate": false
+            }
+          ]
+        }
+      ],
+      "activityLenght": 3,
+      "warningLenght": 1
     },
-    "timeline": [
-      {
-        "order": 1,
-        "activitiesDate": "2020-11-02T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 101, "color_map": "red", "picture_url": "red" },
-              { "code": 103, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 6,
-        "caption": "no use",
-        "status": false,
-        "activitiesDate": "2020-11-06T00:00:00.000000Z",
-        "timelineType": 1,
-        "activities": [
-          {
-            "code_type": 1,
-            "array_code": [
-              {
-                "code": 107,
-                "picture_url": "red",
-                "activate": false
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 17,
-        "activitiesDate": "2020-11-17T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 18,
-        "activitiesDate": "2020-11-19T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 108, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 25,
-        "activitiesDate": "2020-11-26T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 109, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 27,
-        "activitiesDate": "2020-11-28T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 104, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 28,
-        "activitiesDate": "2020-11-28T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 33,
-        "activitiesDate": "2020-12-04T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 104, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 37,
-        "activitiesDate": "2020-12-08T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 104, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 39,
-        "activitiesDate": "2020-12-09T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 43,
-        "activitiesDate": "2020-12-14T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 104, "color_map": "red", "picture_url": "red" },
-              { "code": 107, "color_map": "red", "picture_url": "red" },
-              { "code": 108, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 48,
-        "activitiesDate": "2020-12-19T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 104, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 50,
-        "activitiesDate": "2020-12-20T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 53,
-        "activitiesDate": "2020-12-24T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 104, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 56,
-        "activitiesDate": "2020-12-27T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 106, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 60,
-        "activitiesDate": "2020-12-31T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" },
-              { "code": 110, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 61,
-        "activitiesDate": "2020-12-31T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 66,
-        "activitiesDate": "2021-01-06T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 72,
-        "activitiesDate": "2021-01-11T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 75,
-        "activitiesDate": "2021-01-15T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" },
-              { "code": 108, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 83,
-        "activitiesDate": "2021-01-22T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 84,
-        "activitiesDate": "2021-01-24T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 90,
-        "activitiesDate": "2021-01-30T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" },
-              { "code": 108, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 94,
-        "activitiesDate": "2021-02-02T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 96,
-        "activitiesDate": "2021-02-05T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 102,
-        "activitiesDate": "2021-02-11T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 105,
-        "activitiesDate": "2021-02-13T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 109,
-        "activitiesDate": "2021-02-18T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 106, "color_map": "red", "picture_url": "red" },
-              { "code": 108, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 120,
-        "activitiesDate": "2021-03-01T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 102, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "varieties": 20,
-    "evalproduct": {
-      "cost": { "value": 4474, "status": "2" },
-      "product": { "value": 373.52000000000004, "status": "1" },
-      "price": { "value": 6859, "status": "3" },
-      "profit": { "value": 1103.0800000000002, "status": "1" }
+    {
+      "order": 2,
+      "activitiesDate": "2020-11-16T00:00:00.000000Z",
+      "caption": null,
+      "status": false,
+      "timelineType": 1,
+      "activities": [
+        {
+          "code_type": 2,
+          "array_code": [
+            {
+              "activityCode": 202,
+              "activity": "ตรวจสอบเพลี้ยไฟ",
+              "picture": "http://www.ricethailand.go.th/rkb3/bug_001.jpg",
+              "activate": false
+            }
+          ]
+        }
+      ],
+      "activityLenght": 0,
+      "warningLenght": 1
     },
-    "timeline": [
-      {
-        "order": 1,
-        "activitiesDate": "2020-11-02T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 101, "color_map": "red", "picture_url": "red" },
-              { "code": 103, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 5,
-        "activitiesDate": "2020-11-06T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 107, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 6,
-        "activitiesDate": "2020-11-06T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 15,
-        "activitiesDate": "2020-11-16T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 108, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 17,
-        "activitiesDate": "2020-11-17T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 20,
-        "activitiesDate": "2020-11-21T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 109, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 21,
-        "activitiesDate": "2020-11-22T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 104, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 26,
-        "activitiesDate": "2020-11-27T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 104, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 28,
-        "activitiesDate": "2020-11-28T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 30,
-        "activitiesDate": "2020-12-01T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 104, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 34,
-        "activitiesDate": "2020-12-05T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 104, "color_map": "red", "picture_url": "red" },
-              { "code": 107, "color_map": "red", "picture_url": "red" },
-              { "code": 108, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 38,
-        "activitiesDate": "2020-12-09T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 104, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 39,
-        "activitiesDate": "2020-12-09T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 42,
-        "activitiesDate": "2020-12-13T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 104, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 45,
-        "activitiesDate": "2020-12-16T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 106, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 48,
-        "activitiesDate": "2020-12-19T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" },
-              { "code": 110, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 50,
-        "activitiesDate": "2020-12-20T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 52,
-        "activitiesDate": "2020-12-23T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 60,
-        "activitiesDate": "2020-12-31T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" },
-              { "code": 108, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 61,
-        "activitiesDate": "2020-12-31T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 66,
-        "activitiesDate": "2021-01-06T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 71,
-        "activitiesDate": "2021-01-11T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" },
-              { "code": 108, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 72,
-        "activitiesDate": "2021-01-11T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 76,
-        "activitiesDate": "2021-01-16T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 80,
-        "activitiesDate": "2021-01-20T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 105, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 83,
-        "activitiesDate": "2021-01-22T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 2,
-            "caption": "no use",
-            "body_color": "pink",
-            "array_code": [
-              { "code": 203, "color_map": "red", "picture_url": "xx" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 86,
-        "activitiesDate": "2021-01-26T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 106, "color_map": "red", "picture_url": "red" },
-              { "code": 108, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      },
-      {
-        "order": 95,
-        "activitiesDate": "2021-02-04T00:00:00.000000Z",
-        "activities": [
-          {
-            "code_type": 1,
-            "caption": "no use",
-            "body_color": "blue",
-            "array_code": [
-              { "code": 102, "color_map": "red", "picture_url": "red" }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-]
+    {
+      "order": 7,
+      "activitiesDate": "2020-11-22T00:00:00.000000Z",
+      "caption": null,
+      "status": false,
+      "timelineType": 1,
+      "activities": [
+        {
+          "code_type": 1,
+          "array_code": [
+            {
+              "activityCode": 102,
+              "activity": "ตรวจสอบระดับน้ำ 3 เซนติเมตร",
+              "picture": "http://ricepedia.org/images/transplanting.jpg",
+              "activate": false
+            },
+            {
+              "activityCode": 103,
+              "activity": "ให้ปู๋ยสูตร xx-xx-xx",
+              "picture": "http://ricepedia.org/images/nutrient-management.jpg",
+              "activate": false
+            }
+          ]
+        }
+      ],
+      "activityLenght": 2,
+      "warningLenght": 0
+    }
+  ]
+}

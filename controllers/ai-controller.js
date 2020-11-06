@@ -1,4 +1,4 @@
-const request = require("request");
+const request = require('request');
 
 //async function predict_tl(params) {}
 
@@ -11,10 +11,10 @@ function predict_tl(province_id, rice_id, mode, start_date) {
     //let url_callback = "http://192.168.1.101:3000/api/varieties/eval";
     request(
       {
-        url: "http://150.95.88.242:10005/predict",
-        method: "POST",
+        url: 'http://150.95.88.242:10006/predict',
+        method: 'POST',
         headers: {
-          "Content-Type": "multipart/form-data",
+          'Content-Type': 'multipart/form-data',
         },
         formData: {
           province_id: province_id,
@@ -24,10 +24,10 @@ function predict_tl(province_id, rice_id, mode, start_date) {
         },
       },
       function (err, resp, body) {
-        if (err) resolve("Error");
-        if (resp) console.log("OK");
+        if (err) resolve('Error');
+        if (resp) console.log('success from ai');
         if (body) {
-          //console.log(body);
+          // console.log(body);
           resolve(JSON.parse(body));
         }
       }
@@ -63,10 +63,10 @@ function update_tl(
     //let url_callback = "http://192.168.1.101:3000/api/varieties/eval";
     request(
       {
-        url: "http://150.95.88.242:10005/update_timeline",
-        method: "POST",
+        url: 'http://150.95.88.242:10006/update_timeline',
+        method: 'POST',
         headers: {
-          "Content-Type": "multipart/form-data",
+          'Content-Type': 'multipart/form-data',
         },
         formData: {
           province_id: province_id,
@@ -80,8 +80,8 @@ function update_tl(
         },
       },
       function (err, resp, body) {
-        if (err) resolve("Error");
-        if (resp) console.log("OK");
+        if (err) resolve('Error');
+        if (resp) console.log('OK');
         if (body) {
           //console.log(body);
           resolve(JSON.parse(body));

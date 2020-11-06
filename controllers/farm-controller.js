@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
 const ai = require('./ai-controller');
-const { json } = require('express');
 
 const varieties = new schema({
   ID: Number,
@@ -23,26 +22,30 @@ const user = User.userModel;
 const farm = Farm.farmModel;
 
 async function varieties_eval_only(req, res, next) {
-  console.log('request');
-  await connectDB.connect_db();
-  const province = req.body.location;
-  const varietie = req.body.varietie;
-  const evaltype = req.body.evaltype;
-  const startDate = req.body.startDate;
+  console.log('request varieties evaluation');
+
+  const { province, varietie, evaltype, startDate } = req.body;
+
   const data = await ai.predict_tl(province, varietie, evaltype, startDate);
   //var result = AIdemo;
   var result = data;
   var ret = [{}];
   var v = [{}];
-  console.log(result.varieties);
+  console.log('==============================================');
+  console.log('==============================================');
+  console.log('==============================================');
+  console.log('result: ', result);
+  console.log('==============================================');
+  console.log('==============================================');
   for (let index = 0; index < result.length; index++) {
     v[index] = await Varieties.findOne({ ID: result[index].varieties }).select([
       'rice_varieties_name',
     ]);
-    console.log(result[index]);
+    // console.log('result[index] : ', result[index]);
+    // console.log('v[index] : ', v[index]);
     ret[index] = {
-      name: v[index].rice_varieties_name,
-      ID: result[index].varieties,
+      name: v[index].rice_varieties_name, // ชื่อพันธุ์ข้าว
+      ID: result[index].varieties, // ID ชื่อพันธุ์ข้าว
       cost: {
         value: result[index].evalproduct.cost.value,
         status: result[index].evalproduct.cost.status,
@@ -59,13 +62,72 @@ async function varieties_eval_only(req, res, next) {
         value: result[index].evalproduct.profit.value,
         status: result[index].evalproduct.profit.status,
       },
-      tl: result[index].timelineFuture,
+
+      code_type: result[0],
+      resultLength: result.length,
+      timelineLength0: result[0].timeline.length,
+      timelineLength1: result[1].timeline.length,
+      resultTimelineActivityLength: result[0].timeline[1].activities.length,
+      resultTimeline1Activity0Code_type:
+        result[0].timeline[1].activities[0].code_type,
+      resultTimeline1Activity1Code_type:
+        result[0].timeline[1].activities[1].code_type,
+      timeline: count_Warning(result[0].timeline),
+      // warningLength: count_Warning(result[index].timeline),
+      // activityLength: count_Warning(result[index].timeline),
     };
   }
-  //console.log(result);
-  console.log(ret);
   res.send(ret);
 }
+
+const count_Warning = (timelineOrder) => {
+  var count = 0;
+  var package = [{}];
+  var activities = [{}];
+  var array_code = [{}];
+
+  var orderLength = timelineOrder.length;
+  console.log('===================================================');
+  console.log(orderLength);
+  for (let i = 0; i < orderLength; i++) {
+    var activitiesLength = timelineOrder[i].activities.length;
+    for (let j = 0; j < activitiesLength; j++) {
+      var array_codeLength = timelineOrder[i].activities[j].array_code.length;
+      for (let k = 0; k < array_codeLength; k++) {
+        console.log('===================================================');
+        console.log('i : ', i);
+        console.log('j : ', j);
+        console.log('k : ', k);
+        console.log(timelineOrder[i].activities[j].array_code[k].code);
+        console.log('===================================================');
+        array_code[k] = {
+          activityCode: timelineOrder[i].activities[j].array_code[k].code,
+          activity: 'ตรวจสอบระดับน้ำ 3 เซนติเมตร',
+          picture: timelineOrder[i].activities[j].array_code[k].picture_url,
+          activate: timelineOrder[i].activities[j].array_code[k].activate,
+        };
+      }
+      activities[j] = {
+        code_type: timelineOrder[i].activities[j].code_type,
+        array_code,
+      };
+    }
+    package[i] = {
+      order: timelineOrder[i].order,
+      activitiesDate: timelineOrder[i].activitiesDate,
+      caption: timelineOrder[i].caption,
+      status: timelineOrder[i].status,
+      timelineType: timelineOrder[i].timelineType,
+      activities,
+    };
+  }
+
+  // if (timelineOrder[0].activities[0].code_type == 1) {
+  //   count = 100;
+  // } else count = 0;
+
+  return package;
+};
 
 async function farm_create(req, res, next) {
   const uid = req.body.uid;
@@ -123,32 +185,34 @@ async function farm_create(req, res, next) {
 
 async function farm_create_tl(req, res, next) {
   //Timeline
-  await connectDB.connect_db();
-  const uid = req.body.uid;
-  const name = req.body.name;
-  const size = req.body.size;
-  const formattedAddress = req.body.formattedAddress;
-  const province = req.body.province;
-  const latt = req.body.latt;
-  const long = req.body.long;
-  const startDate = req.body.startDate;
-  const varieties = req.body.varieties;
-  const timelineFuture = req.body.timelineFuture;
-  const cost = req.body.cost;
-  const product = req.body.product;
-  const price = req.body.price;
-  const profit = req.body.profit;
-  const costS = req.body.costS;
-  const productS = req.body.productS;
-  const priceS = req.body.priceS;
-  const profitS = req.body.profitS;
+  const {
+    uid,
+    name,
+    size,
+    formattedAddress,
+    province,
+    latt,
+    long,
+    startDate,
+    varieties,
+    timeline,
+    cost,
+    product,
+    price,
+    profit,
+    costS,
+    productS,
+    priceS,
+    profitS,
+  } = req.body;
+
   const activate = 'wait';
 
   let location = {
-      formattedAddress: formattedAddress,
-      province: province,
-      latt: latt, // or String
-      long: long, // or String
+      formattedAddress,
+      province,
+      latt, // or String
+      long, // or String
     },
     evalproduct = {
       cost: { value: cost, status: costS },
@@ -157,14 +221,14 @@ async function farm_create_tl(req, res, next) {
       profit: { value: profit, status: profitS },
     };
   data = {
-    name: name,
-    size: size,
-    varieties: varieties,
-    location: location,
-    evalproduct: evalproduct,
-    timelineFuture: timelineFuture,
-    activate: activate,
-    startDate: startDate,
+    name,
+    size,
+    varieties,
+    location,
+    evalproduct,
+    timeline,
+    activate,
+    startDate,
   };
   let farmdata = new farm(data);
   await farmdata.save();
@@ -201,7 +265,6 @@ async function farm_create_tl(req, res, next) {
 
 async function varieties_get_name(req, res, next) {
   console.log('get varirties id / name');
-  await connectDB.connect_db();
 
   const v = await Varieties.find().select(['ID', 'rice_varieties_name']);
   console.log(v);
@@ -209,7 +272,6 @@ async function varieties_get_name(req, res, next) {
 }
 
 async function farm_information(req, res, next) {
-  await connectDB.connect_db();
   console.log('farm information');
   const fid = req.body.fid;
   const f = await farm.findOne({ _id: fid });
