@@ -2,8 +2,11 @@ const connectDB = require('../connectdb');
 const User = require('../models/userSchema');
 const Farm = require('../models/FarmSchema');
 const AIdemo = require('../temp/eval_demo.json');
+
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
+const CodeDif = require('../models/codeDefSchema');
+const codeDif = CodeDif.codeDefModel;
 
 const ai = require('./ai-controller');
 
@@ -72,16 +75,13 @@ async function varieties_eval_only(req, res, next) {
         result[0].timeline[1].activities[0].code_type,
       resultTimeline1Activity1Code_type:
         result[0].timeline[1].activities[1].code_type,
-      timeline: count_Warning(result[0].timeline),
-      // warningLength: count_Warning(result[index].timeline),
-      // activityLength: count_Warning(result[index].timeline),
+      timeline1: count_Warning(result[index].timeline),
     };
   }
   res.send(ret);
 }
 
-const count_Warning = (timelineOrder) => {
-  var count = 0;
+async function count_Warning(timelineOrder) {
   var package = [{}];
   var activities = [{}];
   var array_code = [{}];
@@ -89,29 +89,58 @@ const count_Warning = (timelineOrder) => {
   var orderLength = timelineOrder.length;
   console.log('===================================================');
   console.log(orderLength);
-  for (let i = 0; i < orderLength; i++) {
-    var activitiesLength = timelineOrder[i].activities.length;
-    for (let j = 0; j < activitiesLength; j++) {
-      var array_codeLength = timelineOrder[i].activities[j].array_code.length;
-      for (let k = 0; k < array_codeLength; k++) {
+
+  for (let i in timelineOrder) {
+    var count1 = 0;
+    var count2 = 0;
+
+    // var activitiesLength = timelineOrder[i].activities.length;
+    for (let j in timelineOrder[i].activities) {
+      if (timelineOrder[i].activities[j].code_type == 1) {
+        count1++;
+      }
+      if (timelineOrder[i].activities[j].code_type == 2) {
+        count2++;
+      }
+
+      // var array_codeLength = timelineOrder[i].activities[j].array_code.length;
+      for (let k in timelineOrder[i].activities[j].array_code) {
         console.log('===================================================');
         console.log('i : ', i);
-        console.log('j : ', j);
+        console.log(timelineOrder[i].order), console.log('j : ', j);
+        console.log(timelineOrder[i].activities[j].code_type);
         console.log('k : ', k);
         console.log(timelineOrder[i].activities[j].array_code[k].code);
         console.log('===================================================');
+
+        code = timelineOrder[i].activities[j].array_code[k].code;
+        //codeDif.findOne({ code }).then(activity);
+        // codeDif.findOne({ code }).then((data) => {
+        //   activity: data.definition;
+        // });
+        codeDif.findOne({ code }).then((datainfo) => {
+          // activity = datainfo.definition;
+          console.log('===================================================');
+          console.log('===================================================');
+          console.log('===================================================');
+          console.log('===================================================');
+          console.log(datainfo);
+        });
+
         array_code[k] = {
           activityCode: timelineOrder[i].activities[j].array_code[k].code,
-          activity: 'ตรวจสอบระดับน้ำ 3 เซนติเมตร',
+          activity: timelineOrder[i].activities[j].array_code[k].code,
           picture: timelineOrder[i].activities[j].array_code[k].picture_url,
           activate: timelineOrder[i].activities[j].array_code[k].activate,
         };
       }
+
       activities[j] = {
         code_type: timelineOrder[i].activities[j].code_type,
         array_code,
       };
     }
+
     package[i] = {
       order: timelineOrder[i].order,
       activitiesDate: timelineOrder[i].activitiesDate,
@@ -119,6 +148,8 @@ const count_Warning = (timelineOrder) => {
       status: timelineOrder[i].status,
       timelineType: timelineOrder[i].timelineType,
       activities,
+      activityLenght: count1,
+      warningLenght: count2,
     };
   }
 
@@ -127,7 +158,7 @@ const count_Warning = (timelineOrder) => {
   // } else count = 0;
 
   return package;
-};
+}
 
 async function farm_create(req, res, next) {
   const uid = req.body.uid;
