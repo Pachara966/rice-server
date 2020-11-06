@@ -21,6 +21,8 @@ const Varieties = mongoose.model(
   'rice_varieties_data'
 );
 
+const codedef = mongoose.model('code_definition', codeDif, 'code_definition');
+
 const user = User.userModel;
 const farm = Farm.farmModel;
 
@@ -34,12 +36,7 @@ async function varieties_eval_only(req, res, next) {
   var result = data;
   var ret = [{}];
   var v = [{}];
-  console.log('==============================================');
-  console.log('==============================================');
-  console.log('==============================================');
-  console.log('result: ', result);
-  console.log('==============================================');
-  console.log('==============================================');
+
   for (let index = 0; index < result.length; index++) {
     v[index] = await Varieties.findOne({ ID: result[index].varieties }).select([
       'rice_varieties_name',
@@ -66,36 +63,39 @@ async function varieties_eval_only(req, res, next) {
         status: result[index].evalproduct.profit.status,
       },
 
-      code_type: result[0],
-      resultLength: result.length,
-      timelineLength0: result[0].timeline.length,
-      timelineLength1: result[1].timeline.length,
-      resultTimelineActivityLength: result[0].timeline[1].activities.length,
-      resultTimeline1Activity0Code_type:
-        result[0].timeline[1].activities[0].code_type,
-      resultTimeline1Activity1Code_type:
-        result[0].timeline[1].activities[1].code_type,
-      timeline1: count_Warning(result[index].timeline),
+      // code_type: result[0],
+      // resultLength: result.length,
+      // timelineLength0: result[0].timeline.length,
+      // timelineLength1: result[1].timeline.length,
+      // resultTimelineActivityLength: result[0].timeline[1].activities.length,
+      // resultTimeline1Activity0Code_type:
+      //   result[0].timeline[1].activities[0].code_type,
+      // resultTimeline1Activity1Code_type:
+      //   result[0].timeline[1].activities[1].code_type,
+      timeline: await timeline(result[index].timeline),
     };
   }
   res.send(ret);
 }
 
-async function count_Warning(timelineOrder) {
+async function timeline(timelineOrder) {
+  const activity1 = await codedef.find();
+
+  // console.log('==========================================');
+  // console.log('==========================================');
+  // console.log(activity1);
+  // console.log('==========================================');
+  // console.log('==========================================');
+
   var package = [{}];
-  var activities = [{}];
-  var array_code = [{}];
 
-  var orderLength = timelineOrder.length;
-  console.log('===================================================');
-  console.log(orderLength);
-
-  for (let i in timelineOrder) {
+  let i, j, k;
+  for (i in timelineOrder) {
     var count1 = 0;
     var count2 = 0;
 
-    // var activitiesLength = timelineOrder[i].activities.length;
-    for (let j in timelineOrder[i].activities) {
+    var activities = [{}];
+    for (j in timelineOrder[i].activities) {
       if (timelineOrder[i].activities[j].code_type == 1) {
         count1++;
       }
@@ -103,33 +103,16 @@ async function count_Warning(timelineOrder) {
         count2++;
       }
 
-      // var array_codeLength = timelineOrder[i].activities[j].array_code.length;
-      for (let k in timelineOrder[i].activities[j].array_code) {
-        console.log('===================================================');
-        console.log('i : ', i);
-        console.log(timelineOrder[i].order), console.log('j : ', j);
-        console.log(timelineOrder[i].activities[j].code_type);
-        console.log('k : ', k);
-        console.log(timelineOrder[i].activities[j].array_code[k].code);
-        console.log('===================================================');
-
-        code = timelineOrder[i].activities[j].array_code[k].code;
-        //codeDif.findOne({ code }).then(activity);
-        // codeDif.findOne({ code }).then((data) => {
-        //   activity: data.definition;
-        // });
-        codeDif.findOne({ code }).then((datainfo) => {
-          // activity = datainfo.definition;
-          console.log('===================================================');
-          console.log('===================================================');
-          console.log('===================================================');
-          console.log('===================================================');
-          console.log(datainfo);
+      var array_code = [{}];
+      for (k in timelineOrder[i].activities[j].array_code) {
+        var __FOUND = activity1.find(function (post, index) {
+          if (post.code == timelineOrder[i].activities[j].array_code[k].code)
+            return true;
         });
 
         array_code[k] = {
           activityCode: timelineOrder[i].activities[j].array_code[k].code,
-          activity: timelineOrder[i].activities[j].array_code[k].code,
+          activity: __FOUND.definition,
           picture: timelineOrder[i].activities[j].array_code[k].picture_url,
           activate: timelineOrder[i].activities[j].array_code[k].activate,
         };
@@ -137,7 +120,7 @@ async function count_Warning(timelineOrder) {
 
       activities[j] = {
         code_type: timelineOrder[i].activities[j].code_type,
-        array_code,
+        array_code: array_code,
       };
     }
 
@@ -152,11 +135,6 @@ async function count_Warning(timelineOrder) {
       warningLenght: count2,
     };
   }
-
-  // if (timelineOrder[0].activities[0].code_type == 1) {
-  //   count = 100;
-  // } else count = 0;
-
   return package;
 }
 
