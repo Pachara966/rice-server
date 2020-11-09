@@ -5,7 +5,7 @@ const userSchema = new schema({
   surname: String,
   phonenumber: { type: String, unique: true },
   password: String,
-  picture: String,
+  photo: { type: String, default: '' },
   address: {
     formattedAddress: { type: String, default: '' },
     province: { type: Number, default: 0 },

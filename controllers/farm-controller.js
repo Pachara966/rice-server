@@ -323,6 +323,116 @@ async function farm_remove(req, res, next) {
   // .catch((err) => console.error(`Failed to add review: ${err}`));
 }
 
+async function farm_create_note(req, res, next) {
+  const { fid, order, noteDate, content, photo, cost } = req.body;
+
+  console.log('request create note at farm id ', fid);
+
+  if (!fid || !order) {
+    return res.json({ status: 'fail', msg: 'กรอกข้อมูลให้ครบทุกช่อง' });
+  }
+
+  const note = {
+    order,
+    noteDate,
+    content, // or String
+    photo, // or String
+    cost,
+  };
+
+  farm
+    .findOneAndUpdate({ _id: fid }, { $push: { note: note } }, { new: true })
+    .then((farmData) => {
+      if (!farmData)
+        return res.json({ status: 'fail', msg: 'ไม่สามารถแก้ไขข้อมูลได้' });
+
+      res.json({
+        status: 'success',
+        note: farmData.note,
+      });
+    });
+}
+
+async function farm_get_note(req, res, next) {
+  const { fid } = req.body;
+
+  console.log('request load note at farm id ', fid);
+
+  if (!fid) {
+    return res.json({ status: 'fail', msg: 'กรอกข้อมูลให้ครบทุกช่อง' });
+  }
+
+  farm.findOne({ _id: fid }).then((farmData) => {
+    if (!farmData)
+      return res.json({ status: 'fail', msg: 'ไม่สามารถแก้ไขข้อมูลได้' });
+
+    res.json({
+      status: 'success',
+      note: farmData.note,
+    });
+  });
+}
+
+async function farm_update_note(req, res, next) {
+  const { fid, nid, order, noteDate, content, photo, cost } = req.body;
+
+  console.log('request update note at farm id ', fid, 'note id ', nid);
+
+  if (!fid || !nid) {
+    return res.json({ status: 'fail', msg: 'กรอกข้อมูลให้ครบทุกช่อง' });
+  }
+
+  farm
+    .findOneAndUpdate(
+      { _id: fid, 'note._id': nid },
+      {
+        'note.$.order': order,
+        'note.$.noteDate': noteDate,
+        'note.$.content': content,
+        'note.$.photo': photo,
+        'note.$.cost': cost,
+      },
+      { new: true }
+    )
+    .then((farmData) => {
+      if (!farmData)
+        return res.json({ status: 'fail', msg: 'ไม่สามารถแก้ไขข้อมูลได้' });
+
+      res.json({
+        status: 'success',
+        note: farmData.note,
+      });
+    });
+}
+
+async function farm_delete_note(req, res, next) {
+  const { fid, nid } = req.body;
+
+  console.log('request delete note at farm id ', fid, 'note id ', nid);
+
+  if (!fid || !nid) {
+    return res.json({ status: 'fail', msg: 'กรอกข้อมูลให้ครบทุกช่อง' });
+  }
+
+  farm
+    .updateMany(
+      { _id: fid },
+      {
+        $pull: { note: { _id: nid } },
+      },
+      { new: true }
+    )
+    .then((farmData) => {
+      if (!farmData)
+        return res.json({ status: 'fail', msg: 'ไม่สามารถแก้ไขข้อมูลได้' });
+
+      res.json({
+        status: 'success',
+        note: farmData,
+      });
+    });
+}
+
 module.exports.varieties_eval_only = varieties_eval_only;
 module.exports.farm_create = farm_create;
 module.exports.varieties_get_name = varieties_get_name;
@@ -330,3 +440,7 @@ module.exports.farm_create_tl = farm_create_tl;
 module.exports.farm_information = farm_information;
 module.exports.farm_remove = farm_remove;
 module.exports.farm_informationByname = farm_informationByname;
+module.exports.farm_create_note = farm_create_note;
+module.exports.farm_get_note = farm_get_note;
+module.exports.farm_update_note = farm_update_note;
+module.exports.farm_delete_note = farm_delete_note;

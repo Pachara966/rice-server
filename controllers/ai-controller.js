@@ -51,18 +51,18 @@ function update_tl(
     const payload = {
       province_id: province_id,
       rice_id: rice_id,
-      start_date: start_date,
+      start_date: start_date, // From farmSchema
       current_date: current_date,
       next_day: next_day,
       old_timeline: old_timeline,
-      test_mode: test_mode,
-      test_data: test_data,
+      test_mode: test_mode, // 0,1
+      test_data: test_data, // 0,1
     };
     /*console.log(start_date);
     console.log(current_date);
     console.log(next_day);*/
     console.log(payload);
-    //let url_callback = "http://192.168.1.101:3000/api/varieties/eval";
+
     request(
       {
         url: AIurl.concat('/update_timeline'),

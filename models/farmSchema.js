@@ -117,7 +117,7 @@ const farmSchema = new schema({
     {
       order: { type: Number, default: 0 },
       caption: { type: String, default: '' },
-      status: { type: Boolean, default: false }, // เปลี่ยนเมื่อกดใช้งานหรือผ่านไปแล้ว
+      status: { type: String, default: '' }, // เปลี่ยนเมื่อกดใช้งานหรือผ่านไปแล้ว 1 = Past Done, 2 = Past Not done, 3 = now -> next 7 days, 4 = After 7 day
       activitiesDate: Date,
       timelineType: { type: Number, enum: [0, 1, 2], default: 0 }, // 1(1,2) = farm, 2(3,4,5) = Admin
       activities: [
@@ -139,11 +139,11 @@ const farmSchema = new schema({
   ],
   note: [
     {
-      order: Number,
-      noteDate: Date,
-      content: String,
-      photo: [String],
-      cost: Number,
+      order: { type: Number, default: 0 },
+      noteDate: { type: Date, default: Date.now() },
+      content: { type: String, default: '' },
+      photo: [{ type: String, default: '' }],
+      cost: { type: Number, default: 0 },
     },
   ],
   activate: { type: String, enum: ['wait', 'process', 'end'], default: 'wait' }, // wait รอเริ่มการปลูก, process ระหว่างการปลูก, end เสร็จสิ้นการปลูก

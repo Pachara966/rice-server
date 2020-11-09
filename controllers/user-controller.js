@@ -107,6 +107,12 @@ async function user_update_information(req, res, next) {
       });
     });
 }
+
+module.exports.user_register = user_register;
+module.exports.user_login = user_login;
+// module.exports.user_information = user_information;
+module.exports.user_update_information = user_update_information;
+
 // async function user_information(req, res, next) {
 //   // await connectDB.connect_db();
 //   const uid = req.body.uid;
@@ -126,8 +132,3 @@ async function user_update_information(req, res, next) {
 //       res.send(ret);
 //     });
 // }
-
-module.exports.user_register = user_register;
-module.exports.user_login = user_login;
-// module.exports.user_information = user_information;
-module.exports.user_update_information = user_update_information;
