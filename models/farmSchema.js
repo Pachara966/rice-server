@@ -125,7 +125,7 @@ const farmSchema = new schema({
           code_type: { type: Number, enum: [0, 1, 2], default: 0 }, // 1 = กิจกรรม , 2 = warning
           array_code: [
             {
-              code: { type: Number, default: 0 }, // 001 - 299
+              activityCode: { type: Number, default: 0 }, // 001 - 299
               activity: { type: String, default: '' }, // Map with code from db
               picture_url: { type: String, default: '' },
               activate: { type: Boolean, default: false },

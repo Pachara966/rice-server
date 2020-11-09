@@ -1,6 +1,7 @@
 const request = require('request');
+const config = require('config');
 
-//async function predict_tl(params) {}
+const AIurl = config.get('AIurl');
 
 function predict_tl(province_id, rice_id, mode, start_date) {
   return new Promise((resolve) => {
@@ -8,10 +9,11 @@ function predict_tl(province_id, rice_id, mode, start_date) {
     console.log(rice_id);
     console.log(mode);
     console.log(start_date);
+
     //let url_callback = "http://192.168.1.101:3000/api/varieties/eval";
     request(
       {
-        url: 'http://150.95.88.242:10006/predict',
+        url: AIurl.concat('/predict'),
         method: 'POST',
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -63,7 +65,7 @@ function update_tl(
     //let url_callback = "http://192.168.1.101:3000/api/varieties/eval";
     request(
       {
-        url: 'http://150.95.88.242:10006/update_timeline',
+        url: AIurl.concat('/update_timeline'),
         method: 'POST',
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -91,6 +93,31 @@ function update_tl(
   });
 }
 
-//predict_tl();
+function getFeed(date, ad_number) {
+  return new Promise((resolve) => {
+    request(
+      {
+        url: AIurl.concat('/update_Feed'),
+        method: 'POST',
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+        formData: {
+          date: date,
+          ad_number: ad_number,
+        },
+      },
+      function (err, resp, body) {
+        if (err) resolve('Error');
+        if (resp) console.log('success from ai');
+        if (body) {
+          resolve(JSON.parse(body));
+        }
+      }
+    );
+  });
+}
+
 module.exports.update_tl = update_tl;
 module.exports.predict_tl = predict_tl;
+module.exports.getFeed = getFeed;

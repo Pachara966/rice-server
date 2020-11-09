@@ -3,8 +3,10 @@ const User = require('../models/userSchema');
 const Farm = require('../models/FarmSchema');
 const AIdemo = require('../temp/eval_demo.json');
 const ai = require('./ai-controller');
+
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
+
 var dateFormat = require('dateformat');
 
 const user = User.userModel;
@@ -317,6 +319,71 @@ async function init_data(req, res, next) {
   });
 }
 
+async function updateFeed(req, res, next) {
+  console.log('request update feed');
+
+  var dateObj = new Date();
+  var month = dateObj.getUTCMonth() + 1; //months from 1-12
+  var day = dateObj.getUTCDate();
+  var year = dateObj.getUTCFullYear();
+  var date = year + '-' + month + '-' + day + 'T00:00:00.000Z';
+  var ad_number = 5;
+
+  const dataFeed = await ai.getFeed(date, ad_number);
+
+  // const userID = await user.find({}).select(['_id']);
+
+  // const u = await user.findOne({ _id: userID[14]._id }).populate('farms');
+
+  // const farms = u.farms;
+  // console.log(farms[0].name);
+
+  var activities = [{}];
+  let feed;
+  let i, j;
+  for (i in dataFeed.Feed.activities) {
+    var array_code = [{}];
+
+    for (j in dataFeed.Feed.activities[i].array_code) {
+      array_code[j] = {
+        activityCode: dataFeed.Feed.activities[i].array_code[j].activityCode,
+        owner: dataFeed.Feed.activities[i].array_code[j].owner,
+        activity: dataFeed.Feed.activities[i].array_code[j].activity,
+        picture_url: dataFeed.Feed.activities[i].array_code[j].picture,
+        activate: dataFeed.Feed.activities[i].array_code[j].activate,
+      };
+    }
+
+    activities[i] = {
+      code_type: dataFeed.Feed.activities[i].code_type,
+      array_code,
+    };
+  }
+  feed = [
+    {
+      order: dataFeed.Feed.order,
+      caption: dataFeed.Feed.caption,
+      status: dataFeed.Feed.status,
+      activitiesDate: dataFeed.Feed.activitiesDate,
+      timelineType: dataFeed.Feed.timelineType,
+      activities,
+    },
+  ];
+  if (dataFeed) {
+    //   for (let index in userID) {
+    //     await user.findByIdAndUpdate(
+    //       { _id: userID[index]._id },
+    //       {
+    //         $push: { feed: dataFeed.Feed },
+    //       }
+    //     );
+    res.json({ status: 'success', feed });
+
+    //res.json({status: 'success', {dataFeed.Feed}});
+  } else return res.json({ status: 'fail', msg: 'ไม่พบข้อมูล' });
+}
+
 module.exports.init_data = init_data;
 module.exports.midnight = midnight;
 module.exports.midnight_demo = midnight_demo;
+module.exports.updateFeed = updateFeed;

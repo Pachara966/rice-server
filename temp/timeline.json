@@ -1,102 +1,87 @@
-{
-  "farmPicture": null,
-  "farmID": null,
-  "name": "farm1",
-  "timeline": [
-    {
-      "order": 1,
-      "activitiesDate": "2020-11-15T00:00:00.000000Z",
-      "caption": null,
-      "status": false,
-      "timelineType": 1,
-      "activities": [
-        {
-          "code_type": 1,
-          "array_code": [
-            {
-              "activityCode": 101,
-              "activity": "เริ่มปลูกข้าว",
-              "picture": "http://ricepedia.org/images/seed-selection.jpg",
-              "activate": false
-            },
-            {
-              "activityCode": 102,
-              "activity": "ตรวจสอบระดับน้ำ 3 เซนติเมตร",
-              "picture": "http://ricepedia.org/images/transplanting.jpg",
-              "activate": false
-            },
-            {
-              "activityCode": 103,
-              "activity": "ให้ปู๋ยสูตร xx-xx-xx",
-              "picture": "http://ricepedia.org/images/nutrient-management.jpg",
-              "activate": false
-            }
-          ]
-        },
-        {
-          "code_type": 2,
-          "array_code": [
-            {
-              "activityCode": 202,
-              "activity": "ตรวจสอบเพลี้ยไฟ",
-              "picture": "http://www.ricethailand.go.th/rkb3/bug_001.jpg",
-              "activate": false
-            }
-          ]
-        }
-      ],
-      "activityLenght": 3,
-      "warningLenght": 1
-    },
-    {
-      "order": 2,
-      "activitiesDate": "2020-11-16T00:00:00.000000Z",
-      "caption": null,
-      "status": false,
-      "timelineType": 1,
-      "activities": [
-        {
-          "code_type": 2,
-          "array_code": [
-            {
-              "activityCode": 202,
-              "activity": "ตรวจสอบเพลี้ยไฟ",
-              "picture": "http://www.ricethailand.go.th/rkb3/bug_001.jpg",
-              "activate": false
-            }
-          ]
-        }
-      ],
-      "activityLenght": 0,
-      "warningLenght": 1
-    },
-    {
-      "order": 7,
-      "activitiesDate": "2020-11-22T00:00:00.000000Z",
-      "caption": null,
-      "status": false,
-      "timelineType": 1,
-      "activities": [
-        {
-          "code_type": 1,
-          "array_code": [
-            {
-              "activityCode": 102,
-              "activity": "ตรวจสอบระดับน้ำ 3 เซนติเมตร",
-              "picture": "http://ricepedia.org/images/transplanting.jpg",
-              "activate": false
-            },
-            {
-              "activityCode": 103,
-              "activity": "ให้ปู๋ยสูตร xx-xx-xx",
-              "picture": "http://ricepedia.org/images/nutrient-management.jpg",
-              "activate": false
-            }
-          ]
-        }
-      ],
-      "activityLenght": 2,
-      "warningLenght": 0
-    }
-  ]
-}
+[
+  {
+    "farmPicture": null,
+    "farmID": null,
+    "name": "farm1",
+    "order": 1,
+    "activitiesDate": "2020-11-15T00:00:00.000000Z",
+    "caption": null,
+    "status": false,
+    "timelineType": 1,
+    "activities": [
+      {
+        "code_type": 1,
+        "array_code": [
+          {
+            "activityCode": 101,
+            "activity": "เริ่มปลูกข้าว",
+            "picture": "http://ricepedia.org/images/seed-selection.jpg",
+            "activate": false
+          },
+          {
+            "activityCode": 102,
+            "activity": "ตรวจสอบระดับน้ำ 3 เซนติเมตร",
+            "picture": "http://ricepedia.org/images/transplanting.jpg",
+            "activate": false
+          },
+          {
+            "activityCode": 103,
+            "activity": "ให้ปู๋ยสูตร xx-xx-xx",
+            "picture": "http://ricepedia.org/images/nutrient-management.jpg",
+            "activate": false
+          }
+        ]
+      },
+      {
+        "code_type": 2,
+        "array_code": [
+          {
+            "activityCode": 202,
+            "activity": "ตรวจสอบเพลี้ยไฟ",
+            "picture": "http://www.ricethailand.go.th/rkb3/bug_001.jpg",
+            "activate": false
+          }
+        ]
+      }
+    ],
+    "activityLenght": 3,
+    "warningLenght": 1
+  },
+  {
+    "farmPicture": "https://upload.wikimedia.org/wikipedia/th/4/4e/%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7.png",
+    "farmID": null,
+    "name": "กรมการข้าว",
+    "order": 2,
+    "activitiesDate": "2020-11-15T00:00:00.000000Z",
+    "caption": "เทคนิคการเตรียมดินก่อนการปลูกข้าว",
+    "status": false,
+    "timelineType": 2,
+    "activities": [
+      {
+        "code_type": 3,
+        "array_code": [
+          {
+            "activityCode": 400,
+            "activity": "",
+            "picture": "http://ricepedia.org/images/seed-selection.jpg",
+            "activate": false
+          },
+          {
+            "activityCode": 400,
+            "activity": "",
+            "picture": "http://ricepedia.org/images/transplanting.jpg",
+            "activate": false
+          },
+          {
+            "activityCode": 400,
+            "activity": "",
+            "picture": "http://ricepedia.org/images/nutrient-management.jpg",
+            "activate": false
+          }
+        ]
+      }
+    ],
+    "activityLenght": 0,
+    "warningLenght": 0
+  }
+]

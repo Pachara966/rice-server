@@ -1,4 +1,4 @@
 {
   "mongoURI": "mongodb+srv://songbank:Ece44ecE47kmutNb@cluster0.suzuv.gcp.mongodb.net/rice",
-  "jwtSecret": "GlAs2021"
+  "AIurl": "http://150.95.88.242:10006"
 }

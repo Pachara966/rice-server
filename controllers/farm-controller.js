@@ -62,16 +62,6 @@ async function varieties_eval_only(req, res, next) {
         value: result[index].evalproduct.profit.value,
         status: result[index].evalproduct.profit.status,
       },
-
-      // code_type: result[0],
-      // resultLength: result.length,
-      // timelineLength0: result[0].timeline.length,
-      // timelineLength1: result[1].timeline.length,
-      // resultTimelineActivityLength: result[0].timeline[1].activities.length,
-      // resultTimeline1Activity0Code_type:
-      //   result[0].timeline[1].activities[0].code_type,
-      // resultTimeline1Activity1Code_type:
-      //   result[0].timeline[1].activities[1].code_type,
       timeline: await timeline(result[index].timeline),
     };
   }
@@ -80,13 +70,6 @@ async function varieties_eval_only(req, res, next) {
 
 async function timeline(timelineOrder) {
   const activity1 = await codedef.find();
-
-  // console.log('==========================================');
-  // console.log('==========================================');
-  // console.log(activity1);
-  // console.log('==========================================');
-  // console.log('==========================================');
-
   var package = [{}];
 
   let i, j, k;

@@ -2,6 +2,8 @@ const bcrypt = require('bcryptjs');
 const User = require('../models/userSchema');
 const user = User.userModel;
 
+// user.getCollection('users._id').find({});
+
 async function user_register(req, res, next) {
   console.log('request user register');
   const { name, phonenumber, password } = req.body;
