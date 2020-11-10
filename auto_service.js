@@ -14,7 +14,7 @@ const bree = new Bree({
   jobs: [
     {
       name: 'update_timeline_status',
-      timeout: ms('5000'),
+      timeout: ms('10000'),
       interval: '10m',
     },
     {
