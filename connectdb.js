@@ -3,8 +3,8 @@ const config = require('config');
 
 const db = config.get('mongoURI');
 
-function connect_db() {
-  mongoose
+async function connect_db() {
+  await mongoose
     .connect(db, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
