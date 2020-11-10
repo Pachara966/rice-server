@@ -1,14 +1,17 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+const config = require('config');
+
+const db = config.get('mongoURI');
+
 function connect_db() {
-    const config = {
-        autoIndex: true,
-        useNewUrlParser: true,
-    };
-    const connectionString = 'mongodb+srv://songbank:Ece44ecE47kmutNb@cluster0.suzuv.gcp.mongodb.net/rice';
-    mongoose.connect(connectionString, config)
-        .then(() => console.log('Connected to MongoDB...'))
-        .catch(err => console.log('Cannot cennect to MongoDB', err));
+  mongoose
+    .connect(db, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    })
+    .then(() => console.log('Mongo DB connected...'))
+    .catch((err) => console.log(err));
 }
-
-
 module.exports.connect_db = connect_db;
