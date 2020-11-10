@@ -101,34 +101,36 @@ async function user_update_information(req, res, next) {
         status: 'success',
         uid: userData._id,
         name: userData.name,
-        surname: userData.surname,
         phonenumber: userData.phonenumber,
         address: userData.address,
       });
     });
 }
 
+async function user_delete_user(req, res, next) {
+  const { _id } = req.body;
+
+  console.log('request delete user ID');
+
+  if (!_id) {
+    return res.json({ status: 'fail', msg: 'ไม่มีข้อมูล id' });
+  }
+
+  user.findByIdAndDelete(_id, function (err, docs) {
+    if (err) {
+      console.log(err);
+      return res.json({ status: 'fail', msg: 'ไม่สามารถลบข้อมูลสมาชิกได้' });
+    } else {
+      console.log('Deleted _id : ', docs._id, ', Name : ', docs.name),
+        res.json({
+          status: 'success',
+          msg: 'ลบข้อมูลสมาชิกแล้ว',
+        });
+    }
+  });
+}
+
 module.exports.user_register = user_register;
 module.exports.user_login = user_login;
-// module.exports.user_information = user_information;
 module.exports.user_update_information = user_update_information;
-
-// async function user_information(req, res, next) {
-//   // await connectDB.connect_db();
-//   const uid = req.body.uid;
-//   user
-//     .findOne({ _id: uid })
-//     .then(async function (logindata) {
-//       let ret = {
-//         uid: logindata,
-//         status: 'success',
-//       };
-//       res.send(ret);
-//     })
-//     .catch(() => {
-//       let ret = {
-//         status: 'phonenumber incorrect',
-//       };
-//       res.send(ret);
-//     });
-// }
+module.exports.user_delete_user = user_delete_user;
