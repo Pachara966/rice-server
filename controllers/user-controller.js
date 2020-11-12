@@ -16,6 +16,13 @@ async function user_register(req, res, next) {
     });
   }
 
+  if (phonenumber.length < 6) {
+    return res.json({
+      status: 'fail',
+      msg: 'กรอกเบอร์โทรศัพท์ให้ครบ 10 หลัก',
+    });
+  }
+
   if (password.length < 6) {
     return res.json({
       status: 'fail',
@@ -55,6 +62,13 @@ async function user_login(req, res, next) {
   // Validation
   if (!phonenumber || !password) {
     return res.json({ status: 'fail', msg: 'กรอกข้อมูลให้ครบทุกช่อง' });
+  }
+
+  if (phonenumber.length < 6) {
+    return res.json({
+      status: 'fail',
+      msg: 'กรอกเบอร์โทรศัพท์ให้ครบ 10 หลัก',
+    });
   }
 
   //Check for existing user
@@ -130,7 +144,72 @@ async function user_delete_user(req, res, next) {
   });
 }
 
+async function user_resetpassword(req, res, next) {
+  const { _id, phonenumber, password, newPassword } = req.body;
+  console.log('request reset password');
+
+  // Validation
+  if (!_id || !password || !password || !newPassword) {
+    return res.json({ status: 'fail', msg: 'กรอกข้อมูลให้ครบทุกช่อง' });
+  }
+
+  if (password.length < 6 || newPassword.length < 6) {
+    return res.json({
+      status: 'fail',
+      msg: 'รหัสผ่านอย่างน้อย 6 ตัวอักษร',
+    });
+  }
+
+  if (phonenumber.length < 6) {
+    return res.json({
+      status: 'fail',
+      msg: 'กรอกเบอร์โทรศัพท์ให้ครบ 10 หลัก',
+    });
+  }
+
+  //Check for existing user
+  user.findOne({ phonenumber }).then((logindata) => {
+    if (!logindata)
+      return res.json({ status: 'fail', msg: 'หมายเลขโทรศัพท์ไม่ถูกต้อง' });
+
+    //Validate password
+    bcrypt.compare(password, logindata.password).then((isMatch) => {
+      if (!isMatch) {
+        return res.json({ status: 'fail', msg: 'รหัสผ่านเก่าไม่ถูกต้อง' });
+      } else {
+        //Create salt & hash
+        bcrypt.genSalt(10, (err, salt) => {
+          bcrypt.hash(newPassword, salt, (err, hash) => {
+            if (err) throw err;
+            var newPassword = hash;
+            user
+              .findByIdAndUpdate(
+                { _id },
+                {
+                  password: newPassword,
+                }
+              )
+              .then((userData) => {
+                if (!userData)
+                  return res.json({
+                    status: 'fail',
+                    msg: 'ไม่สามารถแก้ไขรหัสผ่านได้',
+                  });
+
+                res.json({
+                  status: 'success',
+                  msg: 'แก้ไขรหัสผ่านสำเร็จ',
+                });
+              });
+          });
+        });
+      }
+    });
+  });
+}
+
 module.exports.user_register = user_register;
 module.exports.user_login = user_login;
 module.exports.user_update_information = user_update_information;
 module.exports.user_delete_user = user_delete_user;
+module.exports.user_resetpassword = user_resetpassword;

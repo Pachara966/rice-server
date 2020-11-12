@@ -377,7 +377,7 @@ async function updateFeed(req, res, next) {
     //         $push: { feed: dataFeed.Feed },
     //       }
     //     );
-    res.json({ status: 'success', feed });
+    return res.json({ status: 'success', feed });
 
     //res.json({status: 'success', {dataFeed.Feed}});
   } else return res.json({ status: 'fail', msg: 'ไม่พบข้อมูล' });
