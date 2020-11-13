@@ -1,29 +1,60 @@
-const path = require('path');
+// const path = require('path');
 
 // optional
 const ms = require('ms');
-const dayjs = require('dayjs');
+// const dayjs = require('dayjs');
 const Graceful = require('@ladjs/graceful');
-const Cabin = require('cabin');
+// const Cabin = require('cabin');
 
 // required
 const Bree = require('bree');
 
 const bree = new Bree({
   // logger: new Cabin(),
+  // Bree work in UTC time
   jobs: [
     {
       name: 'update_timeline_status',
-      timeout: ms('10000'),
-      interval: '10m',
+      timeout: ms('100000'),
+      interval: ms('300000'),
+      // interval: '10m',
     },
     {
       name: 'test2',
-      interval: 'at 12:00 am',
+      worker: {
+        workerData: {
+          foo: [
+            {
+              code_type: 1,
+              array_code: [
+                {
+                  activityCode: 102,
+                  activity: 'ตรวจสอบระดับน้ำ 3 เซนติเมตร',
+                  picture: 'http://ricepedia.org/images/transplanting.jpg',
+                  activate: false,
+                },
+                {
+                  activityCode: 103,
+                  activity: 'ให้ปู๋ยสูตร xx-xx-xx',
+                  picture:
+                    'http://ricepedia.org/images/nutrient-management.jpg',
+                  activate: false,
+                },
+              ],
+            },
+          ],
+          beep: 'boop',
+        },
+      },
+      interval: 'at 7:16 am also at 7:17 am ',
+    },
+    {
+      name: 'rain_regions',
+      //timeout: ms('5000'),
     },
   ],
 });
-// // handle graceful reloads, pm2 support, and events like SIGHUP, SIGINT, etc.
+// handle graceful reloads, pm2 support, and events like SIGHUP, SIGINT, etc.
 const graceful = new Graceful({ brees: [bree] });
 graceful.listen();
 

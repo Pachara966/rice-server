@@ -1,6 +1,7 @@
 const User = require('../models/userSchema');
 const user = User.userModel;
 const connectDB = require('../connectdb');
+const mongoose = require('mongoose');
 const Farm = require('../models/FarmSchema');
 const farm = Farm.farmModel;
 var dateFormat = require('dateformat');
@@ -20,10 +21,14 @@ var DateTime =
 updateTimelineStatus();
 
 async function updateTimelineStatus() {
+  console.log(
+    '================================================================='
+  );
   await connectDB.connect_db();
   const farmData = await farm.find({}).select(['_id', 'timeline', 'activate']);
   console.log('มีทั้งหมด ', farmData.length, ' farm');
   console.log(DateTime);
+
   // let countWait = 0;
 
   // for (index in farmData) {
@@ -32,5 +37,6 @@ async function updateTimelineStatus() {
   //   }
   // }
   // console.log('count wait = ', countWait);
+  mongoose.connection.close();
   return true;
 }

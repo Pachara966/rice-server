@@ -1,4 +1,11 @@
-console.log('=============Autro run from bree 2===========');
+const { Worker, isMainThread, workerData } = require('worker_threads');
+
+console.log(
+  '==========================Autro run from bree 2=========================='
+);
+
+console.log('worker data', workerData.foo);
+
 var dateFormat = require('dateformat');
 var today = new Date();
 var DateTime =

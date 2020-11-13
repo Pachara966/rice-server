@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://songbank:Ece44ecE47kmutNb@cluster0.suzuv.gcp.mongodb.net/rice",
-  "AIurl": "http://150.95.88.242:10006"
+  "AIurl": "http://150.95.88.242:10006",
+  "uid": "u63glasrice",
+  "ukey": "3e296702720f633d0a819d0f90c35deb"
 }

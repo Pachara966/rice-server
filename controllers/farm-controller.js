@@ -9,14 +9,14 @@ const CodeDif = require('../models/codeDefSchema');
 const codeDif = CodeDif.codeDefModel;
 
 const ai = require('./ai-controller');
-
-const varieties = new schema({
-  ID: Number,
-  rice_varieties_name: String,
-});
+const varieties = require('../models/ricevaritiesSchema');
+// const varieties = new schema({
+//   ID: Number,
+//   rice_varieties_name: String,
+// });
 
 const Varieties = mongoose.model(
-  'rice_varieties_data',
+  'rice_varieties1',
   varieties,
   'rice_varieties_data'
 );

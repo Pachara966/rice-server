@@ -1,0 +1,2903 @@
+{
+  "@attributes": { "Version": "1.0" },
+  "Header": {
+    "Title": "Daily Rain Regions",
+    "Description": "Daily Rain Observation for regions in Thailand ",
+    "Uri": "http://data.tmd.go.th/api/RainRegions/v1/index.php",
+    "LastBuildDate": "2020-11-13 01:11:53",
+    "DateOfData": "2020-11-11",
+    "CopyRight": "Thai Meteorological Department:2016",
+    "Generator": "TMDData_API Services",
+    "status": "200 OK"
+  },
+  "Regions": {
+    "Region": [
+      {
+        "RegionName": "\u0e20\u0e32\u0e04\u0e40\u0e2b\u0e19\u0e37\u0e2d",
+        "Provinces": {
+          "Province": [
+            {
+              "ProvinceName": "\u0e2a\u0e38\u0e42\u0e02\u0e17\u0e31\u0e22",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e2d\u0e38\u0e17\u0e22\u0e32\u0e19\u0e41\u0e2b\u0e48\u0e07\u0e0a\u0e32\u0e15\u0e34\u0e23\u0e32\u0e21\u0e04\u0e33\u0e41\u0e2b\u0e07  (\u0e40\u0e02\u0e32\u0e2b\u0e25\u0e27\u0e07)",
+                  "StationNameEnglish": "Naline Yord Kholung",
+                  "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                  "Longitude": { "@attributes": { "Unit": "decimal degree" } },
+                  "Rainfall": "2.00"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e15\u0e32\u0e01",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e14\u0e2d\u0e22\u0e21\u0e39\u0e40\u0e0b\u0e2d\u0e23\u0e4c \u0e2a\u0e01\u0e29.",
+                  "StationNameEnglish": "DOI MU SOE AGROMET.",
+                  "Latitude": "16.75000",
+                  "Longitude": "98.93333",
+                  "Rainfall": "0.01"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e40\u0e1e\u0e0a\u0e23\u0e1a\u0e39\u0e23\u0e13\u0e4c",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e40\u0e1e\u0e0a\u0e23\u0e1a\u0e39\u0e23\u0e13\u0e4c",
+                    "StationNameEnglish": "PHETCHABUN",
+                    "Latitude": "16.43333",
+                    "Longitude": "101.15000",
+                    "Rainfall": "1.30"
+                  },
+                  {
+                    "StationNameThai": "\u0e2b\u0e25\u0e48\u0e21\u0e2a\u0e31\u0e01",
+                    "StationNameEnglish": "LOM SAK",
+                    "Latitude": "16.77361",
+                    "Longitude": "101.24944",
+                    "Rainfall": "0.02"
+                  },
+                  {
+                    "StationNameThai": "\u0e27\u0e34\u0e40\u0e0a\u0e35\u0e22\u0e23\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "WICHIAN BURI",
+                    "Latitude": "15.65700",
+                    "Longitude": "101.10800",
+                    "Rainfall": "5.41"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e01\u0e33\u0e41\u0e1e\u0e07\u0e40\u0e1e\u0e0a\u0e23",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e01\u0e33\u0e41\u0e1e\u0e07\u0e40\u0e1e\u0e0a\u0e23",
+                    "StationNameEnglish": "KAMPHAENG PHET",
+                    "Latitude": "16.48681",
+                    "Longitude": "99.52697",
+                    "Rainfall": "0.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e23\u0e32\u0e19\u0e01\u0e23\u0e30\u0e15\u0e48\u0e32\u0e22",
+                    "StationNameEnglish": "Phran Kratai",
+                    "Latitude": "16.60000",
+                    "Longitude": "99.63333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e25\u0e32\u0e19\u0e01\u0e23\u0e30\u0e1a\u0e37\u0e2d",
+                    "StationNameEnglish": "Lan Kra Bue",
+                    "Latitude": "16.60000",
+                    "Longitude": "99.90000",
+                    "Rainfall": "0.01"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e1e\u0e34\u0e08\u0e34\u0e15\u0e23",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e1e\u0e34\u0e08\u0e34\u0e15\u0e23 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "PICHIT AGROMET.",
+                    "Latitude": "16.33878",
+                    "Longitude": "100.36711",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e21\u0e39\u0e25\u0e19\u0e32\u0e01",
+                    "StationNameEnglish": "Bang Mool Nak",
+                    "Latitude": "15.98333",
+                    "Longitude": "100.41667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e42\u0e1e\u0e17\u0e30\u0e40\u0e25",
+                    "StationNameEnglish": "Pho Thale",
+                    "Latitude": "16.03333",
+                    "Longitude": "100.26667",
+                    "Rainfall": "0.01"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RegionName": "\u0e20\u0e32\u0e04\u0e15\u0e30\u0e27\u0e31\u0e19\u0e2d\u0e2d\u0e01\u0e40\u0e09\u0e35\u0e22\u0e07\u0e40\u0e2b\u0e19\u0e37\u0e2d",
+        "Provinces": {
+          "Province": [
+            {
+              "ProvinceName": "\u0e40\u0e25\u0e22",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e2d\u0e38\u0e17\u0e22\u0e32\u0e19\u0e41\u0e2b\u0e48\u0e07\u0e0a\u0e32\u0e15\u0e34\u0e20\u0e39\u0e01\u0e23\u0e30\u0e14\u0e36\u0e07 ",
+                  "StationNameEnglish": "Phu Kradung National Parks",
+                  "Latitude": "16.88333",
+                  "Longitude": "101.78333",
+                  "Rainfall": "0.40"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e2d\u0e38\u0e14\u0e23\u0e18\u0e32\u0e19\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2d\u0e38\u0e14\u0e23\u0e18\u0e32\u0e19\u0e35",
+                    "StationNameEnglish": "UDON THANI",
+                    "Latitude": "17.38333",
+                    "Longitude": "102.80000",
+                    "Rainfall": "0.02"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e19\u0e2d\u0e07\u0e2b\u0e32\u0e19",
+                    "StationNameEnglish": "Nong Han",
+                    "Latitude": "17.31667",
+                    "Longitude": "103.13333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e49\u0e32\u0e19\u0e14\u0e38\u0e07",
+                    "StationNameEnglish": "Ban Dung",
+                    "Latitude": "17.71667",
+                    "Longitude": "103.26667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e44\u0e0a\u0e22\u0e27\u0e32\u0e19",
+                    "StationNameEnglish": "Chaiyavan",
+                    "Latitude": "17.30000",
+                    "Longitude": "103.25000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e01\u0e39\u0e48\u0e41\u0e01\u0e49\u0e27",
+                    "StationNameEnglish": "K.A.Ku Keaw",
+                    "Latitude": "17.16667",
+                    "Longitude": "103.16667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1b\u0e23\u0e30\u0e08\u0e31\u0e01\u0e29\u0e4c\u0e28\u0e34\u0e25\u0e1b\u0e32\u0e04\u0e21",
+                    "StationNameEnglish": "A.Prajak Silapakom",
+                    "Latitude": "17.24056",
+                    "Longitude": "103.02889",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e19\u0e2d\u0e07\u0e41\u0e2a\u0e07",
+                    "StationNameEnglish": "A.Nongsang",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.01"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e2a\u0e01\u0e25\u0e19\u0e04\u0e23",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2a\u0e01\u0e25\u0e19\u0e04\u0e23",
+                    "StationNameEnglish": "SAKON NAKHON",
+                    "Latitude": "17.15000",
+                    "Longitude": "104.13333",
+                    "Rainfall": "1.21"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e23\u0e23\u0e13\u0e32\u0e19\u0e34\u0e04\u0e21",
+                    "StationNameEnglish": "Phanna Nikhom",
+                    "Latitude": "17.31667",
+                    "Longitude": "103.86667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2d\u0e32\u0e01\u0e32\u0e28\u0e2d\u0e33\u0e19\u0e27\u0e22",
+                    "StationNameEnglish": "Akat Amnuai",
+                    "Latitude": "17.55000",
+                    "Longitude": "104.00000",
+                    "Rainfall": "3.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e01\u0e38\u0e2a\u0e38\u0e21\u0e32\u0e25\u0e22\u0e4c",
+                    "StationNameEnglish": "Kusuman",
+                    "Latitude": "17.28333",
+                    "Longitude": "104.33333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e31\u0e07\u0e42\u0e04\u0e19",
+                    "StationNameEnglish": "Phang Khon",
+                    "Latitude": "17.38333",
+                    "Longitude": "103.73333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e48\u0e2d\u0e07\u0e14\u0e32\u0e27",
+                    "StationNameEnglish": "Song Dao",
+                    "Latitude": "17.28333",
+                    "Longitude": "103.48333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e27\u0e48\u0e32\u0e07\u0e41\u0e14\u0e19\u0e14\u0e34\u0e19  ",
+                    "StationNameEnglish": "Sawang Daen Din",
+                    "Latitude": "17.41667",
+                    "Longitude": "103.46667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e27\u0e32\u0e23\u0e34\u0e0a\u0e20\u0e39\u0e21\u0e34  ",
+                    "StationNameEnglish": "Waritchaphum",
+                    "Latitude": "17.25000",
+                    "Longitude": "103.65000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e01\u0e38\u0e14\u0e1a\u0e32\u0e01",
+                    "StationNameEnglish": "Kut Bak",
+                    "Latitude": "17.08333",
+                    "Longitude": "103.81667",
+                    "Rainfall": "0.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e42\u0e04\u0e01\u0e28\u0e23\u0e35\u0e2a\u0e38\u0e1e\u0e23\u0e23\u0e13",
+                    "StationNameEnglish": "K.A.Kogsrisuphan",
+                    "Latitude": "17.01667",
+                    "Longitude": "104.35000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e01\u0e25\u0e19\u0e04\u0e23 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "SAKON NAKHON AGROMET.",
+                    "Latitude": "17.12503",
+                    "Longitude": "104.06100",
+                    "Rainfall": "0.60"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e19\u0e04\u0e23\u0e1e\u0e19\u0e21",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e19\u0e04\u0e23\u0e1e\u0e19\u0e21",
+                    "StationNameEnglish": "NAKHON PHANOM",
+                    "Latitude": "17.41083",
+                    "Longitude": "104.78250",
+                    "Rainfall": "0.03"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e18\u0e32\u0e15\u0e38\u0e1e\u0e19\u0e21",
+                    "StationNameEnglish": "That Phanom",
+                    "Latitude": "16.96667",
+                    "Longitude": "104.71667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e48\u0e32\u0e2d\u0e38\u0e40\u0e17\u0e19",
+                    "StationNameEnglish": "Tha Uthen",
+                    "Latitude": "17.51667",
+                    "Longitude": "104.60000",
+                    "Rainfall": "0.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e28\u0e23\u0e35\u0e2a\u0e07\u0e04\u0e23\u0e32\u0e21  ",
+                    "StationNameEnglish": "Si Songkhram",
+                    "Latitude": "17.61667",
+                    "Longitude": "104.30000",
+                    "Rainfall": "5.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e19\u0e04\u0e23\u0e1e\u0e19\u0e21 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "NAKHON PHANOM AGROMET.",
+                    "Latitude": "17.44306",
+                    "Longitude": "104.77361",
+                    "Rainfall": "0.12"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e2b\u0e19\u0e2d\u0e07\u0e1a\u0e31\u0e27\u0e25\u0e33\u0e20\u0e39",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e2b\u0e19\u0e2d\u0e07\u0e1a\u0e31\u0e27\u0e25\u0e33\u0e20\u0e39",
+                  "StationNameEnglish": "NONG BUA LAM PHU",
+                  "Latitude": "17.23250",
+                  "Longitude": "102.42944",
+                  "Rainfall": "0.03"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e02\u0e2d\u0e19\u0e41\u0e01\u0e48\u0e19",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e02\u0e2d\u0e19\u0e41\u0e01\u0e48\u0e19",
+                    "StationNameEnglish": "KHON KAEN",
+                    "Latitude": "16.46111",
+                    "Longitude": "102.78972",
+                    "Rainfall": "1.81"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e0a\u0e19\u0e1a\u0e17 ",
+                    "StationNameEnglish": "Chonnabot",
+                    "Latitude": "16.03333",
+                    "Longitude": "102.65000",
+                    "Rainfall": "4.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e25  ",
+                    "StationNameEnglish": "Phon",
+                    "Latitude": "15.78333",
+                    "Longitude": "102.61667",
+                    "Rainfall": "10.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e0a\u0e38\u0e21\u0e41\u0e1e  ",
+                    "StationNameEnglish": "Chum Phae",
+                    "Latitude": "16.48333",
+                    "Longitude": "102.11667",
+                    "Rainfall": "1.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e01\u0e23\u0e30\u0e19\u0e27\u0e19 ",
+                    "StationNameEnglish": "Kranuan",
+                    "Latitude": "16.66667",
+                    "Longitude": "103.08333",
+                    "Rainfall": "1.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e21\u0e31\u0e0d\u0e08\u0e32\u0e28\u0e34\u0e23\u0e35",
+                    "StationNameEnglish": "Mancha Khiri",
+                    "Latitude": "16.08333",
+                    "Longitude": "102.55000",
+                    "Rainfall": "8.60"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e49\u0e32\u0e19\u0e44\u0e1c\u0e48",
+                    "StationNameEnglish": "Ban Phai",
+                    "Latitude": "16.01667",
+                    "Longitude": "102.73333",
+                    "Rainfall": "0.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e19\u0e2d\u0e07\u0e2a\u0e2d\u0e07\u0e2b\u0e49\u0e2d\u0e07",
+                    "StationNameEnglish": "Nong Song Hong",
+                    "Latitude": "15.71667",
+                    "Longitude": "102.81667",
+                    "Rainfall": "1.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e19\u0e49\u0e33\u0e1e\u0e2d\u0e07",
+                    "StationNameEnglish": "Nam Phong",
+                    "Latitude": "16.66667",
+                    "Longitude": "102.88333",
+                    "Rainfall": "0.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e49\u0e32\u0e19\u0e1d\u0e32\u0e07",
+                    "StationNameEnglish": "Ban Fang",
+                    "Latitude": "16.45000",
+                    "Longitude": "102.61667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e41\u0e27\u0e07\u0e43\u0e2b\u0e0d\u0e48",
+                    "StationNameEnglish": "Waeng Yai",
+                    "Latitude": "15.78333",
+                    "Longitude": "102.55000",
+                    "Rainfall": "8.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e28\u0e39\u0e19\u0e22\u0e4c\u0e27\u0e34\u0e08\u0e31\u0e22\u0e1e\u0e37\u0e0a\u0e44\u0e23\u0e48\u0e02\u0e2d\u0e19\u0e41\u0e01\u0e48\u0e19  \u0e2d.\u0e40\u0e21\u0e37\u0e2d\u0e07",
+                    "StationNameEnglish": "Khon Kaen Field CropsResearch",
+                    "Latitude": "16.48333",
+                    "Longitude": "102.83333",
+                    "Rainfall": "0.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e42\u0e04\u0e01\u0e42\u0e1e\u0e18\u0e34\u0e4c\u0e0a\u0e31\u0e22",
+                    "StationNameEnglish": "Kokepochai",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "6.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e0a\u0e33\u0e2a\u0e39\u0e07",
+                    "StationNameEnglish": "Sam Soong",
+                    "Latitude": "16.52805",
+                    "Longitude": "103.06556",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e49\u0e32\u0e19\u0e41\u0e2e\u0e14",
+                    "StationNameEnglish": "Ban Had",
+                    "Latitude": "16.19694",
+                    "Longitude": "102.76361",
+                    "Rainfall": "8.90"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e42\u0e19\u0e19\u0e28\u0e34\u0e25\u0e32",
+                    "StationNameEnglish": "Non Sila",
+                    "Latitude": "15.79472",
+                    "Longitude": "102.69250",
+                    "Rainfall": "4.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e23\u0e30\u0e22\u0e37\u0e19",
+                    "StationNameEnglish": "Phra Yeun",
+                    "Latitude": "16.33167",
+                    "Longitude": "102.65833",
+                    "Rainfall": "3.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e41\u0e27\u0e07\u0e19\u0e49\u0e2d\u0e22",
+                    "StationNameEnglish": "A.Wangnoi",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "9.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e17\u0e48\u0e32\u0e1e\u0e23\u0e30 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "THA PHRA AGROMET.",
+                    "Latitude": "16.33333",
+                    "Longitude": "102.81667",
+                    "Rainfall": "4.71"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e21\u0e38\u0e01\u0e14\u0e32\u0e2b\u0e32\u0e23",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e21\u0e38\u0e01\u0e14\u0e32\u0e2b\u0e32\u0e23",
+                    "StationNameEnglish": "MUKDAHAN",
+                    "Latitude": "16.54139",
+                    "Longitude": "104.72889",
+                    "Rainfall": "0.51"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e16\u0e32\u0e19\u0e35\u0e17\u0e14\u0e25\u0e2d\u0e07\u0e2b\u0e21\u0e48\u0e2d\u0e19\u0e44\u0e2b\u0e21\u0e21\u0e38\u0e01\u0e14\u0e32\u0e2b\u0e32\u0e23  \u0e2d.\u0e40\u0e21\u0e37\u0e2d\u0e07",
+                    "StationNameEnglish": "Mukdahan Sericulture Research",
+                    "Latitude": "16.53333",
+                    "Longitude": "104.66667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e19\u0e2d\u0e07\u0e2a\u0e39\u0e07",
+                    "StationNameEnglish": "Nong Soong",
+                    "Latitude": "16.38333",
+                    "Longitude": "104.36667",
+                    "Rainfall": "1.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e14\u0e2d\u0e19\u0e15\u0e32\u0e25",
+                    "StationNameEnglish": "Dontan",
+                    "Latitude": "16.31139",
+                    "Longitude": "104.92444",
+                    "Rainfall": "1.30"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e21\u0e2b\u0e32\u0e2a\u0e32\u0e23\u0e04\u0e32\u0e21",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e21\u0e2b\u0e32\u0e2a\u0e32\u0e23\u0e04\u0e32\u0e21",
+                  "StationNameEnglish": "MAHASARAKHAM",
+                  "Latitude": "16.24722",
+                  "Longitude": "103.06805",
+                  "Rainfall": "6.40"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e01\u0e32\u0e2c\u0e2a\u0e34\u0e19\u0e18\u0e38\u0e4c",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e01\u0e32\u0e2c\u0e2a\u0e34\u0e19\u0e18\u0e38\u0e4c",
+                    "StationNameEnglish": "KALASIN",
+                    "Latitude": "16.33203",
+                    "Longitude": "103.58753",
+                    "Rainfall": "5.51"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e01\u0e32\u0e2c\u0e2a\u0e34\u0e19\u0e18\u0e38\u0e4c  ",
+                    "StationNameEnglish": "A.Muang Kalasin",
+                    "Latitude": "16.41667",
+                    "Longitude": "103.51667",
+                    "Rainfall": "2.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e22\u0e32\u0e07\u0e15\u0e25\u0e32\u0e14",
+                    "StationNameEnglish": "Yang Talat",
+                    "Latitude": "16.36667",
+                    "Longitude": "103.36667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e21\u0e40\u0e14\u0e47\u0e08",
+                    "StationNameEnglish": "Somdet",
+                    "Latitude": "16.66667",
+                    "Longitude": "103.75000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e48\u0e32\u0e04\u0e31\u0e19\u0e42\u0e17",
+                    "StationNameEnglish": "Tha Khantho",
+                    "Latitude": "16.88333",
+                    "Longitude": "103.23333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e28\u0e39\u0e19\u0e22\u0e4c\u0e27\u0e34\u0e08\u0e31\u0e22\u0e1e\u0e37\u0e0a\u0e44\u0e23\u0e48\u0e01\u0e32\u0e2c\u0e2a\u0e34\u0e19\u0e18\u0e38\u0e4c  \u0e2d.\u0e22\u0e32\u0e07\u0e15\u0e25\u0e32\u0e14",
+                    "StationNameEnglish": "Kalasin Field Crops Research S",
+                    "Latitude": "16.40000",
+                    "Longitude": "103.38333",
+                    "Rainfall": "2.70"
+                  },
+                  {
+                    "StationNameThai": "\u0e19\u0e34\u0e04\u0e21\u0e2a\u0e23\u0e49\u0e32\u0e07\u0e15\u0e19\u0e40\u0e2d\u0e07\u0e01\u0e38\u0e09\u0e34\u0e19\u0e32\u0e23\u0e32\u0e22\u0e19\u0e4c",
+                    "StationNameEnglish": "Kuchinarai Self-Help Settlemen",
+                    "Latitude": "16.65000",
+                    "Longitude": "103.90000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e19\u0e32\u0e21\u0e19",
+                    "StationNameEnglish": "Namon Agricultural Office",
+                    "Latitude": "16.56667",
+                    "Longitude": "103.80000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e23\u0e48\u0e2d\u0e07\u0e04\u0e33",
+                    "StationNameEnglish": "K.A.Rongkam",
+                    "Latitude": "16.30000",
+                    "Longitude": "103.71667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e06\u0e49\u0e2d\u0e07\u0e0a\u0e31\u0e22",
+                    "StationNameEnglish": "A. KONG CHAI",
+                    "Latitude": "16.24500",
+                    "Longitude": "103.45722",
+                    "Rainfall": "3.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e14\u0e2d\u0e19\u0e08\u0e32\u0e19",
+                    "StationNameEnglish": "A.Don jan",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.01"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e2d\u0e33\u0e19\u0e32\u0e08\u0e40\u0e08\u0e23\u0e34\u0e0d",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e2d\u0e33\u0e19\u0e32\u0e08\u0e40\u0e08\u0e23\u0e34\u0e0d",
+                  "StationNameEnglish": "Amnat Charoen",
+                  "Latitude": "15.90375",
+                  "Longitude": "104.61805",
+                  "Rainfall": "0.21"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e0a\u0e31\u0e22\u0e20\u0e39\u0e21\u0e34",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e0a\u0e31\u0e22\u0e20\u0e39\u0e21\u0e34",
+                    "StationNameEnglish": "CHAIYAPHUM",
+                    "Latitude": "15.80000",
+                    "Longitude": "102.03333",
+                    "Rainfall": "5.21"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e08\u0e31\u0e15\u0e38\u0e23\u0e31\u0e2a  ( \u0e2d\u0e38\u0e17\u0e01\u0e0a\u0e31\u0e49\u0e19 3 )",
+                    "StationNameEnglish": "Chatturat",
+                    "Latitude": "15.51667",
+                    "Longitude": "101.85000",
+                    "Rainfall": "12.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e01\u0e29\u0e15\u0e23\u0e2a\u0e21\u0e1a\u0e39\u0e23\u0e13\u0e4c",
+                    "StationNameEnglish": "Kaset Sombun",
+                    "Latitude": "16.23333",
+                    "Longitude": "101.96667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e49\u0e32\u0e19\u0e02\u0e27\u0e49\u0e32",
+                    "StationNameEnglish": "Ban Khwao",
+                    "Latitude": "15.75000",
+                    "Longitude": "101.93333",
+                    "Rainfall": "7.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e49\u0e32\u0e19\u0e41\u0e17\u0e48\u0e19",
+                    "StationNameEnglish": "Ban Thaen",
+                    "Latitude": "16.35000",
+                    "Longitude": "102.36667",
+                    "Rainfall": "1.30"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e19\u0e2d\u0e07\u0e1a\u0e31\u0e27\u0e41\u0e14\u0e07",
+                    "StationNameEnglish": "Nong Bua Daeng",
+                    "Latitude": "15.98333",
+                    "Longitude": "101.91667",
+                    "Rainfall": "1.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e33\u0e40\u0e2b\u0e19\u0e47\u0e08\u0e13\u0e23\u0e07\u0e04\u0e4c  **",
+                    "StationNameEnglish": "Bamnet Narong",
+                    "Latitude": "15.45000",
+                    "Longitude": "101.70000",
+                    "Rainfall": "9.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e04\u0e2d\u0e19\u0e2a\u0e27\u0e23\u0e23\u0e04\u0e4c  **",
+                    "StationNameEnglish": "Khon Sawan",
+                    "Latitude": "15.88333",
+                    "Longitude": "102.30000",
+                    "Rainfall": "15.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e19\u0e2d\u0e07\u0e1a\u0e31\u0e27\u0e23\u0e30\u0e40\u0e2b\u0e27",
+                    "StationNameEnglish": "Nongbua rahaew",
+                    "Latitude": "15.81667",
+                    "Longitude": "101.73333",
+                    "Rainfall": "5.70"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e17\u0e1e\u0e2a\u0e16\u0e34\u0e15",
+                    "StationNameEnglish": "Thep Sathit",
+                    "Latitude": "15.40000",
+                    "Longitude": "101.35000",
+                    "Rainfall": "13.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e20\u0e31\u0e01\u0e14\u0e35\u0e0a\u0e38\u0e21\u0e1e\u0e25",
+                    "StationNameEnglish": "K.A.Pakdee Chumpon",
+                    "Latitude": "15.85000",
+                    "Longitude": "101.41667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e19\u0e34\u0e19\u0e2a\u0e07\u0e48\u0e32",
+                    "StationNameEnglish": "K.A.Neon Sanga",
+                    "Latitude": "15.56667",
+                    "Longitude": "101.00000",
+                    "Rainfall": "15.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e0b\u0e31\u0e1a\u0e43\u0e2b\u0e0d\u0e48",
+                    "StationNameEnglish": "A.SUB YAI",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "8.00"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e23\u0e49\u0e2d\u0e22\u0e40\u0e2d\u0e47\u0e14",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e23\u0e49\u0e2d\u0e22\u0e40\u0e2d\u0e47\u0e14",
+                    "StationNameEnglish": "ROI ET",
+                    "Latitude": "16.02000",
+                    "Longitude": "103.74389",
+                    "Rainfall": "1.31"
+                  },
+                  {
+                    "StationNameThai": "\u0e23\u0e49\u0e2d\u0e22\u0e40\u0e2d\u0e47\u0e14 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "ROI ET AGROMET.",
+                    "Latitude": "16.07322",
+                    "Longitude": "103.60844",
+                    "Rainfall": "2.21"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e15\u0e32\u0e14\u0e17\u0e2d\u0e07",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e22\u0e42\u0e2a\u0e18\u0e23",
+                  "StationNameEnglish": "Yasothon",
+                  "Latitude": "15.79494",
+                  "Longitude": "104.21436",
+                  "Rainfall": "0.02"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e2d\u0e38\u0e1a\u0e25\u0e23\u0e32\u0e0a\u0e18\u0e32\u0e19\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2d\u0e38\u0e1a\u0e25\u0e23\u0e32\u0e0a\u0e18\u0e32\u0e19\u0e35 (\u0e28\u0e39\u0e19\u0e22\u0e4c\u0e2f)",
+                    "StationNameEnglish": "UBON RATCHATHANI",
+                    "Latitude": "15.25000",
+                    "Longitude": "104.86667",
+                    "Rainfall": "0.02"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e15\u0e23\u0e30\u0e01\u0e32\u0e23\u0e1e\u0e37\u0e0a\u0e1c\u0e25",
+                    "StationNameEnglish": "Trakan Phutphon",
+                    "Latitude": "15.05000",
+                    "Longitude": "105.61667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e19\u0e49\u0e33\u0e22\u0e37\u0e19",
+                    "StationNameEnglish": "Nam Yun",
+                    "Latitude": "14.48333",
+                    "Longitude": "104.98333",
+                    "Rainfall": "7.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e38\u0e13\u0e11\u0e23\u0e34\u0e01  **",
+                    "StationNameEnglish": "Buntharik",
+                    "Latitude": "14.73333",
+                    "Longitude": "105.43333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e19\u0e32\u0e08\u0e30\u0e2b\u0e25\u0e27\u0e22",
+                    "StationNameEnglish": "Na Chaluai",
+                    "Latitude": "14.51667",
+                    "Longitude": "105.25000",
+                    "Rainfall": "6.20"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e19\u0e04\u0e23\u0e23\u0e32\u0e0a\u0e2a\u0e35\u0e21\u0e32",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e19\u0e04\u0e23\u0e23\u0e32\u0e0a\u0e2a\u0e35\u0e21\u0e32",
+                    "StationNameEnglish": "NAKHON RATCHASIMA",
+                    "Latitude": "14.96830",
+                    "Longitude": "102.08603",
+                    "Rainfall": "2.71"
+                  },
+                  {
+                    "StationNameThai": "\u0e1b\u0e32\u0e01\u0e0a\u0e48\u0e2d\u0e07 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "PAKCHONG AGROMET.",
+                    "Latitude": "14.64389",
+                    "Longitude": "101.33194",
+                    "Rainfall": "3.90"
+                  },
+                  {
+                    "StationNameThai": "\u0e42\u0e0a\u0e04\u0e0a\u0e31\u0e22",
+                    "StationNameEnglish": "CHOK CHAI",
+                    "Latitude": "14.71889",
+                    "Longitude": "102.16861",
+                    "Rainfall": "3.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e34\u0e21\u0e32\u0e22",
+                    "StationNameEnglish": "Phimai",
+                    "Latitude": "15.18333",
+                    "Longitude": "102.50000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e31\u0e27\u0e43\u0e2b\u0e0d\u0e48",
+                    "StationNameEnglish": "Bua Yai",
+                    "Latitude": "15.51667",
+                    "Longitude": "102.43333",
+                    "Rainfall": "5.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e14\u0e48\u0e32\u0e19\u0e02\u0e38\u0e19\u0e17\u0e14",
+                    "StationNameEnglish": "Dan Khun Thot",
+                    "Latitude": "15.18333",
+                    "Longitude": "101.80000",
+                    "Rainfall": "2.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e39\u0e07\u0e40\u0e19\u0e34\u0e19",
+                    "StationNameEnglish": "Sung Noen",
+                    "Latitude": "14.90000",
+                    "Longitude": "101.81667",
+                    "Rainfall": "2.30"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1b\u0e31\u0e01\u0e18\u0e07\u0e0a\u0e31\u0e22",
+                    "StationNameEnglish": "Pak Thong Chai",
+                    "Latitude": "14.68333",
+                    "Longitude": "102.05000",
+                    "Rainfall": "3.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e04\u0e23\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "Khon Buri",
+                    "Latitude": "14.45000",
+                    "Longitude": "102.26667",
+                    "Rainfall": "3.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e08\u0e31\u0e01\u0e23\u0e32\u0e0a",
+                    "StationNameEnglish": "Chakkarat",
+                    "Latitude": "14.96667",
+                    "Longitude": "102.41667",
+                    "Rainfall": "0.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e04\u0e07",
+                    "StationNameEnglish": "Khong",
+                    "Latitude": "15.40000",
+                    "Longitude": "102.35000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e49\u0e27\u0e22\u0e41\u0e01\u0e25\u0e07",
+                    "StationNameEnglish": "Huai Thalaeng",
+                    "Latitude": "14.96667",
+                    "Longitude": "102.63333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e0a\u0e38\u0e21\u0e1e\u0e27\u0e07",
+                    "StationNameEnglish": "Chum Phuang",
+                    "Latitude": "15.31667",
+                    "Longitude": "102.76667",
+                    "Rainfall": "4.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1b\u0e23\u0e30\u0e17\u0e32\u0e22",
+                    "StationNameEnglish": "Prathai",
+                    "Latitude": "15.50000",
+                    "Longitude": "102.71667",
+                    "Rainfall": "1.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e02\u0e32\u0e21\u0e2a\u0e30\u0e41\u0e01\u0e41\u0e2a\u0e07",
+                    "StationNameEnglish": "Kham Sakae Saeng",
+                    "Latitude": "15.30000",
+                    "Longitude": "102.16667",
+                    "Rainfall": "1.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e2a\u0e34\u0e07\u0e2a\u0e32\u0e07",
+                    "StationNameEnglish": "Soeng Sang",
+                    "Latitude": "14.41667",
+                    "Longitude": "102.45000",
+                    "Rainfall": "4.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e17\u0e35\u0e48\u0e17\u0e33\u0e01\u0e32\u0e23\u0e44\u0e1b\u0e23\u0e29\u0e13\u0e35\u0e22\u0e4c\u0e42\u0e17\u0e23\u0e40\u0e25\u0e02\u0e42\u0e19\u0e19\u0e44\u0e17\u0e22",
+                    "StationNameEnglish": "Non Thai",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "1.70"
+                  },
+                  {
+                    "StationNameThai": "\u0e17\u0e35\u0e48\u0e17\u0e33\u0e01\u0e32\u0e23\u0e44\u0e1b\u0e23\u0e29\u0e13\u0e35\u0e22\u0e4c\u0e42\u0e17\u0e23\u0e40\u0e25\u0e02\u0e2a\u0e35\u0e48\u0e04\u0e34\u0e49\u0e27",
+                    "StationNameEnglish": "Sikhiu",
+                    "Latitude": "15.85000",
+                    "Longitude": "101.71667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e33\u0e19\u0e31\u0e01\u0e07\u0e32\u0e19\u0e40\u0e01\u0e29\u0e15\u0e23\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1b\u0e32\u0e01\u0e0a\u0e48\u0e2d\u0e07",
+                    "StationNameEnglish": "Pak Chong",
+                    "Latitude": "14.70000",
+                    "Longitude": "101.41667",
+                    "Rainfall": "13.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e42\u0e19\u0e19\u0e2a\u0e39\u0e07",
+                    "StationNameEnglish": "Non Soong",
+                    "Latitude": "15.18333",
+                    "Longitude": "102.25000",
+                    "Rainfall": "4.60"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e19\u0e2d\u0e07\u0e02\u0e38\u0e19\u0e19\u0e32\u0e01",
+                    "StationNameEnglish": "Nong Bunnak",
+                    "Latitude": "14.70000",
+                    "Longitude": "102.46667",
+                    "Rainfall": "2.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e41\u0e01\u0e49\u0e07\u0e2a\u0e19\u0e32\u0e21\u0e19\u0e32\u0e07",
+                    "StationNameEnglish": "Kaeng Sanam Nang",
+                    "Latitude": "15.75000",
+                    "Longitude": "102.25000",
+                    "Rainfall": "6.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e27\u0e31\u0e07\u0e19\u0e49\u0e33\u0e40\u0e02\u0e35\u0e22\u0e27",
+                    "StationNameEnglish": "K.A.Wang Nam Khieo",
+                    "Latitude": "14.41667",
+                    "Longitude": "101.86667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e22\u0e32\u0e07",
+                    "StationNameEnglish": "A.Muang Yang",
+                    "Latitude": "15.41694",
+                    "Longitude": "102.89722",
+                    "Rainfall": "0.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e17\u0e1e\u0e32\u0e23\u0e31\u0e01\u0e29\u0e4c ( \u0e2a\u0e33\u0e19\u0e31\u0e01\u0e15\u0e30\u0e04\u0e49\u0e2d )",
+                    "StationNameEnglish": "A.Theparak",
+                    "Latitude": "15.28611",
+                    "Longitude": "101.57222",
+                    "Rainfall": "3.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e35\u0e14\u0e32",
+                    "StationNameEnglish": "A.Sida",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "2.00"
+                  },
+                  {
+                    "StationNameThai": " \u0e2d.\u0e1a\u0e31\u0e27\u0e25\u0e32\u0e22",
+                    "StationNameEnglish": "A. boalai",
+                    "Latitude": "15.67361",
+                    "Longitude": "102.48889",
+                    "Rainfall": "7.70"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e23\u0e30\u0e17\u0e2d\u0e07\u0e04\u0e33",
+                    "StationNameEnglish": "A.Phrathongkam",
+                    "Latitude": "15.31500",
+                    "Longitude": "101.99028",
+                    "Rainfall": "3.00"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e2a\u0e38\u0e23\u0e34\u0e19\u0e17\u0e23\u0e4c",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2a\u0e38\u0e23\u0e34\u0e19\u0e17\u0e23\u0e4c",
+                    "StationNameEnglish": "SURIN",
+                    "Latitude": "14.88333",
+                    "Longitude": "103.50000",
+                    "Rainfall": "3.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e38\u0e23\u0e34\u0e19\u0e17\u0e23\u0e4c \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "SURIN AGROMET.",
+                    "Latitude": "14.88333",
+                    "Longitude": "103.45000",
+                    "Rainfall": "4.00"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e1a\u0e38\u0e23\u0e35\u0e23\u0e31\u0e21\u0e22\u0e4c",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e1a\u0e38\u0e23\u0e35\u0e23\u0e31\u0e21\u0e22\u0e4c",
+                    "StationNameEnglish": "BURIRUM",
+                    "Latitude": "15.22575",
+                    "Longitude": "103.24808",
+                    "Rainfall": "4.12"
+                  },
+                  {
+                    "StationNameThai": "\u0e19\u0e32\u0e07\u0e23\u0e2d\u0e07",
+                    "StationNameEnglish": "NANG RONG",
+                    "Latitude": "14.58333",
+                    "Longitude": "102.80000",
+                    "Rainfall": "4.61"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e1a\u0e38\u0e23\u0e35\u0e23\u0e31\u0e21\u0e22\u0e4c",
+                    "StationNameEnglish": "Buri Ram",
+                    "Latitude": "14.95000",
+                    "Longitude": "103.13333",
+                    "Rainfall": "0.70"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e25\u0e30\u0e2b\u0e32\u0e19\u0e17\u0e23\u0e32\u0e22 ( \u0e2d\u0e38\u0e17\u0e01\u0e0a\u0e31\u0e49\u0e19 3 )",
+                    "StationNameEnglish": "Lahan Sai",
+                    "Latitude": "14.36667",
+                    "Longitude": "102.86667",
+                    "Rainfall": "3.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1b\u0e23\u0e30\u0e42\u0e04\u0e19\u0e0a\u0e31\u0e22",
+                    "StationNameEnglish": "Prakhon Chai",
+                    "Latitude": "14.56667",
+                    "Longitude": "103.11667",
+                    "Rainfall": "5.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e04\u0e39\u0e40\u0e21\u0e37\u0e2d\u0e07",
+                    "StationNameEnglish": "Khu Muang",
+                    "Latitude": "15.31667",
+                    "Longitude": "103.01667",
+                    "Rainfall": "1.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e19\u0e2d\u0e07\u0e01\u0e35\u0e48",
+                    "StationNameEnglish": "Nong Ki",
+                    "Latitude": "14.68333",
+                    "Longitude": "102.56667",
+                    "Rainfall": "2.90"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e49\u0e32\u0e19\u0e01\u0e23\u0e27\u0e14",
+                    "StationNameEnglish": "Ban Kruat",
+                    "Latitude": "14.36667",
+                    "Longitude": "103.10000",
+                    "Rainfall": "1.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1b\u0e23\u0e30\u0e04\u0e33",
+                    "StationNameEnglish": "Pa Kham",
+                    "Latitude": "14.45000",
+                    "Longitude": "102.73333",
+                    "Rainfall": "3.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e49\u0e32\u0e19\u0e14\u0e48\u0e32\u0e19",
+                    "StationNameEnglish": "A.Ban Dan",
+                    "Latitude": "15.10389",
+                    "Longitude": "103.17861",
+                    "Rainfall": "3.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e09\u0e25\u0e34\u0e21\u0e1e\u0e23\u0e30\u0e40\u0e01\u0e23\u0e35\u0e22\u0e23\u0e15\u0e34",
+                    "StationNameEnglish": "Chalerm Phrakiat",
+                    "Latitude": "14.55583",
+                    "Longitude": "102.92750",
+                    "Rainfall": "4.50"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RegionName": "\u0e20\u0e32\u0e04\u0e01\u0e25\u0e32\u0e07",
+        "Provinces": {
+          "Province": [
+            {
+              "ProvinceName": "\u0e2a\u0e34\u0e07\u0e2b\u0e4c\u0e1a\u0e38\u0e23\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2a\u0e34\u0e07\u0e2b\u0e4c\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "Sing Buri",
+                    "Latitude": "14.88333",
+                    "Longitude": "100.40000",
+                    "Rainfall": "0.60"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e23\u0e2b\u0e21\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "Phrom Buri",
+                    "Latitude": "14.78333",
+                    "Longitude": "100.46667",
+                    "Rainfall": "0.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e23\u0e30\u0e08\u0e31\u0e19",
+                    "StationNameEnglish": "Bang Rachan",
+                    "Latitude": "14.83333",
+                    "Longitude": "100.20000",
+                    "Rainfall": "1.60"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e2d\u0e48\u0e32\u0e07\u0e17\u0e2d\u0e07",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2a\u0e33\u0e19\u0e31\u0e01\u0e07\u0e32\u0e19\u0e40\u0e01\u0e29\u0e15\u0e23\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14\u0e2d\u0e48\u0e32\u0e07\u0e17\u0e2d\u0e07",
+                    "StationNameEnglish": "Ang Thong",
+                    "Latitude": "14.58333",
+                    "Longitude": "100.45000",
+                    "Rainfall": "2.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e42\u0e1e\u0e18\u0e34\u0e4c\u0e17\u0e2d\u0e07",
+                    "StationNameEnglish": "Pho Thong",
+                    "Latitude": "14.65000",
+                    "Longitude": "100.40000",
+                    "Rainfall": "0.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e16\u0e32\u0e19\u0e35\u0e17\u0e14\u0e25\u0e2d\u0e07\u0e41\u0e25\u0e30\u0e02\u0e22\u0e32\u0e22\u0e1e\u0e31\u0e19\u0e18\u0e38\u0e4c\u0e2d\u0e49\u0e2d\u0e22 \u0e2d.\u0e41\u0e2a\u0e27\u0e07\u0e2b\u0e32",
+                    "StationNameEnglish": "Ang Thong Sugar Cane Breeding",
+                    "Latitude": "14.78055",
+                    "Longitude": "100.23528",
+                    "Rainfall": "0.01"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e2d\u0e38\u0e17\u0e31\u0e22\u0e18\u0e32\u0e19\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2d\u0e38\u0e17\u0e31\u0e22\u0e18\u0e32\u0e19\u0e35",
+                    "StationNameEnglish": "Uthai Thani",
+                    "Latitude": "15.35000",
+                    "Longitude": "100.05000",
+                    "Rainfall": "2.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e49\u0e32\u0e19\u0e44\u0e23\u0e48",
+                    "StationNameEnglish": "Ban Rai",
+                    "Latitude": "15.03333",
+                    "Longitude": "99.55000",
+                    "Rainfall": "0.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e19\u0e2d\u0e07\u0e09\u0e32\u0e07",
+                    "StationNameEnglish": "Nong Chang",
+                    "Latitude": "15.35000",
+                    "Longitude": "99.86667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e31\u0e1e\u0e17\u0e31\u0e19",
+                    "StationNameEnglish": "Thap Than",
+                    "Latitude": "15.41667",
+                    "Longitude": "99.91667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e27\u0e48\u0e32\u0e07\u0e2d\u0e32\u0e23\u0e21\u0e13\u0e4c",
+                    "StationNameEnglish": "Sawang Arom",
+                    "Latitude": "15.51667",
+                    "Longitude": "99.88333",
+                    "Rainfall": "0.01"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e19\u0e04\u0e23\u0e2a\u0e27\u0e23\u0e23\u0e04\u0e4c",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e19\u0e04\u0e23\u0e2a\u0e27\u0e23\u0e23\u0e04\u0e4c ",
+                    "StationNameEnglish": "NAKHON SAWAN",
+                    "Latitude": "15.67183",
+                    "Longitude": "100.13236",
+                    "Rainfall": "0.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e48\u0e32\u0e15\u0e30\u0e42\u0e01",
+                    "StationNameEnglish": "Tha Tako",
+                    "Latitude": "15.60000",
+                    "Longitude": "100.51667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e25\u0e32\u0e14\u0e22\u0e32\u0e27",
+                    "StationNameEnglish": "Lat Yao",
+                    "Latitude": "15.70000",
+                    "Longitude": "99.81667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e42\u0e01\u0e23\u0e01\u0e1e\u0e23\u0e30",
+                    "StationNameEnglish": "Krok Phra",
+                    "Latitude": "15.51667",
+                    "Longitude": "100.08333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e15\u0e32\u0e04\u0e25\u0e35",
+                    "StationNameEnglish": "Takhli",
+                    "Latitude": "15.21667",
+                    "Longitude": "100.35000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e0a\u0e38\u0e21\u0e41\u0e2a\u0e07",
+                    "StationNameEnglish": "Chumsaeng",
+                    "Latitude": "15.85000",
+                    "Longitude": "100.33333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e19\u0e2d\u0e07\u0e1a\u0e31\u0e27",
+                    "StationNameEnglish": "Nong Bua",
+                    "Latitude": "15.81667",
+                    "Longitude": "100.63333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e44\u0e1e\u0e28\u0e32\u0e25\u0e35",
+                    "StationNameEnglish": "Phaisali",
+                    "Latitude": "15.56667",
+                    "Longitude": "100.70000",
+                    "Rainfall": "3.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e15\u0e32\u0e01\u0e1f\u0e49\u0e32 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "TAKFA AGROMET.",
+                    "Latitude": "15.34944",
+                    "Longitude": "100.53028",
+                    "Rainfall": "3.00"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e0a\u0e31\u0e22\u0e19\u0e32\u0e17",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e0a\u0e31\u0e22\u0e19\u0e32\u0e17 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "CHAINAT AGROMET.",
+                    "Latitude": "15.15000",
+                    "Longitude": "100.18333",
+                    "Rainfall": "0.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e21\u0e42\u0e19\u0e23\u0e21\u0e22\u0e4c",
+                    "StationNameEnglish": "Manorom",
+                    "Latitude": "15.26667",
+                    "Longitude": "100.10000",
+                    "Rainfall": "1.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e27\u0e31\u0e14\u0e2a\u0e34\u0e07\u0e2b\u0e4c",
+                    "StationNameEnglish": "Wat Sing",
+                    "Latitude": "15.23333",
+                    "Longitude": "100.05000",
+                    "Rainfall": "0.60"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e23\u0e23\u0e1e\u0e22\u0e32",
+                    "StationNameEnglish": "San phaya",
+                    "Latitude": "15.08333",
+                    "Longitude": "100.26667",
+                    "Rainfall": "0.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e31\u0e19\u0e04\u0e32",
+                    "StationNameEnglish": "Han ka",
+                    "Latitude": "14.98333",
+                    "Longitude": "100.01667",
+                    "Rainfall": "0.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e28\u0e39\u0e19\u0e22\u0e4c\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23\u0e27\u0e34\u0e0a\u0e32\u0e01\u0e32\u0e23\u0e14\u0e49\u0e32\u0e19\u0e1e\u0e37\u0e0a\u0e41\u0e25\u0e30\u0e1b\u0e31\u0e08\u0e08\u0e31\u0e22\u0e01\u0e32\u0e23\u0e1c\u0e25\u0e34\u0e15\u0e0a\u0e31\u0e22\u0e19\u0e32\u0e17",
+                    "StationNameEnglish": "Chai Nat Rice Research Station",
+                    "Latitude": "15.20000",
+                    "Longitude": "100.15000",
+                    "Rainfall": "0.50"
+                  },
+                  {
+                    "StationNameThai": " \u0e2d.\u0e2b\u0e19\u0e2d\u0e07\u0e21\u0e30\u0e42\u0e21\u0e07",
+                    "StationNameEnglish": "A.Nong Mamong",
+                    "Latitude": "15.27722",
+                    "Longitude": "99.88028",
+                    "Rainfall": "0.01"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e2d\u0e38\u0e17\u0e31\u0e22\u0e18\u0e32\u0e19\u0e35",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e2d\u0e38\u0e17\u0e31\u0e22\u0e18\u0e32\u0e19\u0e35",
+                  "StationNameEnglish": "UTHAITHANI",
+                  "Latitude": "15.37417",
+                  "Longitude": "100.03889",
+                  "Rainfall": "1.32"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e1e\u0e23\u0e30\u0e19\u0e04\u0e23\u0e28\u0e23\u0e35\u0e2d\u0e22\u0e38\u0e18\u0e22\u0e32",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e1e\u0e23\u0e30\u0e19\u0e04\u0e23\u0e28\u0e23\u0e35\u0e2d\u0e22\u0e38\u0e18\u0e22\u0e32",
+                    "StationNameEnglish": "AYUTTHAYA",
+                    "Latitude": "14.53472",
+                    "Longitude": "100.72500",
+                    "Rainfall": "1.90"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e23\u0e30\u0e19\u0e04\u0e23\u0e28\u0e23\u0e35\u0e2d\u0e22\u0e38\u0e18\u0e22\u0e32",
+                    "StationNameEnglish": "Phra Nakhon Si Ayutthaya",
+                    "Latitude": "14.36667",
+                    "Longitude": "100.58333",
+                    "Rainfall": "7.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e1b\u0e30\u0e2d\u0e34\u0e19",
+                    "StationNameEnglish": "Bang Pa-In",
+                    "Latitude": "14.21667",
+                    "Longitude": "100.61667",
+                    "Rainfall": "8.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e44\u0e17\u0e23",
+                    "StationNameEnglish": "Bang Sai",
+                    "Latitude": "14.20000",
+                    "Longitude": "100.50000",
+                    "Rainfall": "8.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e25\u0e32\u0e14\u0e1a\u0e31\u0e27\u0e2b\u0e25\u0e27\u0e07",
+                    "StationNameEnglish": "Lat Bua Luang",
+                    "Latitude": "14.13333",
+                    "Longitude": "100.33333",
+                    "Rainfall": "6.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e2a\u0e19\u0e32",
+                    "StationNameEnglish": "Sena",
+                    "Latitude": "14.33333",
+                    "Longitude": "100.41667",
+                    "Rainfall": "3.30"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e0b\u0e49\u0e32\u0e22",
+                    "StationNameEnglish": "Bang Sai",
+                    "Latitude": "14.30000",
+                    "Longitude": "100.31667",
+                    "Rainfall": "8.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1c\u0e31\u0e01\u0e44\u0e2b\u0e48",
+                    "StationNameEnglish": "Phak Hai",
+                    "Latitude": "14.45000",
+                    "Longitude": "100.40000",
+                    "Rainfall": "4.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e49\u0e32\u0e19\u0e41\u0e1e\u0e23\u0e01",
+                    "StationNameEnglish": "Ban Phraek",
+                    "Latitude": "14.68333",
+                    "Longitude": "100.60000",
+                    "Rainfall": "3.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e19\u0e04\u0e23\u0e2b\u0e25\u0e27\u0e07",
+                    "StationNameEnglish": "Nakhon Luang",
+                    "Latitude": "14.46667",
+                    "Longitude": "100.61667",
+                    "Rainfall": "5.70"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e48\u0e32\u0e40\u0e23\u0e37\u0e2d",
+                    "StationNameEnglish": "Tha Rua",
+                    "Latitude": "14.58333",
+                    "Longitude": "100.73333",
+                    "Rainfall": "1.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e27\u0e31\u0e07\u0e19\u0e49\u0e2d\u0e22",
+                    "StationNameEnglish": "Wang Noi",
+                    "Latitude": "14.20000",
+                    "Longitude": "100.73333",
+                    "Rainfall": "5.90"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e1a\u0e32\u0e25",
+                    "StationNameEnglish": "Bang Ban",
+                    "Latitude": "14.35000",
+                    "Longitude": "100.53333",
+                    "Rainfall": "10.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2d\u0e38\u0e17\u0e31\u0e22",
+                    "StationNameEnglish": "Uthai",
+                    "Latitude": "14.38333",
+                    "Longitude": "100.66667",
+                    "Rainfall": "15.60"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e1b\u0e17\u0e38\u0e21\u0e18\u0e32\u0e19\u0e35",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e1b\u0e17\u0e38\u0e21\u0e18\u0e32\u0e19\u0e35 \u0e2a\u0e01\u0e29.",
+                  "StationNameEnglish": "PATHUMTHANI",
+                  "Latitude": "14.10000",
+                  "Longitude": "100.61667",
+                  "Rainfall": "0.51"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e23\u0e32\u0e0a\u0e1a\u0e38\u0e23\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e23\u0e32\u0e0a\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "RATCHA BURI",
+                    "Latitude": "13.48931",
+                    "Longitude": "99.79239",
+                    "Rainfall": "0.21"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e23\u0e32\u0e0a\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "Ratchaburi",
+                    "Latitude": "13.51667",
+                    "Longitude": "99.83333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e42\u0e1e\u0e18\u0e32\u0e23\u0e32\u0e21",
+                    "StationNameEnglish": "Photharam",
+                    "Latitude": "13.65000",
+                    "Longitude": "99.86667",
+                    "Rainfall": "0.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e14\u0e33\u0e40\u0e19\u0e34\u0e19\u0e2a\u0e30\u0e14\u0e27\u0e01",
+                    "StationNameEnglish": "Damnoen Saduak",
+                    "Latitude": "13.50000",
+                    "Longitude": "99.96667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1b\u0e32\u0e01\u0e17\u0e48\u0e2d",
+                    "StationNameEnglish": "Pak Tho",
+                    "Latitude": "13.33333",
+                    "Longitude": "99.86667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e49\u0e32\u0e19\u0e42\u0e1b\u0e48\u0e07",
+                    "StationNameEnglish": "Ban Pong",
+                    "Latitude": "13.76667",
+                    "Longitude": "99.90000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e08\u0e2d\u0e21\u0e1a\u0e36\u0e07",
+                    "StationNameEnglish": "Chom Bung",
+                    "Latitude": "13.58333",
+                    "Longitude": "99.65000",
+                    "Rainfall": "2.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e27\u0e19\u0e1c\u0e36\u0e49\u0e07",
+                    "StationNameEnglish": "Suan Phung",
+                    "Latitude": "13.51667",
+                    "Longitude": "99.31667",
+                    "Rainfall": "2.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e17\u0e35\u0e48\u0e17\u0e33\u0e01\u0e32\u0e23\u0e44\u0e1b\u0e23\u0e29\u0e13\u0e35\u0e22\u0e4c\u0e42\u0e17\u0e23\u0e40\u0e25\u0e02\u0e1a\u0e32\u0e07\u0e41\u0e1e",
+                    "StationNameEnglish": "Bang Phae",
+                    "Latitude": "13.65000",
+                    "Longitude": "99.95000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e27\u0e19\u0e23\u0e38\u0e01\u0e02\u0e0a\u0e32\u0e15\u0e34\u0e16\u0e49\u0e33\u0e08\u0e2d\u0e21\u0e1e\u0e25  \u0e2d.\u0e08\u0e2d\u0e21\u0e1a\u0e36\u0e07",
+                    "StationNameEnglish": "Tham Chom Pon Royal Garden",
+                    "Latitude": "13.61667",
+                    "Longitude": "99.61667",
+                    "Rainfall": "2.00"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e2a\u0e38\u0e1e\u0e23\u0e23\u0e13\u0e1a\u0e38\u0e23\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2a\u0e38\u0e1e\u0e23\u0e23\u0e13\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "SUPHAN BURI",
+                    "Latitude": "14.47444",
+                    "Longitude": "100.13889",
+                    "Rainfall": "1.21"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e1b\u0e25\u0e32\u0e21\u0e49\u0e32",
+                    "StationNameEnglish": "Bang Pla Ma",
+                    "Latitude": "14.31667",
+                    "Longitude": "100.40000",
+                    "Rainfall": "3.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e19\u0e07.\u0e40\u0e01\u0e29\u0e15\u0e23\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e2d\u0e07\u0e1e\u0e35\u0e48\u0e19\u0e49\u0e2d\u0e07",
+                    "StationNameEnglish": "Song Phi Nong",
+                    "Latitude": "14.21667",
+                    "Longitude": "100.01667",
+                    "Rainfall": "0.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e19\u0e07.\u0e40\u0e01\u0e29\u0e15\u0e23\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e14\u0e34\u0e21\u0e1a\u0e32\u0e07\u0e19\u0e32\u0e07\u0e1a\u0e27\u0e0a",
+                    "StationNameEnglish": "Doembang Nangbuat",
+                    "Latitude": "14.83333",
+                    "Longitude": "100.10000",
+                    "Rainfall": "0.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2d\u0e39\u0e48\u0e17\u0e2d\u0e07",
+                    "StationNameEnglish": "U Thong",
+                    "Latitude": "14.36667",
+                    "Longitude": "99.86667",
+                    "Rainfall": "3.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e32\u0e21\u0e0a\u0e38\u0e01",
+                    "StationNameEnglish": "Sam Chuk",
+                    "Latitude": "14.76667",
+                    "Longitude": "100.08333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e19\u0e07.\u0e40\u0e01\u0e29\u0e15\u0e23\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e28\u0e23\u0e35\u0e1b\u0e23\u0e30\u0e08\u0e31\u0e19\u0e15\u0e4c",
+                    "StationNameEnglish": "Si Prachan",
+                    "Latitude": "14.63333",
+                    "Longitude": "100.18333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e19\u0e07.\u0e40\u0e01\u0e29\u0e15\u0e23\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e14\u0e48\u0e32\u0e19\u0e0a\u0e49\u0e32\u0e07",
+                    "StationNameEnglish": "Dan Chang",
+                    "Latitude": "14.80000",
+                    "Longitude": "99.71667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e19\u0e07.\u0e40\u0e01\u0e29\u0e15\u0e23\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e19\u0e2d\u0e07\u0e2b\u0e0d\u0e49\u0e32\u0e44\u0e0b",
+                    "StationNameEnglish": "K.A.Nong Ya Sai",
+                    "Latitude": "14.73333",
+                    "Longitude": "99.91667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e19\u0e34\u0e04\u0e21\u0e2f\u0e01\u0e23\u0e30\u0e40\u0e2a\u0e35\u0e22\u0e27  \u0e2d.\u0e14\u0e48\u0e32\u0e19\u0e0a\u0e49\u0e32\u0e07",
+                    "StationNameEnglish": "Kraseo Self-Help Settlement",
+                    "Latitude": "14.85000",
+                    "Longitude": "99.58333",
+                    "Rainfall": "2.60"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e38\u0e17\u0e22\u0e32\u0e19\u0e41\u0e2b\u0e48\u0e07\u0e0a\u0e32\u0e15\u0e34\u0e1e\u0e38\u0e40\u0e15\u0e22",
+                    "StationNameEnglish": "phutoei nationnal park",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "2.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e39\u0e48\u0e17\u0e2d\u0e07 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "U THONG AGROMET.",
+                    "Latitude": "14.30361",
+                    "Longitude": "99.86472",
+                    "Rainfall": "1.01"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e25\u0e1e\u0e1a\u0e38\u0e23\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e25\u0e1e\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "LOP BURI",
+                    "Latitude": "14.79972",
+                    "Longitude": "100.62833",
+                    "Rainfall": "0.72"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e48\u0e32\u0e27\u0e38\u0e49\u0e07",
+                    "StationNameEnglish": "Tha Wung",
+                    "Latitude": "14.83333",
+                    "Longitude": "100.51667",
+                    "Rainfall": "3.60"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e42\u0e04\u0e01\u0e2a\u0e33\u0e42\u0e23\u0e07",
+                    "StationNameEnglish": "Khok Samrong",
+                    "Latitude": "15.03333",
+                    "Longitude": "100.76667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e23.\u0e23.\u0e1a\u0e49\u0e32\u0e19\u0e21\u0e2b\u0e32\u0e42\u0e1e\u0e18\u0e34\u0e4c",
+                    "StationNameEnglish": "Ban mahapo",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "4.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e48\u0e32\u0e2b\u0e25\u0e27\u0e07",
+                    "StationNameEnglish": "Thaluang",
+                    "Latitude": "15.05000",
+                    "Longitude": "101.13333",
+                    "Rainfall": "2.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e42\u0e04\u0e01\u0e40\u0e08\u0e23\u0e34\u0e0d",
+                    "StationNameEnglish": "K.A.Kogchareon",
+                    "Latitude": "15.35000",
+                    "Longitude": "100.81667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e27\u0e19\u0e1b\u0e48\u0e32\u0e0b\u0e31\u0e1a\u0e25\u0e31\u0e07\u0e01\u0e32",
+                    "StationNameEnglish": "Sub Lanka Forest Garden",
+                    "Latitude": "15.48333",
+                    "Longitude": "101.35000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e23\u0e23.\u0e1a\u0e49\u0e32\u0e19\u0e2b\u0e19\u0e2d\u0e07\u0e21\u0e30\u0e04\u0e48\u0e32",
+                    "StationNameEnglish": "Ban Nong Makha School",
+                    "Latitude": "15.43333",
+                    "Longitude": "101.93333",
+                    "Rainfall": "1.30"
+                  },
+                  {
+                    "StationNameThai": "\u0e23\u0e23.\u0e1a\u0e49\u0e32\u0e19\u0e27\u0e31\u0e07\u0e17\u0e2d\u0e07",
+                    "StationNameEnglish": "Ban Wang Thong",
+                    "Latitude": "15.38333",
+                    "Longitude": "101.36667",
+                    "Rainfall": "3.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e23\u0e23.\u0e1a\u0e49\u0e32\u0e19\u0e25\u0e31\u0e07\u0e01\u0e32\u0e1b\u0e23\u0e30\u0e0a\u0e32\u0e2a\u0e23\u0e23\u0e04\u0e4c",
+                    "StationNameEnglish": "Ban Lanka Prachasan School",
+                    "Latitude": "15.33333",
+                    "Longitude": "101.01667",
+                    "Rainfall": "3.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e25\u0e33\u0e2a\u0e19\u0e18\u0e34",
+                    "StationNameEnglish": "K.A.Lam Sonthi",
+                    "Latitude": "15.30000",
+                    "Longitude": "101.36667",
+                    "Rainfall": "2.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e23\u0e23.\u0e1a\u0e49\u0e32\u0e19\u0e17\u0e38\u0e48\u0e07\u0e15\u0e32\u0e41\u0e01\u0e49\u0e27",
+                    "StationNameEnglish": "Ban Thung Takaew School",
+                    "Latitude": "15.11667",
+                    "Longitude": "101.03333",
+                    "Rainfall": "5.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e1a\u0e31\u0e27\u0e0a\u0e38\u0e21  ",
+                    "StationNameEnglish": "BUA CHUM",
+                    "Latitude": "15.26667",
+                    "Longitude": "101.18736",
+                    "Rainfall": "3.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e31\u0e12\u0e19\u0e32\u0e19\u0e34\u0e04\u0e21",
+                    "StationNameEnglish": "Phatthana Nikhom",
+                    "Latitude": "14.88333",
+                    "Longitude": "101.00000",
+                    "Rainfall": "2.20"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e2a\u0e21\u0e38\u0e17\u0e23\u0e1b\u0e23\u0e32\u0e01\u0e32\u0e23",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e19\u0e33\u0e23\u0e48\u0e2d\u0e07",
+                    "StationNameEnglish": "PILOT STATION",
+                    "Latitude": "13.37722",
+                    "Longitude": "100.59944",
+                    "Rainfall": "0.50"
+                  },
+                  {
+                    "StationNameThai": " \u0e2d.\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2a\u0e21\u0e38\u0e17\u0e23\u0e1b\u0e23\u0e32\u0e01\u0e32\u0e23",
+                    "StationNameEnglish": "A.Muang Samut Prakan",
+                    "Latitude": "13.60000",
+                    "Longitude": "100.63333",
+                    "Rainfall": "0.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e1e\u0e25\u0e35",
+                    "StationNameEnglish": "Bang Phli",
+                    "Latitude": "13.60000",
+                    "Longitude": "100.73333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e21\u0e38\u0e17\u0e23\u0e1b\u0e23\u0e32\u0e01\u0e32\u0e23 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "Samut Prakarn",
+                    "Latitude": "13.51667",
+                    "Longitude": "100.76167",
+                    "Rainfall": "2.90"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e19\u0e32\u0e21\u0e1a\u0e34\u0e19\u0e2a\u0e38\u0e27\u0e23\u0e23\u0e13\u0e20\u0e39\u0e21\u0e34",
+                    "StationNameEnglish": "SUVARNABHUMI AIRPORT",
+                    "Latitude": "13.68639",
+                    "Longitude": "100.76750",
+                    "Rainfall": "1.03"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e2a\u0e21\u0e38\u0e17\u0e23\u0e2a\u0e07\u0e04\u0e23\u0e32\u0e21",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e2a\u0e21\u0e38\u0e17\u0e23\u0e2a\u0e07\u0e04\u0e23\u0e32\u0e21",
+                  "StationNameEnglish": "SAMUTSONGKRAM",
+                  "Latitude": "13.40778",
+                  "Longitude": "100.03222",
+                  "Rainfall": "0.70"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e01\u0e32\u0e0d\u0e08\u0e19\u0e1a\u0e38\u0e23\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e01\u0e32\u0e0d\u0e08\u0e19\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "KANCHANA BURI",
+                    "Latitude": "14.02250",
+                    "Longitude": "99.53583",
+                    "Rainfall": "0.42"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e48\u0e32\u0e21\u0e48\u0e27\u0e07",
+                    "StationNameEnglish": "Tha Muang",
+                    "Latitude": "13.91667",
+                    "Longitude": "99.65000",
+                    "Rainfall": "1.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e48\u0e32\u0e21\u0e30\u0e01\u0e32",
+                    "StationNameEnglish": "Tha Maka",
+                    "Latitude": "13.88333",
+                    "Longitude": "99.78333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e25\u0e32\u0e02\u0e27\u0e31\u0e0d",
+                    "StationNameEnglish": "Lao Khwan",
+                    "Latitude": "14.53333",
+                    "Longitude": "99.81667",
+                    "Rainfall": "1.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e48\u0e2d\u0e1e\u0e25\u0e2d\u0e22  ",
+                    "StationNameEnglish": "Bo Phloi",
+                    "Latitude": "14.28333",
+                    "Longitude": "99.53333",
+                    "Rainfall": "3.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e17\u0e35\u0e48\u0e17\u0e33\u0e01\u0e32\u0e23\u0e44\u0e1b\u0e23\u0e29\u0e13\u0e35\u0e22\u0e4c\u0e42\u0e17\u0e23\u0e40\u0e25\u0e02\u0e1e\u0e19\u0e21\u0e17\u0e27\u0e19",
+                    "StationNameEnglish": "Phanom Thuan",
+                    "Latitude": "14.08333",
+                    "Longitude": "99.71667",
+                    "Rainfall": "1.70"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e19\u0e04\u0e23\u0e1b\u0e10\u0e21",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e19\u0e04\u0e23\u0e1b\u0e10\u0e21",
+                  "StationNameEnglish": "NAKHONPATHOM",
+                  "Latitude": "14.01167",
+                  "Longitude": "99.97000",
+                  "Rainfall": "2.30"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e21\u0e2b\u0e32\u0e19\u0e04\u0e23",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2d\u0e07\u0e04\u0e4c\u0e01\u0e32\u0e23\u0e2a\u0e07\u0e40\u0e04\u0e23\u0e32\u0e30\u0e2b\u0e4c\u0e17\u0e2b\u0e32\u0e23\u0e1c\u0e48\u0e32\u0e19\u0e28\u0e36\u0e01",
+                    "StationNameEnglish": "The War Veterans Organization",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.70"
+                  },
+                  {
+                    "StationNameThai": "\u0e27\u0e34\u0e17\u0e22\u0e32\u0e25\u0e31\u0e22\u0e1e\u0e22\u0e32\u0e1a\u0e32\u0e25\u0e40\u0e01\u0e37\u0e49\u0e2d\u0e01\u0e32\u0e23\u0e38\u0e13\u0e22\u0e4c",
+                    "StationNameEnglish": "Kuakarun Nursing College",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e23\u0e23.\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e04\u0e23\u0e34\u0e2a\u0e40\u0e15\u0e35\u0e22\u0e19\u0e27\u0e34\u0e17\u0e22\u0e32\u0e25\u0e31\u0e22",
+                    "StationNameEnglish": "Bangkok Christian College",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2b\u0e21\u0e39\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e17\u0e38\u0e48\u0e07\u0e40\u0e28\u0e23\u0e29\u0e10\u0e35",
+                    "StationNameEnglish": "Thung Setthi Village",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e23\u0e23.\u0e2a\u0e32\u0e21\u0e40\u0e2a\u0e19\u0e19\u0e2d\u0e01",
+                    "StationNameEnglish": "Sam Saen Nok School",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e33\u0e19\u0e31\u0e01\u0e07\u0e32\u0e19\u0e40\u0e02\u0e15\u0e1a\u0e32\u0e07\u0e01\u0e30\u0e1b\u0e34",
+                    "StationNameEnglish": "Bang Kapi",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e23\u0e23.\u0e27\u0e31\u0e14\u0e1a\u0e36\u0e07\u0e17\u0e2d\u0e07\u0e2b\u0e25\u0e32\u0e07",
+                    "StationNameEnglish": "Wat Bung Thonglang School",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e23\u0e23.\u0e04\u0e25\u0e2d\u0e07\u0e01\u0e38\u0e48\u0e21",
+                    "StationNameEnglish": "Klong Kum School",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e27\u0e31\u0e14\u0e19\u0e27\u0e25\u0e08\u0e31\u0e19\u0e17\u0e23\u0e4c",
+                    "StationNameEnglish": "Wat Nual Jan",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e23\u0e23.\u0e1a\u0e49\u0e32\u0e19\u0e25\u0e32\u0e14\u0e1e\u0e23\u0e49\u0e32\u0e27",
+                    "StationNameEnglish": "Ban Lat Phrao School",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e01\u0e2d\u0e07\u0e1a\u0e34\u0e19\u0e15\u0e33\u0e23\u0e27\u0e08",
+                    "StationNameEnglish": "Police Aviation Division",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.30"
+                  },
+                  {
+                    "StationNameThai": "\u0e01\u0e2d\u0e07\u0e01\u0e33\u0e01\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e2a\u0e32\u0e22\u0e15\u0e23\u0e27\u0e08\u0e2f (\u0e01\u0e01.\u0e2a\u0e15\u0e23.)",
+                    "StationNameEnglish": "M.M.P. Sub Div.C.C.",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "2.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e33\u0e19\u0e31\u0e01\u0e07\u0e32\u0e19\u0e40\u0e02\u0e15\u0e21\u0e35\u0e19\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "Min Buri",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e23\u0e23.\u0e27\u0e31\u0e14\u0e1a\u0e32\u0e07\u0e1a\u0e2d\u0e19",
+                    "StationNameEnglish": "Wat Bang Bon School",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e23\u0e23.\u0e17\u0e27\u0e35\u0e18\u0e32\u0e20\u0e34\u0e40\u0e28\u0e01 2 ",
+                    "StationNameEnglish": "Taweetha Phisek 2 School",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e01\u0e23\u0e38\u0e07\u0e40\u0e17\u0e1e\u0e2f \u0e1a\u0e32\u0e07\u0e19\u0e32 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "BANG NA AGROMET.",
+                    "Latitude": "13.66639",
+                    "Longitude": "100.60611",
+                    "Rainfall": "0.41"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e19\u0e32\u0e21\u0e1a\u0e34\u0e19\u0e14\u0e2d\u0e19\u0e40\u0e21\u0e37\u0e2d\u0e07",
+                    "StationNameEnglish": "DON MUANG AIRPORT",
+                    "Latitude": "13.91917",
+                    "Longitude": "100.60500",
+                    "Rainfall": "0.01"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RegionName": "\u0e20\u0e32\u0e04\u0e15\u0e30\u0e27\u0e31\u0e19\u0e2d\u0e2d\u0e01",
+        "Provinces": {
+          "Province": [
+            {
+              "ProvinceName": "\u0e19\u0e04\u0e23\u0e19\u0e32\u0e22\u0e01",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e19\u0e04\u0e23\u0e19\u0e32\u0e22\u0e01",
+                    "StationNameEnglish": "Nakhon Nayok",
+                    "Latitude": "14.20000",
+                    "Longitude": "101.21667",
+                    "Rainfall": "1.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e19\u0e04\u0e23\u0e19\u0e32\u0e22\u0e01",
+                    "StationNameEnglish": "NAKORNNAYOK",
+                    "Latitude": { "@attributes": { "Unit": "decimal degree" } },
+                    "Longitude": {
+                      "@attributes": { "Unit": "decimal degree" }
+                    },
+                    "Rainfall": "0.03"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e09\u0e30\u0e40\u0e0a\u0e34\u0e07\u0e40\u0e17\u0e23\u0e32",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e09\u0e30\u0e40\u0e0a\u0e34\u0e07\u0e40\u0e17\u0e23\u0e32",
+                    "StationNameEnglish": "CHACHOENGSAO",
+                    "Latitude": "13.51556",
+                    "Longitude": "101.45833",
+                    "Rainfall": "5.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e33\u0e19\u0e31\u0e01\u0e07\u0e32\u0e19\u0e40\u0e01\u0e29\u0e15\u0e23\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14\u0e09\u0e30\u0e40\u0e0a\u0e34\u0e07\u0e40\u0e17\u0e23\u0e32",
+                    "StationNameEnglish": "Chachoengsao",
+                    "Latitude": "13.68333",
+                    "Longitude": "101.06667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e33\u0e19\u0e31\u0e01\u0e07\u0e32\u0e19\u0e40\u0e01\u0e29\u0e15\u0e23\u0e1a\u0e49\u0e32\u0e19\u0e42\u0e1e\u0e18\u0e34\u0e4c",
+                    "StationNameEnglish": "Ban Pho",
+                    "Latitude": "13.60000",
+                    "Longitude": "101.10000",
+                    "Rainfall": "2.30"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e04\u0e25\u0e49\u0e32",
+                    "StationNameEnglish": "Bang Khla",
+                    "Latitude": "13.73333",
+                    "Longitude": "101.23333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e19\u0e21\u0e2a\u0e32\u0e23\u0e04\u0e32\u0e21",
+                    "StationNameEnglish": "Phanom Sarakham",
+                    "Latitude": "13.73333",
+                    "Longitude": "101.35000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e1b\u0e23\u0e30\u0e01\u0e07",
+                    "StationNameEnglish": "Bang Pakong",
+                    "Latitude": "13.50000",
+                    "Longitude": "101.03333",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e16\u0e32\u0e19\u0e35\u0e27\u0e34\u0e08\u0e31\u0e22\u0e2a\u0e31\u0e15\u0e27\u0e4c\u0e1b\u0e48\u0e32\u0e09\u0e30\u0e40\u0e0a\u0e34\u0e07\u0e40\u0e17\u0e23\u0e32  \u0e2d.\u0e17\u0e48\u0e32\u0e15\u0e30\u0e40\u0e01\u0e35\u0e22\u0e1a",
+                    "StationNameEnglish": "Chacheongsao Wildlife Research",
+                    "Latitude": "13.36667",
+                    "Longitude": "101.88333",
+                    "Rainfall": "0.20"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e1b\u0e23\u0e32\u0e08\u0e35\u0e19\u0e1a\u0e38\u0e23\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e1b\u0e23\u0e32\u0e08\u0e35\u0e19\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "PRACHIN BURI",
+                    "Latitude": "14.05842",
+                    "Longitude": "101.36930",
+                    "Rainfall": "2.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1b\u0e23\u0e30\u0e08\u0e31\u0e19\u0e15\u0e04\u0e32\u0e21",
+                    "StationNameEnglish": "Prachantakham",
+                    "Latitude": "14.03333",
+                    "Longitude": "101.56667",
+                    "Rainfall": "1.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e49\u0e32\u0e19\u0e2a\u0e23\u0e49\u0e32\u0e07",
+                    "StationNameEnglish": "Ban Sang",
+                    "Latitude": "14.00000",
+                    "Longitude": "101.21667",
+                    "Rainfall": "1.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e28\u0e23\u0e35\u0e21\u0e2b\u0e32\u0e42\u0e1e\u0e18\u0e34\u0e4c",
+                    "StationNameEnglish": "Si Maha Phot",
+                    "Latitude": "13.96667",
+                    "Longitude": "101.51667",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e19\u0e32\u0e14\u0e35",
+                    "StationNameEnglish": "Na Di",
+                    "Latitude": "14.10000",
+                    "Longitude": "101.76667",
+                    "Rainfall": "2.30"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e28\u0e23\u0e35\u0e21\u0e42\u0e2b\u0e2a\u0e16",
+                    "StationNameEnglish": "Srimahosot",
+                    "Latitude": "13.76667",
+                    "Longitude": "101.43333",
+                    "Rainfall": "0.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e1a\u0e49\u0e32\u0e19\u0e27\u0e31\u0e07\u0e17\u0e48\u0e32\u0e0a\u0e49\u0e32\u0e07 \u0e15.\u0e27\u0e31\u0e07\u0e17\u0e48\u0e32\u0e0a\u0e49\u0e32\u0e07  \u0e2d.\u0e01\u0e1a\u0e34\u0e19\u0e17\u0e23\u0e4c\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "Ban Wang Tha Chang",
+                    "Latitude": "13.76667",
+                    "Longitude": "101.90000",
+                    "Rainfall": "1.70"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e16\u0e32\u0e19\u0e35\u0e17\u0e14\u0e25\u0e2d\u0e07\u0e1e\u0e37\u0e0a\u0e44\u0e23\u0e48\u0e1b\u0e23\u0e32\u0e08\u0e35\u0e19\u0e1a\u0e38\u0e23\u0e35  \u0e2d.\u0e01\u0e1a\u0e34\u0e19\u0e17\u0e23\u0e4c\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "SL.R.Prachin Buri",
+                    "Latitude": "13.81361",
+                    "Longitude": "101.79667",
+                    "Rainfall": "3.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e01\u0e1a\u0e34\u0e19\u0e17\u0e23\u0e4c\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "KABIN BURI",
+                    "Latitude": "13.98333",
+                    "Longitude": "101.70722",
+                    "Rainfall": "1.50"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e2a\u0e23\u0e30\u0e41\u0e01\u0e49\u0e27",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2d\u0e23\u0e31\u0e0d\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28",
+                    "StationNameEnglish": "ARANYA PRATHET",
+                    "Latitude": "13.70000",
+                    "Longitude": "102.58333",
+                    "Rainfall": "6.61"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e27\u0e31\u0e12\u0e19\u0e32\u0e19\u0e04\u0e23",
+                    "StationNameEnglish": "Watthana Nakhon",
+                    "Latitude": "13.70000",
+                    "Longitude": "102.35000",
+                    "Rainfall": "8.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e15\u0e32\u0e1e\u0e23\u0e30\u0e22\u0e32",
+                    "StationNameEnglish": "Ta Praya",
+                    "Latitude": "13.96667",
+                    "Longitude": "102.83333",
+                    "Rainfall": "2.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e27\u0e31\u0e07\u0e19\u0e49\u0e33\u0e40\u0e22\u0e47\u0e19",
+                    "StationNameEnglish": "Wang Nam Yen",
+                    "Latitude": "13.51667",
+                    "Longitude": "102.05000",
+                    "Rainfall": "2.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e04\u0e25\u0e2d\u0e07\u0e2b\u0e32\u0e14",
+                    "StationNameEnglish": "K.A.Klong Hat",
+                    "Latitude": "13.45000",
+                    "Longitude": "102.25000",
+                    "Rainfall": "2.30"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e27\u0e19\u0e1b\u0e48\u0e32\u0e17\u0e48\u0e32\u0e41\u0e22\u0e01  \u0e2d.\u0e40\u0e21\u0e37\u0e2d\u0e07",
+                    "StationNameEnglish": "Tha Yaek Forest Plantation",
+                    "Latitude": "13.91667",
+                    "Longitude": "102.01667",
+                    "Rainfall": "6.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e19\u0e34\u0e04\u0e21\u0e2a\u0e23\u0e49\u0e32\u0e07\u0e15\u0e19\u0e40\u0e2d\u0e07\u0e04\u0e25\u0e2d\u0e07\u0e19\u0e49\u0e33\u0e43\u0e2a  \u0e2d.\u0e2d\u0e23\u0e31\u0e0d\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28",
+                    "StationNameEnglish": "Klong Nam Sai Self-Help Settle",
+                    "Latitude": "13.63333",
+                    "Longitude": "102.43333",
+                    "Rainfall": "3.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e02\u0e32\u0e09\u0e01\u0e23\u0e23\u0e13\u0e4c",
+                    "StationNameEnglish": "Ban Khao Chakan",
+                    "Latitude": "13.66667",
+                    "Longitude": "102.08333",
+                    "Rainfall": "16.60"
+                  },
+                  {
+                    "StationNameThai": "\u0e1a\u0e49\u0e32\u0e19\u0e44\u0e17\u0e23\u0e40\u0e14\u0e35\u0e48\u0e22\u0e27 1 \u0e21.4  \u0e15.\u0e44\u0e17\u0e23\u0e17\u0e2d\u0e07  \u0e2d.\u0e27\u0e31\u0e12\u0e19\u0e32\u0e19\u0e04\u0e23",
+                    "StationNameEnglish": "Ban Sai Deaw",
+                    "Latitude": "13.60000",
+                    "Longitude": "102.30000",
+                    "Rainfall": "2.90"
+                  },
+                  {
+                    "StationNameThai": "\u0e1a\u0e49\u0e32\u0e19\u0e2b\u0e49\u0e27\u0e22\u0e0b\u0e31\u0e19 1 \u0e21.3  \u0e15.\u0e0a\u0e48\u0e2d\u0e07\u0e01\u0e38\u0e48\u0e21  \u0e2d.\u0e27\u0e31\u0e12\u0e19\u0e32\u0e19\u0e04\u0e23",
+                    "StationNameEnglish": "Ban Huai Chan",
+                    "Latitude": "13.98333",
+                    "Longitude": "102.45000",
+                    "Rainfall": "4.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e01\u0e34\u0e48\u0e07 \u0e2d.\u0e42\u0e04\u0e01\u0e2a\u0e39\u0e07  \u0e2d.\u0e15\u0e32\u0e1e\u0e23\u0e30\u0e22\u0e32",
+                    "StationNameEnglish": "Ban Kog Soong",
+                    "Latitude": "13.80000",
+                    "Longitude": "102.71667",
+                    "Rainfall": "13.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e38\u0e17\u0e22\u0e32\u0e19\u0e41\u0e2b\u0e48\u0e07\u0e0a\u0e32\u0e15\u0e34\u0e1b\u0e32\u0e07\u0e2a\u0e35\u0e14\u0e32  \u0e2d.\u0e40\u0e21\u0e37\u0e2d\u0e07",
+                    "StationNameEnglish": "Pang Si Da National Parks",
+                    "Latitude": "13.99250",
+                    "Longitude": "102.21000",
+                    "Rainfall": "4.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e23\u0e30\u0e41\u0e01\u0e49\u0e27",
+                    "StationNameEnglish": "SA KAEW",
+                    "Latitude": "13.78889",
+                    "Longitude": "102.03472",
+                    "Rainfall": "8.60"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e0a\u0e25\u0e1a\u0e38\u0e23\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e0a\u0e25\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "CHON BURI",
+                    "Latitude": "13.36667",
+                    "Longitude": "100.98333",
+                    "Rainfall": "0.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e40\u0e01\u0e32\u0e30\u0e2a\u0e35\u0e0a\u0e31\u0e07",
+                    "StationNameEnglish": "KO SICHANG",
+                    "Latitude": "13.16167",
+                    "Longitude": "100.80194",
+                    "Rainfall": "1.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e1e\u0e31\u0e17\u0e22\u0e32",
+                    "StationNameEnglish": "PHATTHAYA",
+                    "Latitude": "12.92000",
+                    "Longitude": "100.86944",
+                    "Rainfall": "0.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e31\u0e15\u0e2b\u0e35\u0e1a",
+                    "StationNameEnglish": "SATTAHIP",
+                    "Latitude": "12.68333",
+                    "Longitude": "100.98333",
+                    "Rainfall": "0.22"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e23\u0e30\u0e22\u0e2d\u0e07",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e27\u0e31\u0e07\u0e08\u0e31\u0e19\u0e17\u0e23\u0e4c",
+                    "StationNameEnglish": "Wang Jan",
+                    "Latitude": "12.91667",
+                    "Longitude": "101.51667",
+                    "Rainfall": "10.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2b\u0e49\u0e27\u0e22\u0e42\u0e1b\u0e48\u0e07 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "HUAI PONG AGROMET.",
+                    "Latitude": "12.73500",
+                    "Longitude": "101.13500",
+                    "Rainfall": "1.00"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e08\u0e31\u0e19\u0e17\u0e1a\u0e38\u0e23\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e42\u0e1b\u0e48\u0e07\u0e19\u0e49\u0e33\u0e23\u0e49\u0e2d\u0e19  **",
+                    "StationNameEnglish": "Pong Nam Ron",
+                    "Latitude": "12.85000",
+                    "Longitude": "102.28333",
+                    "Rainfall": "4.10"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e2d\u0e22\u0e14\u0e32\u0e27",
+                    "StationNameEnglish": "K.A.Soi Dao",
+                    "Latitude": "13.18333",
+                    "Longitude": "102.18333",
+                    "Rainfall": "1.30"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e19\u0e32\u0e22\u0e32\u0e22\u0e2d\u0e32\u0e21",
+                    "StationNameEnglish": "K.A.Na Yai Arm",
+                    "Latitude": "12.78222",
+                    "Longitude": "101.83333",
+                    "Rainfall": "0.01"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e15\u0e23\u0e32\u0e14",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e15\u0e23\u0e32\u0e14",
+                    "StationNameEnglish": "TRAD",
+                    "Latitude": "11.76667",
+                    "Longitude": "102.88333",
+                    "Rainfall": "0.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e15\u0e23\u0e32\u0e14",
+                    "StationNameEnglish": "Trat",
+                    "Latitude": "12.21667",
+                    "Longitude": "102.58333",
+                    "Rainfall": "0.30"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RegionName": "\u0e20\u0e32\u0e04\u0e43\u0e15\u0e49 (\u0e1d\u0e31\u0e48\u0e07\u0e15\u0e30\u0e27\u0e31\u0e19\u0e2d\u0e2d\u0e01)",
+        "Provinces": {
+          "Province": [
+            {
+              "ProvinceName": "\u0e40\u0e1e\u0e0a\u0e23\u0e1a\u0e38\u0e23\u0e35",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e40\u0e1e\u0e0a\u0e23\u0e1a\u0e38\u0e23\u0e35",
+                  "StationNameEnglish": "PHETCHA BURI",
+                  "Latitude": "12.99944",
+                  "Longitude": "100.06056",
+                  "Rainfall": "3.50"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e1b\u0e23\u0e30\u0e08\u0e27\u0e1a\u0e04\u0e35\u0e23\u0e35\u0e02\u0e31\u0e19\u0e18\u0e4c",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e1b\u0e23\u0e30\u0e08\u0e27\u0e1a\u0e04\u0e35\u0e23\u0e35\u0e02\u0e31\u0e19\u0e18\u0e4c",
+                    "StationNameEnglish": "PRACHUAP KHIRIKHAN",
+                    "Latitude": "11.83333",
+                    "Longitude": "99.83333",
+                    "Rainfall": "1.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2b\u0e31\u0e27\u0e2b\u0e34\u0e19",
+                    "StationNameEnglish": "HUA HIN",
+                    "Latitude": "12.58611",
+                    "Longitude": "99.96250",
+                    "Rainfall": "1.70"
+                  },
+                  {
+                    "StationNameThai": "\u0e2b\u0e19\u0e2d\u0e07\u0e1e\u0e25\u0e31\u0e1a \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "NONG PHLUB AGROMET.",
+                    "Latitude": "12.58333",
+                    "Longitude": "99.73333",
+                    "Rainfall": "2.10"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e0a\u0e38\u0e21\u0e1e\u0e23",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e25\u0e30\u0e41\u0e21",
+                  "StationNameEnglish": "Lamae",
+                  "Latitude": "9.81667",
+                  "Longitude": "99.13333",
+                  "Rainfall": "1.00"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e2a\u0e38\u0e23\u0e32\u0e29\u0e0e\u0e23\u0e4c\u0e18\u0e32\u0e19\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2a\u0e38\u0e23\u0e32\u0e29\u0e0e\u0e23\u0e4c\u0e18\u0e32\u0e19\u0e35",
+                    "StationNameEnglish": "SURAT THANI",
+                    "Latitude": "9.13556",
+                    "Longitude": "99.15194",
+                    "Rainfall": "5.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e44\u0e0a\u0e22\u0e32",
+                    "StationNameEnglish": "Chaiya",
+                    "Latitude": "9.40000",
+                    "Longitude": "99.21667",
+                    "Rainfall": "6.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e01\u0e32\u0e0d\u0e08\u0e19\u0e14\u0e34\u0e29\u0e10\u0e4c",
+                    "StationNameEnglish": "Kanchanadit",
+                    "Latitude": "9.15000",
+                    "Longitude": "99.53333",
+                    "Rainfall": "37.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e01\u0e32\u0e30\u0e2a\u0e21\u0e38\u0e22",
+                    "StationNameEnglish": "Ko Samui",
+                    "Latitude": "9.53333",
+                    "Longitude": "99.85000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e48\u0e32\u0e09\u0e32\u0e07",
+                    "StationNameEnglish": "Tha Chang",
+                    "Latitude": "9.25000",
+                    "Longitude": "99.21667",
+                    "Rainfall": "7.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e14\u0e2d\u0e19\u0e2a\u0e31\u0e01",
+                    "StationNameEnglish": "Don Sak",
+                    "Latitude": "9.28333",
+                    "Longitude": "99.70000",
+                    "Rainfall": "0.01"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e38\u0e19\u0e1e\u0e34\u0e19  **",
+                    "StationNameEnglish": "Phunphin",
+                    "Latitude": "9.08333",
+                    "Longitude": "99.25000",
+                    "Rainfall": "11.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e48\u0e32\u0e0a\u0e19\u0e30  **",
+                    "StationNameEnglish": "Tha Chana",
+                    "Latitude": "9.56667",
+                    "Longitude": "99.16667",
+                    "Rainfall": "15.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e04\u0e35\u0e22\u0e19\u0e0b\u0e32",
+                    "StationNameEnglish": "Kiansa",
+                    "Latitude": "8.85000",
+                    "Longitude": "99.20000",
+                    "Rainfall": "5.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e01\u0e32\u0e30\u0e1e\u0e07\u0e31\u0e19",
+                    "StationNameEnglish": "Koh pangan",
+                    "Latitude": "9.81667",
+                    "Longitude": "100.00000",
+                    "Rainfall": "2.90"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e27\u0e34\u0e20\u0e32\u0e27\u0e14\u0e35",
+                    "StationNameEnglish": "A.Wipawadee",
+                    "Latitude": "9.21667",
+                    "Longitude": "98.95000",
+                    "Rainfall": "10.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e2a\u0e38\u0e23\u0e32\u0e29\u0e0e\u0e23\u0e4c\u0e18\u0e32\u0e19\u0e35",
+                    "StationNameEnglish": "Kong Roi A.S.A Muang 3",
+                    "Latitude": "9.13389",
+                    "Longitude": "99.32333",
+                    "Rainfall": "15.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e40\u0e01\u0e32\u0e30\u0e2a\u0e21\u0e38\u0e22",
+                    "StationNameEnglish": "KO SAMUI",
+                    "Latitude": "9.46667",
+                    "Longitude": "100.05000",
+                    "Rainfall": "9.50"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e38\u0e23\u0e32\u0e29\u0e0e\u0e23\u0e4c\u0e18\u0e32\u0e19\u0e35 \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "SURAT THANI AGROMET.",
+                    "Latitude": "9.10000",
+                    "Longitude": "99.63333",
+                    "Rainfall": "2.02"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e19\u0e04\u0e23\u0e28\u0e23\u0e35\u0e18\u0e23\u0e23\u0e21\u0e23\u0e32\u0e0a",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e19\u0e04\u0e23\u0e28\u0e23\u0e35\u0e18\u0e23\u0e23\u0e21\u0e23\u0e32\u0e0a",
+                    "StationNameEnglish": "NAKHONSI THAMMARAT",
+                    "Latitude": "8.53778",
+                    "Longitude": "99.94722",
+                    "Rainfall": "14.53"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1b\u0e32\u0e01\u0e1e\u0e19\u0e31\u0e07",
+                    "StationNameEnglish": "Pak Phanang",
+                    "Latitude": "8.31667",
+                    "Longitude": "100.21667",
+                    "Rainfall": "3.90"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e48\u0e32\u0e28\u0e32\u0e25\u0e32",
+                    "StationNameEnglish": "Tha Sala",
+                    "Latitude": "8.63333",
+                    "Longitude": "99.95000",
+                    "Rainfall": "24.30"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e34\u0e0a\u0e25",
+                    "StationNameEnglish": "Sichon",
+                    "Latitude": "8.98333",
+                    "Longitude": "99.91667",
+                    "Rainfall": "35.30"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e02\u0e31\u0e19",
+                    "StationNameEnglish": "K.A.Bang Khan",
+                    "Latitude": "8.01667",
+                    "Longitude": "99.53333",
+                    "Rainfall": "2.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1e\u0e23\u0e2b\u0e21\u0e04\u0e35\u0e23\u0e35",
+                    "StationNameEnglish": "Prom Kiri",
+                    "Latitude": "8.50000",
+                    "Longitude": "99.83333",
+                    "Rainfall": "2.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e19\u0e1a\u0e1e\u0e34\u0e15\u0e33",
+                    "StationNameEnglish": "A.Noppitum",
+                    "Latitude": "8.74333",
+                    "Longitude": "99.65417",
+                    "Rainfall": "3.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e21\u0e2b\u0e32\u0e27\u0e34\u0e17\u0e22\u0e32\u0e25\u0e31\u0e22\u0e27\u0e25\u0e31\u0e22\u0e25\u0e31\u0e01\u0e29\u0e13\u0e4c  \u0e2d.\u0e17\u0e48\u0e32\u0e28\u0e32\u0e25\u0e32",
+                    "StationNameEnglish": "Walailak University",
+                    "Latitude": "8.65500",
+                    "Longitude": "99.87055",
+                    "Rainfall": "12.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e19\u0e04\u0e23\u0e28\u0e23\u0e35\u0e18\u0e23\u0e23\u0e21\u0e23\u0e32\u0e0a \u0e2a\u0e01\u0e29.",
+                    "StationNameEnglish": "NAKHONSI THAMMARAT AGROMET.",
+                    "Latitude": "8.35931",
+                    "Longitude": "100.00000",
+                    "Rainfall": "4.11"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e1e\u0e31\u0e17\u0e25\u0e38\u0e07",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e1e\u0e31\u0e17\u0e25\u0e38\u0e07",
+                    "StationNameEnglish": "Phatthalung",
+                    "Latitude": "7.60000",
+                    "Longitude": "100.08333",
+                    "Rainfall": "4.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e01\u0e07\u0e2b\u0e23\u0e32",
+                    "StationNameEnglish": "Kong Hra",
+                    "Latitude": "7.46667",
+                    "Longitude": "99.93333",
+                    "Rainfall": "6.20"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e2a\u0e07\u0e02\u0e25\u0e32",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e2a\u0e30\u0e40\u0e14\u0e32",
+                    "StationNameEnglish": "SA DAO",
+                    "Latitude": "6.79806",
+                    "Longitude": "100.39056",
+                    "Rainfall": "0.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2a\u0e07\u0e02\u0e25\u0e32",
+                    "StationNameEnglish": "SONGKHLA",
+                    "Latitude": "7.18211",
+                    "Longitude": "100.60769",
+                    "Rainfall": "3.91"
+                  },
+                  {
+                    "StationNameThai": "\u0e2b\u0e32\u0e14\u0e43\u0e2b\u0e0d\u0e48",
+                    "StationNameEnglish": "HAT YAI AIRPORT",
+                    "Latitude": "6.91667",
+                    "Longitude": "100.43333",
+                    "Rainfall": "0.24"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e1b\u0e31\u0e15\u0e15\u0e32\u0e19\u0e35",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e1b\u0e31\u0e15\u0e15\u0e32\u0e19\u0e35",
+                    "StationNameEnglish": "PATTANI AIRPORT",
+                    "Latitude": "6.78333",
+                    "Longitude": "101.15000",
+                    "Rainfall": "16.11"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e21\u0e37\u0e2d\u0e07\u0e1b\u0e31\u0e15\u0e15\u0e32\u0e19\u0e35",
+                    "StationNameEnglish": "Pattani",
+                    "Latitude": "6.86667",
+                    "Longitude": "101.25000",
+                    "Rainfall": "9.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e32\u0e22\u0e1a\u0e38\u0e23\u0e35",
+                    "StationNameEnglish": "Sai Buri",
+                    "Latitude": "6.70000",
+                    "Longitude": "101.63333",
+                    "Rainfall": "76.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e42\u0e04\u0e01\u0e42\u0e1e\u0e18\u0e34\u0e4c",
+                    "StationNameEnglish": "Khok Pho",
+                    "Latitude": "6.71667",
+                    "Longitude": "101.11667",
+                    "Rainfall": "8.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1b\u0e32\u0e19\u0e32\u0e40\u0e23\u0e30",
+                    "StationNameEnglish": "Panare",
+                    "Latitude": "6.85000",
+                    "Longitude": "101.50000",
+                    "Rainfall": "61.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e21\u0e32\u0e22\u0e2d",
+                    "StationNameEnglish": "Mayo",
+                    "Latitude": "6.71667",
+                    "Longitude": "101.43333",
+                    "Rainfall": "58.60"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2b\u0e19\u0e2d\u0e07\u0e08\u0e34\u0e01",
+                    "StationNameEnglish": "Nong Chik",
+                    "Latitude": "6.81667",
+                    "Longitude": "101.16667",
+                    "Rainfall": "30.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e22\u0e30\u0e2b\u0e23\u0e34\u0e48\u0e07",
+                    "StationNameEnglish": "Yaring",
+                    "Latitude": "6.85000",
+                    "Longitude": "101.33333",
+                    "Rainfall": "16.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e01\u0e30\u0e1e\u0e49\u0e2d",
+                    "StationNameEnglish": "A.Kapho",
+                    "Latitude": "6.56667",
+                    "Longitude": "101.55000",
+                    "Rainfall": "2.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e44\u0e21\u0e49\u0e41\u0e01\u0e48\u0e19",
+                    "StationNameEnglish": "A.Mai Kaen",
+                    "Latitude": "6.61667",
+                    "Longitude": "101.68333",
+                    "Rainfall": "62.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e17\u0e38\u0e48\u0e07\u0e22\u0e32\u0e07\u0e41\u0e14\u0e07",
+                    "StationNameEnglish": "K.A.Thung Yang Dang",
+                    "Latitude": "6.65000",
+                    "Longitude": "101.41667",
+                    "Rainfall": "28.80"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e41\u0e21\u0e48\u0e25\u0e32\u0e19",
+                    "StationNameEnglish": "K.A.Mae Lan",
+                    "Latitude": "6.66667",
+                    "Longitude": "101.18333",
+                    "Rainfall": "44.00"
+                  }
+                ]
+              }
+            },
+            {
+              "ProvinceName": "\u0e22\u0e30\u0e25\u0e32",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e22\u0e30\u0e25\u0e32 \u0e2a\u0e01\u0e29.",
+                  "StationNameEnglish": "YALA AGROMET.",
+                  "Latitude": "6.51667",
+                  "Longitude": "101.28333",
+                  "Rainfall": "42.50"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e19\u0e23\u0e32\u0e18\u0e34\u0e27\u0e32\u0e2a",
+              "Stations": {
+                "Station": [
+                  {
+                    "StationNameThai": "\u0e19\u0e23\u0e32\u0e18\u0e34\u0e27\u0e32\u0e2a",
+                    "StationNameEnglish": "NARATHIWAT",
+                    "Latitude": "6.41667",
+                    "Longitude": "101.81667",
+                    "Rainfall": "5.60"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e22\u0e35\u0e48\u0e07\u0e2d",
+                    "StationNameEnglish": "Yi-Ngo",
+                    "Latitude": "6.40000",
+                    "Longitude": "101.71667",
+                    "Rainfall": "11.60"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e38\u0e44\u0e2b\u0e07\u0e1b\u0e32\u0e14\u0e35",
+                    "StationNameEnglish": "Sungai Padi",
+                    "Latitude": "6.08333",
+                    "Longitude": "101.90000",
+                    "Rainfall": "16.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e23\u0e30\u0e41\u0e07\u0e30",
+                    "StationNameEnglish": "Rangae",
+                    "Latitude": "6.28333",
+                    "Longitude": "101.73333",
+                    "Rainfall": "6.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e15\u0e32\u0e01\u0e43\u0e1a",
+                    "StationNameEnglish": "Tak Bai",
+                    "Latitude": "6.23333",
+                    "Longitude": "102.08333",
+                    "Rainfall": "44.60"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e38\u0e44\u0e2b\u0e07\u0e42\u0e01-\u0e25\u0e01",
+                    "StationNameEnglish": "Sungai Kolok",
+                    "Latitude": "6.01667",
+                    "Longitude": "101.98333",
+                    "Rainfall": "59.60"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e40\u0e08\u0e32\u0e30",
+                    "StationNameEnglish": "Bacho",
+                    "Latitude": "6.48333",
+                    "Longitude": "101.66667",
+                    "Rainfall": "13.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e23\u0e37\u0e2d\u0e40\u0e2a\u0e32\u0e30",
+                    "StationNameEnglish": "Ruso",
+                    "Latitude": "6.40000",
+                    "Longitude": "101.53333",
+                    "Rainfall": "0.20"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e41\u0e27\u0e49\u0e07",
+                    "StationNameEnglish": "Waeng",
+                    "Latitude": "5.91667",
+                    "Longitude": "101.88333",
+                    "Rainfall": "61.40"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e2a\u0e38\u0e04\u0e34\u0e23\u0e34\u0e19",
+                    "StationNameEnglish": "K.A.Sukhirin",
+                    "Latitude": "5.95000",
+                    "Longitude": "101.78333",
+                    "Rainfall": "47.00"
+                  },
+                  {
+                    "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e40\u0e08\u0e32\u0e30\u0e44\u0e2d\u0e23\u0e49\u0e2d\u0e07",
+                    "StationNameEnglish": "K.A.Joa I Rong",
+                    "Latitude": "6.23361",
+                    "Longitude": "101.81972",
+                    "Rainfall": "16.80"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RegionName": "\u0e20\u0e32\u0e04\u0e43\u0e15\u0e49 (\u0e1d\u0e31\u0e48\u0e07\u0e15\u0e30\u0e27\u0e31\u0e19\u0e15\u0e01)",
+        "Provinces": {
+          "Province": [
+            {
+              "ProvinceName": "\u0e01\u0e23\u0e30\u0e1a\u0e35\u0e48",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e40\u0e01\u0e32\u0e30\u0e25\u0e31\u0e19\u0e15\u0e32",
+                  "StationNameEnglish": "KO LANTA",
+                  "Latitude": "7.53333",
+                  "Longitude": "99.05000",
+                  "Rainfall": "11.80"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e15\u0e23\u0e31\u0e07",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1b\u0e30\u0e40\u0e2b\u0e25\u0e35\u0e22\u0e19  **",
+                  "StationNameEnglish": "Palian",
+                  "Latitude": "7.16667",
+                  "Longitude": "99.70000",
+                  "Rainfall": "4.00"
+                }
+              }
+            },
+            {
+              "ProvinceName": "\u0e2a\u0e15\u0e39\u0e25",
+              "Stations": {
+                "Station": {
+                  "StationNameThai": "\u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e25\u0e30\u0e07\u0e39",
+                  "StationNameEnglish": "Langu",
+                  "Latitude": "6.88333",
+                  "Longitude": "99.80000",
+                  "Rainfall": "4.30"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

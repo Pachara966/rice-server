@@ -7,6 +7,14 @@ const ai = require('./ai-controller');
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
+const RiceVaritiesData = require('../models/ricevaritiesSchema');
+
+const riceVarities = mongoose.model(
+  'rice_varieties',
+  RiceVaritiesData,
+  'rice_varieties_data'
+);
+
 var dateFormat = require('dateformat');
 
 const user = User.userModel;
@@ -383,7 +391,41 @@ async function updateFeed(req, res, next) {
   } else return res.json({ status: 'fail', msg: 'ไม่พบข้อมูล' });
 }
 
+async function get_rice_varity_information(req, res, next) {
+  console.log('request rice varity information');
+
+  const ID = req.body;
+
+  if (ID.ID == 0) {
+    await riceVarities.find().then((riceVarityInfo) => {
+      if (riceVarityInfo) {
+        return res.json({
+          status: 'success',
+          riceVarityInfo,
+        });
+      } else {
+        return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลพันธุ์ข้าว' });
+      }
+    });
+  } else {
+    await riceVarities.findOne(ID, (error, riceVarityInfo) => {
+      if (error) {
+        return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลพันธุ์ข้าว' });
+      }
+      if (riceVarityInfo) {
+        return res.json({
+          status: 'success',
+          riceVarityInfo,
+        });
+      } else {
+        return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลพันธุ์ข้าว1' });
+      }
+    });
+  }
+}
+
 module.exports.init_data = init_data;
 module.exports.midnight = midnight;
 module.exports.midnight_demo = midnight_demo;
 module.exports.updateFeed = updateFeed;
+module.exports.get_rice_varity_information = get_rice_varity_information;
