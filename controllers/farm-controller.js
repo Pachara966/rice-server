@@ -26,8 +26,27 @@ const codedef = mongoose.model('code_definition', codeDif, 'code_definition');
 const user = User.userModel;
 const farm = Farm.farmModel;
 
+function trimObj(obj) {
+  if (!Array.isArray(obj) && typeof obj != 'object') return obj;
+  return Object.keys(obj).reduce(
+    function (acc, key) {
+      acc[key.trim()] =
+        typeof obj[key] == 'string' ? obj[key].trim() : trimObj(obj[key]);
+      return acc;
+    },
+    Array.isArray(obj) ? [] : {}
+  );
+}
+
 async function varieties_eval_only(req, res, next) {
   console.log('request varieties evaluation');
+  var variriesName = await Varieties.find().select([
+    'ID',
+    'rice_varieties_name',
+  ]);
+  variriesName = JSON.stringify(variriesName);
+  variriesName = trimObj(variriesName);
+  const obj = JSON.parse(variriesName);
 
   const { province, varietie, evaltype, startDate } = req.body;
 
@@ -38,13 +57,13 @@ async function varieties_eval_only(req, res, next) {
   var v = [{}];
 
   for (let index = 0; index < result.length; index++) {
-    v[index] = await Varieties.findOne({ ID: result[index].varieties }).select([
-      'rice_varieties_name',
-    ]);
-    // console.log('result[index] : ', result[index]);
-    // console.log('v[index] : ', v[index]);
+    var __FOUND = obj.find(function (post, index1) {
+      if (post.ID == result[index].varieties) {
+        return true;
+      }
+    });
     ret[index] = {
-      name: v[index].rice_varieties_name, // ชื่อพันธุ์ข้าว
+      name: __FOUND.rice_varieties_name, // ชื่อพันธุ์ข้าว
       ID: result[index].varieties, // ID ชื่อพันธุ์ข้าว
       cost: {
         value: result[index].evalproduct.cost.value,
@@ -65,7 +84,7 @@ async function varieties_eval_only(req, res, next) {
       timeline: await timeline(result[index].timeline),
     };
   }
-  res.send(ret);
+  res.json(ret);
 }
 
 async function timeline(timelineOrder) {

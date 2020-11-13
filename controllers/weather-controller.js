@@ -46,8 +46,15 @@ async function rain_regions(req, res, next) {
         if (err) {
           throw err;
         }
-        const jsonData = JSON.stringify(result).replace(/\\/g, '');
-
+        const jsonData = JSON.stringify(result.RainRegions.Version).replace(
+          /\\/g,
+          ''
+        );
+        // fs.writeFileSync('data1.json', jsonData);
+        fs.writeFileSync(
+          'data2.json',
+          JSON.stringify(result.RainRegions.Version)
+        );
         return res.json({
           status: 'success',
           data: jsonData,
