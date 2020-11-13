@@ -50,7 +50,7 @@ const bree = new Bree({
     },
     {
       name: 'rain_regions',
-      //timeout: ms('5000'),
+      interval: 'at 4:10 am also at 7:17 am ',
     },
   ],
 });

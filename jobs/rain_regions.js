@@ -2,12 +2,21 @@ const https = require('https');
 const xml2js = require('xml2js');
 const fs = require('fs');
 
+var dateFormat = require('dateformat');
+var today = new Date();
+var DateTime =
+  dateFormat(today.setDate(today.getDate()), 'isoDate').toString() +
+  'T' +
+  dateFormat(today.setDate(today.getDate()), 'isoTime').toString() +
+  '.000Z';
+
 rainregions();
 
 async function rainregions() {
   console.log(
-    '===============================Rain Regions=================================='
+    '============================Auto run from Rain Regions============================'
   );
+  console.log(DateTime);
   let url =
     'https://data.tmd.go.th/api/RainRegions/v1/?uid=u63glasrice&ukey=3e296702720f633d0a819d0f90c35deb';
 
