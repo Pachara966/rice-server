@@ -22,8 +22,8 @@ async function rainregions() {
           throw err;
         }
         const jsonData = JSON.stringify(result, null, 4);
-        fs.writeFileSync('data1.json', jsonData);
-        console.log(jsonData.RainRegions);
+        // fs.writeFileSync('data1.json', jsonData);
+        console.log('success');
       });
     });
   });
