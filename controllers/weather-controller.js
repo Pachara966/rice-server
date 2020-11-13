@@ -5,7 +5,20 @@ async function weather_forecast_7days(req, res, next) {
   console.log('Require weather forecast 7 days');
 
   let { Province } = req.body;
+  const data = await weatherforecast_7days(Province);
+  console.log(data);
+  if (data) {
+    return res.json({ status: 'success', Provinces: data.Provinces[0] });
+  } else {
+    return res.json({
+      status: 'fail',
+      msg: 'Please search for a valid city 😩',
+    });
+  }
+}
 
+async function weatherforecast_7days(Province) {
+  var package = [{}];
   Province = utf8.encode(Province);
   url =
     'https://data.tmd.go.th/api/WeatherForecast7Days/V1/?type=json&Province=';
@@ -14,15 +27,12 @@ async function weather_forecast_7days(req, res, next) {
   await fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      return res.json({ status: 'success', Provinces: data.Provinces[0] });
+      package = data;
     })
     .catch(() => {
       console.log('Please search for a valid city 😩');
-      return res.json({
-        status: 'fail',
-        msg: 'Please search for a valid city 😩',
-      });
     });
+  return package;
 }
 
 const https = require('https');
@@ -72,3 +82,4 @@ async function rain_regions(req, res, next) {
 
 module.exports.weather_forecast_7days = weather_forecast_7days;
 module.exports.rain_regions = rain_regions;
+module.exports.weatherforecast_7days = weatherforecast_7days;

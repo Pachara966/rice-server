@@ -3,7 +3,7 @@ const User = require('../models/userSchema');
 const Farm = require('../models/FarmSchema');
 const AIdemo = require('../temp/eval_demo.json');
 const ai = require('./ai-controller');
-
+const { weatherforecast_7days } = require('../controllers/weather-controller');
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
@@ -299,11 +299,11 @@ async function midnight(req, res, next) {
 async function init_data(req, res, next) {
   console.log('request initial user data');
 
-  const _id = req.body;
+  const { _id, Province } = req.body;
 
-  const farms = await user.findOne(_id).populate('farms');
-  const feed = await user.findOne(_id).populate('feed');
-
+  const farms = await user.findById(_id).populate('farms');
+  const feed = await user.findById(_id).populate('feed');
+  const weatherForecast7Days = await weatherforecast_7days(Province);
   user.findById(_id, '-password', (error, userInfo) => {
     if (error) {
       return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
@@ -318,8 +318,11 @@ async function init_data(req, res, next) {
           phonenumber: userInfo.phonenumber,
           address: userInfo.address,
         },
-        farms: farms,
-        feed: feed,
+        farms: farms.farms,
+        feed: feed.feed,
+        // nofication,
+        // ricePrice,
+        weatherForecast7Days: weatherForecast7Days.Provinces[0],
       });
     } else {
       return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });

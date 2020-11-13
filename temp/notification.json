@@ -1,0 +1,30 @@
+{
+  "activities": [
+    {
+      "fid": "_id",
+      "fname": "name",
+      "activitiesDate": "activitiesDate",
+      "activityLenght": "activityLenght"
+    },
+    {
+      "fid": "_id",
+      "fname": "name",
+      "activitiesDate": "activitiesDate",
+      "activityLenght": "activityLenght"
+    }
+  ],
+  "warning": [
+    {
+      "fid": "_id",
+      "fname": "name",
+      "activitiesDate": "activitiesDate",
+      "warningLenght": "warningLenght"
+    },
+    {
+      "fid": "_id",
+      "fname": "name",
+      "activitiesDate": "activitiesDate",
+      "activityLenght": "activityLenght"
+    }
+  ]
+}
