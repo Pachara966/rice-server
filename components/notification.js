@@ -22,7 +22,6 @@ async function notification(_id) {
       var DateDB = dateFormat(dateDB.setDate(dateDB.getDate()), 'isoDate');
 
       if (DateDB == toDay) {
-        console.log('Date from DB ', DateDB);
         activities[countActivities] = {
           fid: farmData[i]._id,
           fname: farmData[i].name,

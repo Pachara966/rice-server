@@ -16,24 +16,6 @@ async function weather_forecast_7days(req, res, next) {
   }
 }
 
-// async function weatherforecast_7days(province) {
-//   var package = [{}];
-//   Province = utf8.encode(province);
-//   url =
-//     'https://data.tmd.go.th/api/WeatherForecast7Days/V1/?type=json&Province=';
-//   url = url.concat(Province);
-//   console.log(url);
-//   await fetch(url)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       package = data;
-//     })
-//     .catch(() => {
-//       console.log('Please search for a valid city 😩');
-//     });
-//   return package;
-// }
-
 const https = require('https');
 const xml2js = require('xml2js');
 const fs = require('fs');

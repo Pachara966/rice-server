@@ -8,7 +8,6 @@ async function weatherforecast_7days(province) {
   url =
     'https://data.tmd.go.th/api/WeatherForecast7Days/V1/?type=json&Province=';
   url = url.concat(Province);
-  console.log(url);
   await fetch(url)
     .then((response) => response.json())
     .then((data) => {
