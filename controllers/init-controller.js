@@ -3,7 +3,8 @@ const User = require('../models/userSchema');
 const Farm = require('../models/FarmSchema');
 const AIdemo = require('../temp/eval_demo.json');
 const ai = require('./ai-controller');
-const { weatherforecast_7days } = require('../controllers/weather-controller');
+const { weatherforecast_7days } = require('../components/weatherforecast7days');
+const { notification } = require('../components/notification');
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
@@ -299,11 +300,13 @@ async function midnight(req, res, next) {
 async function init_data(req, res, next) {
   console.log('request initial user data');
 
-  const { _id, Province } = req.body;
+  let { _id, Province } = req.body;
 
   const farms = await user.findById(_id).populate('farms');
   const feed = await user.findById(_id).populate('feed');
   const weatherForecast7Days = await weatherforecast_7days(Province);
+  const farmNotification = await notification(_id);
+
   user.findById(_id, '-password', (error, userInfo) => {
     if (error) {
       return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
@@ -320,7 +323,7 @@ async function init_data(req, res, next) {
         },
         farms: farms.farms,
         feed: feed.feed,
-        // nofication,
+        notification: farmNotification,
         // ricePrice,
         weatherForecast7Days: weatherForecast7Days.Provinces[0],
       });
@@ -426,6 +429,11 @@ async function get_rice_varity_information(req, res, next) {
     });
   }
 }
+
+// async function notification(_id) {
+//   const farms = await user.findById(_id).populate('farms');
+//   const farmData = farms.farms;
+// }
 
 module.exports.init_data = init_data;
 module.exports.midnight = midnight;

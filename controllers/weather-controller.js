@@ -1,5 +1,4 @@
-const fetch = require('node-fetch');
-const utf8 = require('utf8');
+const { weatherforecast_7days } = require('../components/weatherforecast7days');
 
 async function weather_forecast_7days(req, res, next) {
   console.log('Require weather forecast 7 days');
@@ -17,23 +16,23 @@ async function weather_forecast_7days(req, res, next) {
   }
 }
 
-async function weatherforecast_7days(Province) {
-  var package = [{}];
-  Province = utf8.encode(Province);
-  url =
-    'https://data.tmd.go.th/api/WeatherForecast7Days/V1/?type=json&Province=';
-  url = url.concat(Province);
-  console.log(url);
-  await fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      package = data;
-    })
-    .catch(() => {
-      console.log('Please search for a valid city 😩');
-    });
-  return package;
-}
+// async function weatherforecast_7days(province) {
+//   var package = [{}];
+//   Province = utf8.encode(province);
+//   url =
+//     'https://data.tmd.go.th/api/WeatherForecast7Days/V1/?type=json&Province=';
+//   url = url.concat(Province);
+//   console.log(url);
+//   await fetch(url)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       package = data;
+//     })
+//     .catch(() => {
+//       console.log('Please search for a valid city 😩');
+//     });
+//   return package;
+// }
 
 const https = require('https');
 const xml2js = require('xml2js');
@@ -82,4 +81,4 @@ async function rain_regions(req, res, next) {
 
 module.exports.weather_forecast_7days = weather_forecast_7days;
 module.exports.rain_regions = rain_regions;
-module.exports.weatherforecast_7days = weatherforecast_7days;
+// module.exports.weatherforecast_7days = weatherforecast_7days;
