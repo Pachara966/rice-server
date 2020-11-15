@@ -9,7 +9,7 @@ const _id = '5fa809cf4fe4aa0f6c70b520';
 var dateFormat = require('dateformat');
 var today = new Date();
 var toDay = dateFormat(today.setDate(today.getDate()), 'isoDate');
-var oneWeek = dateFormat(today.setDate(today.getDate() + 14), 'isoDate');
+var oneWeek = dateFormat(today.setDate(today.getDate() + 7), 'isoDate');
 
 console.log(toDay);
 updateTimelineStatus(_id);
