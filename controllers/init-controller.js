@@ -349,17 +349,17 @@ async function updateFeed(req, res, next) {
 
   const userID = await user.find({}).select(['_id']);
 
-  console.log(dataFeed1);
+  // console.log(dataFeed1);
   // dataFeed1 = utf8.decode(dataFeed1);
 
   dataFeed1 = JSON.stringify(dataFeed1);
   dataFeed1 = trimObj(dataFeed1);
   // dataFeed1 = JSON.stringify(dataFeed1);
 
-  console.log(dataFeed1);
+  // console.log(dataFeed1);
   var dataFeed = JSON.parse(dataFeed1);
   // dataFeed = dataFeed.replace(/\\/g, '');
-  console.log(dataFeed);
+  // console.log(dataFeed);
   // return res.json({ status: 'success', dataFeed });
   // const u = await user.findOne({ _id: userID[14]._id }).populate('farms');
 
@@ -398,31 +398,31 @@ async function updateFeed(req, res, next) {
     },
   ];
 
-  let newDataFeed = JSON.stringify(dataFeed.Feed);
-  console.log(newDataFeed);
-  newDataFeed = newDataFeed.replace(/\\n/g, '');
-  console.log(newDataFeed);
-  newDataFeed = trimObj(newDataFeed);
-  console.log(newDataFeed);
-  newDataFeed = newDataFeed.replace(/\\/g, '');
-  const obj_data = JSON.parse(newDataFeed);
-  console.log(obj_data);
-  // return res.json({ status: 'success', obj_data });
+  // let newDataFeed = JSON.stringify(dataFeed.Feed);
+  // console.log(newDataFeed);
+  // newDataFeed = newDataFeed.replace(/\\n/g, '');
+  // console.log(newDataFeed);
+  // newDataFeed = trimObj(newDataFeed);
+  // console.log(newDataFeed);
+  // newDataFeed = newDataFeed.replace(/\\/g, '');
+  // const obj_data = JSON.parse(newDataFeed);
+  // console.log(obj_data);
+  return res.json({ status: 'success', feed });
 
-  if (dataFeed) {
-    for (let index in userID) {
-      console.log('data feed');
-      await user.findByIdAndUpdate(
-        { _id: userID[index]._id },
-        {
-          $push: { feed: obj_data },
-        }
-      );
-    }
-    return res.json({ status: 'success', feed: newDataFeed });
-  } else {
-    return res.json({ status: 'fail', msg: 'ไม่พบข้อมูล' });
-  }
+  // if (dataFeed) {
+  //   for (let index in userID) {
+  //     console.log('data feed');
+  //     await user.findByIdAndUpdate(
+  //       { _id: userID[index]._id },
+  //       {
+  //         $push: { feed: obj_data },
+  //       }
+  //     );
+  //   }
+  //   return res.json({ status: 'success', feed: newDataFeed });
+  // } else {
+  //   return res.json({ status: 'fail', msg: 'ไม่พบข้อมูล' });
+  // }
 }
 
 async function get_rice_varity_information(req, res, next) {
