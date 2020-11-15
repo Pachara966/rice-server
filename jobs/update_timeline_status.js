@@ -42,14 +42,14 @@ async function updateTimelineStatus(_id) {
             { _id: fid, 'timeline._id': tlid },
             {
               $set: { 'timeline.$.status': '2' },
-            },
-            {
-              new: true,
-            },
-            function (err, model) {
-              if (err) throw err;
-              console.log(model.timeline[j]);
             }
+            // {
+            //   new: true,
+            // },
+            // function (err, model) {
+            //   if (err) throw err;
+            //   console.log(model.timeline[j]);
+            // }
           );
         }
         if (DateDB >= toDay && DateDB <= oneWeek) {
@@ -59,14 +59,14 @@ async function updateTimelineStatus(_id) {
             { _id: fid, 'timeline._id': tlid },
             {
               $set: { 'timeline.$.status': '3' },
-            },
-            {
-              new: true,
-            },
-            function (err, model) {
-              if (err) throw err;
-              console.log(model.timeline[j]);
             }
+            // {
+            //   new: true,
+            // },
+            // function (err, model) {
+            //   if (err) throw err;
+            //   console.log(model.timeline[j]);
+            // }
           );
         }
         if (DateDB > oneWeek) {
@@ -76,14 +76,14 @@ async function updateTimelineStatus(_id) {
             { _id: fid, 'timeline._id': tlid },
             {
               $set: { 'timeline.$.status': '4' },
-            },
-            {
-              new: true,
-            },
-            function (err, model) {
-              if (err) throw err;
-              console.log(model.timeline[j]);
             }
+            // {
+            //   new: true,
+            // },
+            // function (err, model) {
+            //   if (err) throw err;
+            //   console.log(model.timeline[j]);
+            // }
           );
         }
       }
