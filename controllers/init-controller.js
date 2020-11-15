@@ -7,6 +7,8 @@ const { weatherforecast_7days } = require('../components/weatherforecast7days');
 const { notification } = require('../components/notification');
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
+const { trimObj } = require('../components/trimObj');
+const utf8 = require('utf8');
 
 const RiceVaritiesData = require('../models/ricevaritiesSchema');
 
@@ -343,10 +345,22 @@ async function updateFeed(req, res, next) {
   var date = year + '-' + month + '-' + day + 'T00:00:00.000Z';
   var ad_number = 5;
 
-  const dataFeed = await ai.getFeed(date, ad_number);
+  var dataFeed1 = await ai.getFeed(date, ad_number);
 
-  // const userID = await user.find({}).select(['_id']);
+  const userID = await user.find({}).select(['_id']);
 
+  console.log(dataFeed1);
+  // dataFeed1 = utf8.decode(dataFeed1);
+
+  dataFeed1 = JSON.stringify(dataFeed1);
+  dataFeed1 = trimObj(dataFeed1);
+  // dataFeed1 = JSON.stringify(dataFeed1);
+
+  console.log(dataFeed1);
+  var dataFeed = JSON.parse(dataFeed1);
+  // dataFeed = dataFeed.replace(/\\/g, '');
+  console.log(dataFeed);
+  // return res.json({ status: 'success', dataFeed });
   // const u = await user.findOne({ _id: userID[14]._id }).populate('farms');
 
   // const farms = u.farms;
@@ -383,18 +397,32 @@ async function updateFeed(req, res, next) {
       activities,
     },
   ];
-  if (dataFeed) {
-    //   for (let index in userID) {
-    //     await user.findByIdAndUpdate(
-    //       { _id: userID[index]._id },
-    //       {
-    //         $push: { feed: dataFeed.Feed },
-    //       }
-    //     );
-    return res.json({ status: 'success', feed });
 
-    //res.json({status: 'success', {dataFeed.Feed}});
-  } else return res.json({ status: 'fail', msg: 'ไม่พบข้อมูล' });
+  let newDataFeed = JSON.stringify(dataFeed.Feed);
+  console.log(newDataFeed);
+  newDataFeed = newDataFeed.replace(/\\n/g, '');
+  console.log(newDataFeed);
+  newDataFeed = trimObj(newDataFeed);
+  console.log(newDataFeed);
+  newDataFeed = newDataFeed.replace(/\\/g, '');
+  const obj_data = JSON.parse(newDataFeed);
+  console.log(obj_data);
+  // return res.json({ status: 'success', obj_data });
+
+  if (dataFeed) {
+    for (let index in userID) {
+      console.log('data feed');
+      await user.findByIdAndUpdate(
+        { _id: userID[index]._id },
+        {
+          $push: { feed: obj_data },
+        }
+      );
+    }
+    return res.json({ status: 'success', feed: newDataFeed });
+  } else {
+    return res.json({ status: 'fail', msg: 'ไม่พบข้อมูล' });
+  }
 }
 
 async function get_rice_varity_information(req, res, next) {

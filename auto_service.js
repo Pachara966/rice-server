@@ -16,12 +16,12 @@ const bree = new Bree({
     // {
     //   name: 'test_notification',
     // },
-    // {
-    //   name: 'update_timeline_status',
-    //   timeout: ms('100000'),
-    //   interval: ms('300000'),
-    //   // interval: '10m',
-    // },
+    {
+      name: 'update_timeline_status',
+      // timeout: ms('100000'),
+      // interval: ms('300000'),
+      // interval: '10m',
+    },
     // {
     //   name: 'test2',
     //   worker: {

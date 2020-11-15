@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const utf8 = require('utf8');
 
 async function weatherforecast_7days(province) {
-  console.log('Require weather forecast 7 days');
+  console.log('require weather forecast 7 days');
   var package = [{}];
   Province = utf8.encode(province);
   url =

@@ -5,7 +5,7 @@ const feedSchema = new schema({
     {
       feedPicture: { type: String, default: '' },
       name: { type: String, default: '' },
-      order: { type: Number, default: 0 },
+      order: { type: Number, default: 0 }, // เริ่มจาก 1 และ บวกขึ้นไปเรื่อยๆ
       activitiesDate: Date,
       caption: { type: String, default: '' },
       status: { type: Boolean, default: false }, // เปลี่ยนเมื่อกดใช้งานหรือผ่านไปแล้ว
