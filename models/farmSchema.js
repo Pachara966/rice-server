@@ -115,6 +115,7 @@ const farmSchema = new schema({
   ],
   timeline: [
     {
+      farmPicture: { type: String, default: '' },
       order: { type: Number, default: 0 },
       caption: { type: String, default: '' },
       status: { type: String, default: '' }, // เปลี่ยนเมื่อกดใช้งานหรือผ่านไปแล้ว 1 = Past Done, 2 = Past Not done, 3 = now -> next 7 days, 4 = After 7 day
