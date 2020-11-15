@@ -4,7 +4,12 @@ const utf8 = require('utf8');
 async function weatherforecast_7days(province) {
   console.log('require weather forecast 7 days');
   var package = [{}];
-  Province = utf8.encode(province);
+  var province1 = province;
+  if (!province1) {
+    province1 = 'นนทบุรี';
+  }
+
+  Province = utf8.encode(province1);
   url =
     'https://data.tmd.go.th/api/WeatherForecast7Days/V1/?type=json&Province=';
   url = url.concat(Province);
