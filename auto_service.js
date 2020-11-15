@@ -15,12 +15,13 @@ const bree = new Bree({
   jobs: [
     // {
     //   name: 'test_notification',
+    // timeout: ms('100000'),
+    // interval: ms('300000'),
+    // interval: '10m',
     // },
     {
       name: 'update_timeline_status',
-      // timeout: ms('100000'),
-      // interval: ms('300000'),
-      // interval: '10m',
+      interval: 'at 5:00 am also at 5:00 pm ',
     },
     // {
     //   name: 'test2',
