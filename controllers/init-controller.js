@@ -303,7 +303,8 @@ async function init_data(req, res, next) {
   console.log('request initial user data');
 
   let { _id, Province } = req.body;
-
+  console.log('User ID : ', _id);
+  console.log('Province : ', Province);
   const farms = await user.findById(_id).populate('farms');
   const feed = await user.findById(_id).populate('feed');
   const weatherForecast7Days = await weatherforecast_7days(Province);
@@ -336,7 +337,7 @@ async function init_data(req, res, next) {
 }
 
 async function updateFeed(req, res, next) {
-  console.log('request update feed');
+  console.log('request update feed'); // เลิกใช้งาน
 
   var dateObj = new Date();
   var month = dateObj.getUTCMonth() + 1; //months from 1-12

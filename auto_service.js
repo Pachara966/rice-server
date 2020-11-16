@@ -25,9 +25,9 @@ const bree = new Bree({
     //   name: 'changeFarmActivate',
     //   interval: 'at 5:30 am also at 5:30 pm ',
     // },
-    // {
-    //   name: 'addFeed',
-    // },
+    {
+      name: 'testGenerateFeed',
+    },
     // {
     //   name: 'test2',
     //   worker: {
