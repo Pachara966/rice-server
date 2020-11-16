@@ -31,13 +31,18 @@ async function notification(_id) {
         countActivities++;
       }
 
-      if (DateDB >= toDay && DateDB <= oneWeek) {
+      if (
+        DateDB >= toDay &&
+        DateDB <= oneWeek &&
+        farmData[i].timeline[j].warningLenght > 0
+      ) {
         console.log('Date from DB ', DateDB);
+
         warning[countWarning] = {
           fid: farmData[i]._id,
           fname: farmData[i].name,
           activitiesDate: farmData[i].timeline[j].activitiesDate,
-          activityLenght: farmData[i].timeline[j].warningLenght,
+          warningLenght: farmData[i].timeline[j].warningLenght,
         };
         countWarning++;
       }
