@@ -21,7 +21,7 @@ async function notification(_id) {
       var dateDB = farmData[i].timeline[j].activitiesDate;
       var DateDB = dateFormat(dateDB.setDate(dateDB.getDate()), 'isoDate');
 
-      if (DateDB == toDay) {
+      if (DateDB == toDay && farmData[i].timeline[j].activityLenght > 0) {
         activities[countActivities] = {
           fid: farmData[i]._id,
           fname: farmData[i].name,
