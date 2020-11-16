@@ -112,9 +112,6 @@ function getFeed(date, ad_number) {
         if (resp) console.log('success from ai');
         if (body) {
           resolve(JSON.parse(body));
-          // resolve(body);
-          // console.log(body);
-          // return body;
         }
       }
     );

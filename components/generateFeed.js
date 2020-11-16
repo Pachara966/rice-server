@@ -1,5 +1,3 @@
-const mongoose = require('mongoose');
-const connectDB = require('../connectdb');
 const Feed = require('../models/feedSchema');
 const User = require('../models/userSchema');
 const Farm = require('../models/FarmSchema');
@@ -7,17 +5,9 @@ const user = User.userModel;
 const feeds = Feed.feedModel;
 const farm = Farm.farmModel;
 
-var dateFormat = require('dateformat');
-var today = new Date();
-var week = dateFormat(today.setDate(today.getDate() + 8), 'isoDate');
-
-const _id = '5fa8c44b4fe4aa0f6c70b649';
-
-addFeed(_id);
-
-async function addFeed(_id) {
-  await connectDB.connect_db();
+async function generateFeed(_id) {
   console.log('request feed  User : ', await user.findById(_id).select('name'));
+
   const farms = await user.findById(_id).populate('farms');
   const farmData = farms.farms;
   const feed = await feeds.find().select('-_id -__v');
@@ -62,6 +52,7 @@ async function addFeed(_id) {
     };
     count1++;
   }
-  // console.log(feedsData);
-  mongoose.connection.close();
+  return feedsData;
 }
+
+module.exports.generateFeed = generateFeed;
