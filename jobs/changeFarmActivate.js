@@ -14,8 +14,8 @@ async function updateTimelineStatus() {
 
   await connectDB.connect_db();
 
-  const farmData = await farm.find({});
-  console.log('farmData', farmData.length, ' farm');
+  const farmData = await farm.find({ activate: 'wait' });
+  console.log('wait ', farmData.length, ' farm ');
 
   for (let fIndex in farmData) {
     var farmStartDate = farmData[fIndex].startDate;
@@ -25,10 +25,10 @@ async function updateTimelineStatus() {
         farmStartDate.setDate(farmStartDate.getDate()),
         'isoDate'
       );
-      //   console.log(farmStartDate);
+      // console.log(farmStartDate);
       var fid = farmData[fIndex]._id;
-      //   console.log(fid);
-      if (farmStartDate < nextDay && farmData[fIndex].activate == 'wait') {
+      // console.log(fid);
+      if (farmStartDate < nextDay) {
         await farm.findByIdAndUpdate(
           { _id: fid },
 

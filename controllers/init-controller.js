@@ -342,7 +342,7 @@ async function init_data(req, res, next) {
 }
 
 async function updateFeed(req, res, next) {
-  console.log('request update feed'); // เลิกใช้งาน
+  console.log('request update feed');
 
   var dateObj = new Date();
   var month = dateObj.getUTCMonth() + 1; //months from 1-12
@@ -351,84 +351,17 @@ async function updateFeed(req, res, next) {
   var date = year + '-' + month + '-' + day + 'T00:00:00.000Z';
   var ad_number = 5;
 
-  var dataFeed1 = await ai.getFeed(date, ad_number);
-
-  const userID = await user.find({}).select(['_id']);
-
-  // console.log(dataFeed1);
-  // dataFeed1 = utf8.decode(dataFeed1);
-
-  dataFeed1 = JSON.stringify(dataFeed1);
-  dataFeed1 = trimObj(dataFeed1);
-  // dataFeed1 = JSON.stringify(dataFeed1);
-
-  // console.log(dataFeed1);
-  var dataFeed = JSON.parse(dataFeed1);
-  // dataFeed = dataFeed.replace(/\\/g, '');
-  // console.log(dataFeed);
-  // return res.json({ status: 'success', dataFeed });
-  // const u = await user.findOne({ _id: userID[14]._id }).populate('farms');
-
-  // const farms = u.farms;
-  // console.log(farms[0].name);
-
-  var activities = [{}];
-  let feed;
-  let i, j;
-  for (i in dataFeed.Feed.activities) {
-    var array_code = [{}];
-
-    for (j in dataFeed.Feed.activities[i].array_code) {
-      array_code[j] = {
-        activityCode: dataFeed.Feed.activities[i].array_code[j].activityCode,
-        owner: dataFeed.Feed.activities[i].array_code[j].owner,
-        activity: dataFeed.Feed.activities[i].array_code[j].activity,
-        picture_url: dataFeed.Feed.activities[i].array_code[j].picture,
-        activate: dataFeed.Feed.activities[i].array_code[j].activate,
-      };
-    }
-
-    activities[i] = {
-      code_type: dataFeed.Feed.activities[i].code_type,
-      array_code,
-    };
-  }
-  feed = [
-    {
-      order: dataFeed.Feed.order,
-      caption: dataFeed.Feed.caption,
-      status: dataFeed.Feed.status,
-      activitiesDate: dataFeed.Feed.activitiesDate,
-      timelineType: dataFeed.Feed.timelineType,
-      activities,
-    },
-  ];
-
-  // let newDataFeed = JSON.stringify(dataFeed.Feed);
-  // console.log(newDataFeed);
-  // newDataFeed = newDataFeed.replace(/\\n/g, '');
-  // console.log(newDataFeed);
-  // newDataFeed = trimObj(newDataFeed);
-  // console.log(newDataFeed);
-  // newDataFeed = newDataFeed.replace(/\\/g, '');
-  // const obj_data = JSON.parse(newDataFeed);
-  // console.log(obj_data);
-  return res.json({ status: 'success', feed });
-
-  // if (dataFeed) {
-  //   for (let index in userID) {
-  //     console.log('data feed');
-  //     await user.findByIdAndUpdate(
-  //       { _id: userID[index]._id },
-  //       {
-  //         $push: { feed: obj_data },
-  //       }
-  //     );
-  //   }
-  //   return res.json({ status: 'success', feed: newDataFeed });
-  // } else {
-  //   return res.json({ status: 'fail', msg: 'ไม่พบข้อมูล' });
-  // }
+  var data = await ai.getFeed(date, ad_number);
+  //   console.log('data ', data);
+  //   // data = data.toString();
+  //   // data = JSON.parse(data);
+  //   var result={};
+  //   data.split('"').forEach(function(value,i,arr){
+  //   if(i%2===0) return;
+  //   var key=arr[i-1].trim().replace("=","");
+  //   result[key]=value;
+  // });
+  return res.json(data);
 }
 
 async function get_rice_varity_information(req, res, next) {
@@ -463,11 +396,6 @@ async function get_rice_varity_information(req, res, next) {
     });
   }
 }
-
-// async function notification(_id) {
-//   const farms = await user.findById(_id).populate('farms');
-//   const farmData = farms.farms;
-// }
 
 module.exports.init_data = init_data;
 module.exports.midnight = midnight;

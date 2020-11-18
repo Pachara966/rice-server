@@ -11,5 +11,6 @@ router
   .post('/api/farm/createnote', farm.farm_create_note)
   .post('/api/farm/note', farm.farm_get_note)
   .post('/api/farm/updatenote', farm.farm_update_note)
-  .post('/api/farm/deletenote', farm.farm_delete_note);
+  .post('/api/farm/deletenote', farm.farm_delete_note)
+  .post('/api/farm/updateactivity', farm.farm_update_activity_timeline);
 module.exports = router;

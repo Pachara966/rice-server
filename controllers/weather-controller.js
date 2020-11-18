@@ -63,4 +63,3 @@ async function rain_regions(req, res, next) {
 
 module.exports.weather_forecast_7days = weather_forecast_7days;
 module.exports.rain_regions = rain_regions;
-// module.exports.weatherforecast_7days = weatherforecast_7days;

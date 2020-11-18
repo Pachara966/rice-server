@@ -94,12 +94,22 @@ function update_tl(
 }
 
 function getFeed(date, ad_number) {
+  // var req = {
+  //   method: 'POST',
+  //   url: AIurl.concat('/update_Feed'),
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   formData: { date: date, ad_number: ad_number },
+  // };
+  // console.log(req);
   return new Promise((resolve) => {
     request(
       {
         url: AIurl.concat('/update_Feed'),
         method: 'POST',
         headers: {
+          //'Content-Type': 'application/json',
           'Content-Type': 'multipart/form-data',
         },
         formData: {
@@ -109,9 +119,13 @@ function getFeed(date, ad_number) {
       },
       function (err, resp, body) {
         if (err) resolve('Error');
-        if (resp) console.log('success from ai');
+        if (resp) {
+          console.log('success from ai');
+        }
         if (body) {
-          resolve(JSON.parse(body));
+          // console.log('sdasdas', body);
+          // return resolve(body);
+          resolve(body);
         }
       }
     );

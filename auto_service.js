@@ -26,7 +26,7 @@ const bree = new Bree({
       interval: 'at 5:30 am also at 5:30 pm ',
     },
     // {
-    //   name: 'testGenerateFeed',
+    //   name: 'testGetRicePrice',
     // },
     // {
     //   name: 'test2',

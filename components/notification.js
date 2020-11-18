@@ -5,9 +5,11 @@ const user = User.userModel;
 
 async function notification(_id) {
   console.log('request notification');
+
   var today = new Date();
   var toDay = dateFormat(today.setDate(today.getDate()), 'isoDate');
   var oneWeek = dateFormat(today.setDate(today.getDate() + 7), 'isoDate');
+
   const farms = await user.findById(_id).populate('farms');
   const farmData = farms.farms;
 

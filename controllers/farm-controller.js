@@ -452,6 +452,44 @@ async function farm_delete_note(req, res, next) {
     });
 }
 
+async function farm_update_activity_timeline(req, res, next) {
+  console.log('request farm update activity in timeline');
+
+  const { fid, activitiesDate, activities } = req.body;
+  try {
+    await farm
+      .findOneAndUpdate(
+        {
+          _id: fid,
+          'timeline.activitiesDate': activitiesDate,
+        },
+        {
+          $set: { 'timeline.$.status': 1, 'timeline.$.activities': activities },
+        },
+        {
+          new: true,
+        }
+      )
+      .then((farmData) => {
+        if (!farmData) {
+          console.log('Update activities fail');
+          return res.json({
+            status: 'fail',
+            msg: 'ไม่สามารถแก้ไขข้อมูลได้',
+          });
+        }
+
+        console.log('Update activities success');
+        res.json({
+          status: 'success',
+        });
+      });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send('Something went wrong');
+  }
+}
+
 module.exports.varieties_eval_only = varieties_eval_only;
 module.exports.farm_create = farm_create;
 module.exports.varieties_get_name = varieties_get_name;
@@ -463,3 +501,4 @@ module.exports.farm_create_note = farm_create_note;
 module.exports.farm_get_note = farm_get_note;
 module.exports.farm_update_note = farm_update_note;
 module.exports.farm_delete_note = farm_delete_note;
+module.exports.farm_update_activity_timeline = farm_update_activity_timeline;
