@@ -30,7 +30,6 @@ async function updateTimelineOrder() {
   let count = 0;
 
   for (let i in farmData) {
-    console.log(farmData[i].timeline.length);
     console.log('farm ID ', farmData[i]._id);
     if (
       typeof farmData[i].timeline !== null &&
@@ -110,7 +109,11 @@ async function updateTimelineOrder() {
           )
         );
     } else {
-      console.log('farm ID ', farmData[i]._id, 'not found timeline order');
+      console.log(
+        'farm ID ',
+        farmData[i]._id,
+        'not found timeline order or farm location'
+      );
     }
   }
 
