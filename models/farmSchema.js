@@ -75,44 +75,6 @@ const farmSchema = new schema({
   // 3 perfect, 2 good, 1 bad
   startDate: Date,
   endDate: Date,
-  timelinePast: [
-    {
-      order: Number,
-      activitiesDate: Date,
-      activities: [
-        {
-          code: Number,
-          active: { type: Boolean, default: true },
-        },
-      ],
-      bugs: [
-        {
-          code: Number,
-          active: { type: Boolean, default: true },
-          found: Boolean,
-        },
-      ],
-    },
-  ],
-  timelineFuture: [
-    {
-      order: { type: Number, default: 0 },
-      activitiesDate: Date,
-      activities: [
-        {
-          code: Number,
-          active: { type: Boolean, default: false },
-        },
-      ],
-      bugs: [
-        {
-          code: Number,
-          active: { type: Boolean, default: false },
-          found: Boolean,
-        },
-      ],
-    },
-  ],
   timeline: [
     {
       farmPicture: { type: String, default: '' },
