@@ -296,7 +296,6 @@ async function farm_information(req, res, next) {
     varietie: v,
   };
   res.send(ret);
-  console.log(ret);
 }
 
 async function farm_informationByname(req, res, next) {

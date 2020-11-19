@@ -4,7 +4,7 @@ const config = require('config');
 const dateFormat = require('dateformat');
 const Farm = require('../models/FarmSchema');
 const farm = Farm.farmModel;
-const AI = require('../controllers/ai-controller');
+const _AI = require('../controllers/ai-controller');
 
 const AIurl = config.get('AIurl');
 
@@ -28,10 +28,15 @@ async function updateTimelineOrder() {
   var timeline = [{}];
   var newTimeline;
   let count = 0;
-  //   let i = 21;
+
   for (let i in farmData) {
     console.log(farmData[i].timeline.length);
-    if (farmData[i].timeline.length > 1) {
+    console.log('farm ID ', farmData[i]._id);
+    if (
+      typeof farmData[i].timeline !== null &&
+      farmData[i].timeline.length > 1 &&
+      farmData[i].location.province !== null
+    ) {
       for (let j in farmData[i].timeline) {
         var status = farmData[i].timeline[j].status;
         if (status == '3') {
@@ -39,14 +44,12 @@ async function updateTimelineOrder() {
           break;
         }
       }
-
       for (let j in farmData[i].timeline) {
         var status = farmData[i].timeline[j].status;
         if (status == '3' || status == '4') {
           (timeline[count] = farmData[i].timeline[j]), count++;
         }
       }
-
       const old_timeline = {
         evalproduct: farmData[i].evalproduct,
         timeline,
@@ -61,8 +64,7 @@ async function updateTimelineOrder() {
       var next_day = nextday;
       var test_mode = 1;
       var test_data = 2;
-
-      newTimeline = await AI.update_tl(
+      newTimeline = await _AI.update_tl(
         province_id,
         rice_id,
         start_date,
@@ -72,7 +74,6 @@ async function updateTimelineOrder() {
         test_mode,
         test_data
       );
-
       var count1 = 0;
       var new_Timeline = [{}];
       for (let j in farmData[i].timeline) {
@@ -82,19 +83,15 @@ async function updateTimelineOrder() {
           count1++;
         }
       }
-
       for (let j in newTimeline.timeline) {
         new_Timeline[count1] = newTimeline.timeline[j];
         count1++;
       }
-
       var newEvalproduct = newTimeline.evalproduct;
-
       await farm.updateOne(
         { _id: farmData[i]._id },
         { $pullAll: { timeline } }
       );
-
       await farm
         .findOneAndUpdate(
           { _id: farmData[i]._id },

@@ -58,7 +58,7 @@ function update_tl(
     //   test_mode: test_mode, // 0,1
     //   test_data: test_data, // 0,1
     // };
-    console.log('current_date', current_date);
+    // console.log('payload', payload);
 
     request(
       {
@@ -81,7 +81,7 @@ function update_tl(
       },
       function (err, resp, body) {
         if (err) resolve('Error');
-        if (resp) console.log('OK');
+        if (resp) console.log('success from ai');
         if (body) {
           //console.log(body);
           resolve(body);
