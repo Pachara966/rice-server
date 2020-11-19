@@ -1,6 +1,7 @@
 const connectDB = require('../connectdb');
 const User = require('../models/userSchema');
 const Farm = require('../models/FarmSchema');
+const RicePricePredict = require('../models/ricePricePredictSchema');
 const AIdemo = require('../temp/eval_demo.json');
 
 const mongoose = require('mongoose');
@@ -10,6 +11,8 @@ const codeDif = CodeDif.codeDefModel;
 
 const ai = require('./ai-controller');
 const varieties = require('../models/ricevaritiesSchema');
+const { json } = require('body-parser');
+const { restart } = require('nodemon');
 // const varieties = new schema({
 //   ID: Number,
 //   rice_varieties_name: String,
@@ -21,10 +24,17 @@ const Varieties = mongoose.model(
   'rice_varieties_data'
 );
 
+const Ricepricepredict = mongoose.model(
+  'trme_rice_price',
+  RicePricePredict,
+  'trme_rice_price_all'
+);
+
 const codedef = mongoose.model('code_definition', codeDif, 'code_definition');
 
 const user = User.userModel;
 const farm = Farm.farmModel;
+// const Ricepricepredict = RicePricePredict.ricepricepredictModel;
 
 function trimObj(obj) {
   if (!Array.isArray(obj) && typeof obj != 'object') return obj;
@@ -489,6 +499,13 @@ async function farm_update_activity_timeline(req, res, next) {
   }
 }
 
+async function rice_price_predict(req, res, next) {
+  const data = await Ricepricepredict.find();
+
+  return res.json(data[0]);
+  console.log();
+}
+
 module.exports.varieties_eval_only = varieties_eval_only;
 module.exports.farm_create = farm_create;
 module.exports.varieties_get_name = varieties_get_name;
@@ -501,3 +518,4 @@ module.exports.farm_get_note = farm_get_note;
 module.exports.farm_update_note = farm_update_note;
 module.exports.farm_delete_note = farm_delete_note;
 module.exports.farm_update_activity_timeline = farm_update_activity_timeline;
+module.exports.rice_price_predict = rice_price_predict;
