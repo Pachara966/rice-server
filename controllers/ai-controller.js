@@ -39,29 +39,26 @@ function predict_tl(province_id, rice_id, mode, start_date) {
 /* */
 function update_tl(
   province_id,
-  rice_id,
+  rice_id, // varieties
   start_date, //startDate
   current_date, // Date now (after midnight)
-  next_day, // order
-  old_timeline,
+  next_day, // Start order of new timeline
+  old_timeline, // From now to end timeline Status 3 and 4
   test_mode,
   test_data
 ) {
   return new Promise((resolve) => {
-    const payload = {
-      province_id: province_id,
-      rice_id: rice_id,
-      start_date: start_date, // From farmSchema
-      current_date: current_date,
-      next_day: next_day,
-      old_timeline: old_timeline,
-      test_mode: test_mode, // 0,1
-      test_data: test_data, // 0,1
-    };
-    /*console.log(start_date);
-    console.log(current_date);
-    console.log(next_day);*/
-    console.log(payload);
+    // const payload = {
+    //   province_id: province_id,
+    //   rice_id: rice_id,
+    //   start_date: start_date, // From farmSchema
+    //   current_date: current_date,
+    //   next_day: next_day,
+    //   old_timeline: old_timeline,
+    //   test_mode: test_mode, // 0,1
+    //   test_data: test_data, // 0,1
+    // };
+    console.log('current_date', current_date);
 
     request(
       {
@@ -70,6 +67,7 @@ function update_tl(
         headers: {
           'Content-Type': 'multipart/form-data',
         },
+        json: true,
         formData: {
           province_id: province_id,
           rice_id: rice_id,
@@ -86,7 +84,7 @@ function update_tl(
         if (resp) console.log('OK');
         if (body) {
           //console.log(body);
-          resolve(JSON.parse(body));
+          resolve(body);
         }
       }
     );

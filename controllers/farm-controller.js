@@ -354,8 +354,8 @@ async function farm_create_note(req, res, next) {
   const note = {
     order,
     noteDate,
-    content, // or String
-    photo, // or String
+    content,
+    photo,
     cost,
   };
 

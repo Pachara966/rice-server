@@ -18,16 +18,17 @@ const bree = new Bree({
       interval: '60m',
     },
     {
-      name: 'update_timeline_status',
-      interval: 'at 5:00 am also at 5:00 pm ',
+      name: 'updateTimelineStatus',
+      interval: 'at 5:01 am also at 11:01 am also at 5:01 pm also at 11:01 pm',
     },
     {
       name: 'changeFarmActivate',
       interval: 'at 5:30 am also at 5:30 pm ',
     },
-    // {
-    //   name: 'testGetRicePrice',
-    // },
+    {
+      name: 'updateTimelineOrder',
+      interval: 'at 5:15 am also at 11:15 am also at 5:15 pm also at 11:15 pm',
+    },
     // {
     //   name: 'test2',
     //   worker: {
