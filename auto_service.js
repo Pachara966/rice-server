@@ -16,12 +16,12 @@ const bree = new Bree({
     // {
     //   name: 'getFarm',
     //   interval: '60m',
+    // // },
+    // {
+    //   name: 'updateTimelineStatus',
+    //   // timeout: '30m',
+    //   interval: 'at 5:01 am also at 11:01 am also at 5:01 pm also at 11:01 pm',
     // },
-    {
-      name: 'updateTimelineStatus',
-      // timeout: '30m',
-      interval: 'at 5:01 am also at 11:01 am also at 5:01 pm also at 11:01 pm',
-    },
     // {
     //   name: 'changeFarmActivate',
     //   // timeout: '5m',

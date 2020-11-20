@@ -608,6 +608,44 @@ async function farm_result_evaluation(req, res, next) {
   });
 }
 
+async function farm_delete(req, res, next) {
+  console.log('request delete farm');
+
+  const { uid, fid } = req.body;
+
+  await user
+    .findOneAndUpdate(
+      { _id: uid },
+      { $pullAll: { farms: [fid] } },
+      { new: true }
+    )
+    .then((userData) => {
+      if (userData) {
+        farm
+          .findByIdAndUpdate({ _id: fid }, { activate: 'end' }, { new: true })
+          .then((farmData) => {
+            if (farmData) {
+              return res.json({
+                status: 'success',
+                userData,
+                farmData,
+              });
+            }
+          });
+      } else {
+        return res.json({
+          status: 'fail',
+        });
+      }
+    });
+  // const data = user.find();
+  // console.log(data);
+
+  // return res.json({
+  //   status: 'success',
+  // });
+}
+
 module.exports.varieties_eval_only = varieties_eval_only;
 module.exports.farm_create = farm_create;
 module.exports.varieties_get_name = varieties_get_name;
@@ -623,3 +661,4 @@ module.exports.farm_update_activity_timeline = farm_update_activity_timeline;
 module.exports.rice_price_predict = rice_price_predict;
 module.exports.rice_price_predict_interval = rice_price_predict_interval;
 module.exports.farm_result_evaluation = farm_result_evaluation;
+module.exports.farm_delete = farm_delete;
