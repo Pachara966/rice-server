@@ -336,22 +336,6 @@ async function farm_informationByname(req, res, next) {
   console.log(ret);
 }
 
-async function farm_remove(req, res, next) {
-  console.log('request remove farm');
-
-  const { fid, uid } = req.body;
-
-  await user.updateOne(
-    { _id: uid },
-    {
-      $pullAll: {
-        farms: { _id: fid },
-      },
-    }
-  );
-  // .catch((err) => console.error(`Failed to add review: ${err}`));
-}
-
 async function farm_create_note(req, res, next) {
   const { fid, order, noteDate, content, photo, cost } = req.body;
 
@@ -627,8 +611,6 @@ async function farm_delete(req, res, next) {
             if (farmData) {
               return res.json({
                 status: 'success',
-                userData,
-                farmData,
               });
             }
           });
@@ -638,12 +620,6 @@ async function farm_delete(req, res, next) {
         });
       }
     });
-  // const data = user.find();
-  // console.log(data);
-
-  // return res.json({
-  //   status: 'success',
-  // });
 }
 
 module.exports.varieties_eval_only = varieties_eval_only;
@@ -651,7 +627,6 @@ module.exports.farm_create = farm_create;
 module.exports.varieties_get_name = varieties_get_name;
 module.exports.farm_create_tl = farm_create_tl;
 module.exports.farm_information = farm_information;
-module.exports.farm_remove = farm_remove;
 module.exports.farm_informationByname = farm_informationByname;
 module.exports.farm_create_note = farm_create_note;
 module.exports.farm_get_note = farm_get_note;
