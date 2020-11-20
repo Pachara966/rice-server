@@ -13,6 +13,7 @@ const ai = require('./ai-controller');
 const varieties = require('../models/ricevaritiesSchema');
 const { json } = require('body-parser');
 const { restart } = require('nodemon');
+const { constants } = require('fs');
 // const varieties = new schema({
 //   ID: Number,
 //   rice_varieties_name: String,
@@ -586,6 +587,27 @@ async function rice_price_predict_interval(req, res, next) {
   });
 }
 
+async function farm_result_evaluation(req, res, next) {
+  console.log('request farm result evaluation');
+
+  const { humidity, cost, product, price, profit } = req.body;
+
+  const resultproduct = {
+    humidity,
+    cost,
+    product,
+    price,
+    profit,
+  };
+
+  // const resultEvaluate = await ai.resultEvaluate(resultproduct);
+
+  return res.json({
+    status: 'success',
+    resultproduct,
+  });
+}
+
 module.exports.varieties_eval_only = varieties_eval_only;
 module.exports.farm_create = farm_create;
 module.exports.varieties_get_name = varieties_get_name;
@@ -600,3 +622,4 @@ module.exports.farm_delete_note = farm_delete_note;
 module.exports.farm_update_activity_timeline = farm_update_activity_timeline;
 module.exports.rice_price_predict = rice_price_predict;
 module.exports.rice_price_predict_interval = rice_price_predict_interval;
+module.exports.farm_result_evaluation = farm_result_evaluation;

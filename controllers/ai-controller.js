@@ -130,6 +130,31 @@ function getFeed(date, ad_number) {
   });
 }
 
+function rusultEvaluate(resultproduct) {
+  return new Promise((resolve) => {
+    request(
+      {
+        url: AIurl.concat('/rusult_evaluate'),
+        method: 'POST',
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+        json: true,
+        formData: {
+          resultproduct: resultproduct,
+        },
+      },
+      function (err, resp, body) {
+        if (err) resolve('Error');
+        if (resp) console.log('success from ai');
+        if (body) {
+          resolve(body);
+        }
+      }
+    );
+  });
+}
 module.exports.update_tl = update_tl;
 module.exports.predict_tl = predict_tl;
 module.exports.getFeed = getFeed;
+module.exports.rusultEvaluate = rusultEvaluate;
