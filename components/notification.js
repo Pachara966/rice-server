@@ -38,7 +38,7 @@ async function notification(_id) {
         DateDB <= oneWeek &&
         farmData[i].timeline[j].warningLenght > 0
       ) {
-        console.log('Date from DB ', DateDB);
+        // console.log('Date from DB ', DateDB);
 
         warning[countWarning] = {
           fid: farmData[i]._id,

@@ -1,9 +1,9 @@
 // const path = require('path');
 
 // optional
-const ms = require('ms');
+// const ms = require('ms');
 // const dayjs = require('dayjs');
-const Graceful = require('@ladjs/graceful');
+// const Graceful = require('@ladjs/graceful');
 // const Cabin = require('cabin');
 
 // required
@@ -19,19 +19,19 @@ const bree = new Bree({
     // },
     {
       name: 'updateTimelineStatus',
-      timeout: '30m',
+      // timeout: '30m',
       interval: 'at 5:01 am also at 11:01 am also at 5:01 pm also at 11:01 pm',
     },
-    {
-      name: 'changeFarmActivate',
-      timeout: '5m',
-      interval: 'at 5:30 am also at 5:30 pm ',
-    },
-    {
-      name: 'updateTimelineOrder',
-      timeout: '10m',
-      interval: 'at 5:15 am also at 11:15 am also at 5:15 pm also at 11:15 pm',
-    },
+    // {
+    //   name: 'changeFarmActivate',
+    //   // timeout: '5m',
+    //   interval: 'at 5:30 am also at 5:30 pm ',
+    // },
+    // {
+    //   name: 'updateTimelineOrder',
+    //   // timeout: '10m',
+    //   interval: 'at 6:00 am also at 12:00 am also at 6:00 pm also at 12:00 pm',
+    // },
     // {
     //   name: 'test2',
     //   worker: {
@@ -68,8 +68,8 @@ const bree = new Bree({
   ],
 });
 // handle graceful reloads, pm2 support, and events like SIGHUP, SIGINT, etc.
-const graceful = new Graceful({ brees: [bree] });
-graceful.listen();
+// const graceful = new Graceful({ brees: [bree] });
+// graceful.listen();
 
 // start all jobs (this is the equivalent of reloading a crontab):
 bree.start();

@@ -3,7 +3,7 @@ const User = require('../models/userSchema');
 const Farm = require('../models/FarmSchema');
 const RicePricePredict = require('../models/ricePricePredictSchema');
 const AIdemo = require('../temp/eval_demo.json');
-
+var dateFormat = require('dateformat');
 const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 const CodeDif = require('../models/codeDefSchema');
@@ -175,8 +175,8 @@ async function farm_create(req, res, next) {
   let farmdata = new farm(data);
   await farmdata.save();
 
-  console.log(uid);
-  console.log(farmdata);
+  // console.log(uid);
+  // console.log(farmdata);
 
   user
     .updateOne(
@@ -254,8 +254,8 @@ async function farm_create_tl(req, res, next) {
   let farmdata = new farm(data);
   await farmdata.save();
 
-  console.log(uid);
-  console.log(farmdata);
+  // console.log(uid);
+  // console.log(farmdata);
   //res.send("ok");
 
   user
@@ -500,10 +500,90 @@ async function farm_update_activity_timeline(req, res, next) {
 }
 
 async function rice_price_predict(req, res, next) {
-  const data = await Ricepricepredict.find();
+  console.log('request rice price prediction');
+  var thisday = new Date();
 
-  return res.json(data[0]);
-  console.log();
+  const data = await Ricepricepredict.find();
+  var RicrPricedata = JSON.stringify(data);
+  RicrPricedata = trimObj(RicrPricedata);
+  const obj = JSON.parse(RicrPricedata);
+
+  var month;
+  var current_month =
+    dateFormat(thisday.setDate(1), 'isoDate').toString() + 'T00:00:00.000Z';
+
+  let rice_price_predict = [{}];
+  let count = 0;
+  for (let i in obj) {
+    for (let j in obj[i].rice_price_predict) {
+      month = obj[i].rice_price_predict[j].month.toString();
+
+      if (current_month == month) {
+        rice_price_predict[count] = {
+          type: obj[i].rice_price_type,
+          name: obj[i].rice_price_name,
+          month: obj[i].rice_price_predict[j].month,
+          price: obj[i].rice_price_predict[j].price,
+        };
+        count++;
+      }
+    }
+  }
+
+  return res.json({
+    status: 'success',
+    rice_price_predict,
+  });
+}
+
+async function rice_price_predict_interval(req, res, next) {
+  console.log('request rice price prediction interval');
+
+  const { rice_ID, startMonth, Endmonth } = req.body;
+
+  var start_month = dateFormat(startMonth, 'isoDate');
+  var end_month = dateFormat(Endmonth, 'isoDate');
+
+  var riceVarities = await Varieties.findOne({ ID: rice_ID }).select([
+    'ID',
+    'rice_price_type',
+    'rice_varieties_name',
+  ]);
+
+  riceVarities = JSON.stringify(riceVarities);
+  riceVarities = trimObj(riceVarities);
+  const riceVaritiesObj = JSON.parse(riceVarities);
+
+  var ricePrice = await Ricepricepredict.findOne({
+    rice_price_type: riceVaritiesObj.rice_price_type,
+  });
+
+  ricePrice = JSON.stringify(ricePrice);
+  ricePrice = trimObj(ricePrice);
+  const ricePriceObj = JSON.parse(ricePrice);
+
+  let rice_price_predict = [{}];
+  let count = 0;
+
+  for (let i in ricePriceObj.rice_price_predict) {
+    var priceMonth = dateFormat(
+      ricePriceObj.rice_price_predict[i].month,
+      'isoDate'
+    );
+    if (priceMonth >= start_month && priceMonth <= end_month) {
+      rice_price_predict[count] = {
+        type: ricePriceObj.rice_price_type,
+        name: ricePriceObj.rice_price_name,
+        month: ricePriceObj.rice_price_predict[i].month,
+        price: ricePriceObj.rice_price_predict[i].price,
+      };
+      count++;
+    }
+  }
+  return res.json({
+    status: 'success',
+    rice_price_predict,
+  });
 }
 
 module.exports.varieties_eval_only = varieties_eval_only;
@@ -519,3 +599,4 @@ module.exports.farm_update_note = farm_update_note;
 module.exports.farm_delete_note = farm_delete_note;
 module.exports.farm_update_activity_timeline = farm_update_activity_timeline;
 module.exports.rice_price_predict = rice_price_predict;
+module.exports.rice_price_predict_interval = rice_price_predict_interval;

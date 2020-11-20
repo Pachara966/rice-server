@@ -13,5 +13,9 @@ router
   .post('/api/farm/updatenote', farm.farm_update_note)
   .post('/api/farm/deletenote', farm.farm_delete_note)
   .post('/api/farm/updateactivity', farm.farm_update_activity_timeline)
-  .post('/api/farm/ricepricepredict', farm.rice_price_predict);
+  .post('/api/farm/ricepricepredict', farm.rice_price_predict)
+  .post(
+    '/api/farm/ricepricepredict/interval',
+    farm.rice_price_predict_interval
+  );
 module.exports = router;
