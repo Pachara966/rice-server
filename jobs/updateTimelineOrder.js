@@ -34,7 +34,8 @@ async function updateTimelineOrder() {
     if (
       typeof farmData[i].timeline !== null &&
       farmData[i].timeline.length > 1 &&
-      farmData[i].location.province !== null
+      farmData[i].location.province !== null &&
+      farmData[i].activate !== 'end'
     ) {
       for (let j in farmData[i].timeline) {
         var status = farmData[i].timeline[j].status;

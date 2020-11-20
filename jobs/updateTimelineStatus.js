@@ -21,7 +21,7 @@ async function updateTimelineStatus() {
   const farmData = await farm.find({});
 
   for (let i in farmData) {
-    if (farmData[i].timeline.length > 1) {
+    if (farmData[i].timeline.length > 1 && farmData[i].activate !== 'end') {
       for (let j in farmData[i].timeline) {
         var dateDB = farmData[i].timeline[j].activitiesDate;
 
