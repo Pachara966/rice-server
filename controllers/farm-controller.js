@@ -617,6 +617,7 @@ async function farm_delete(req, res, next) {
       } else {
         return res.json({
           status: 'fail',
+          msg: 'ไม่สามารถแก้ไขข้อมูลได้',
         });
       }
     });
