@@ -15,6 +15,7 @@ const bree = new Bree({
   jobs: [
     {
       name: 'getFarm',
+      timeout: '1m',
       interval: '60m',
     },
     {
