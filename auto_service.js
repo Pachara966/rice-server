@@ -13,11 +13,11 @@ const bree = new Bree({
   // logger: new Cabin(),
   // Bree work in UTC time
   jobs: [
-    {
-      name: 'getFarm',
-      timeout: '1m',
-      interval: '60m',
-    },
+    // {
+    //   name: 'getFarm',
+    //   timeout: '1m',
+    //   interval: '60m',
+    // },
     {
       name: 'updateTimelineStatus',
       timeout: '30m',
