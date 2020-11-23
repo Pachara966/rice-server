@@ -314,7 +314,7 @@ async function init_data(req, res, next) {
 
   var weatherForecast7Days = await weatherforecast_7days(Province);
   const farmNotification = await notification(_id);
-  if (weatherForecast7Days.Provinces[0] === null) {
+  if (typeof weatherForecast7Days.Provinces[0]) {
     weatherForecast7Days = await weatherforecast_7days('นนทบุรี');
   }
   // console.log('weatherForecast7Days', weatherForecast7Days.Provinces);
