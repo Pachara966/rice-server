@@ -314,10 +314,11 @@ async function init_data(req, res, next) {
 
   var weatherForecast7Days = await weatherforecast_7days(Province);
   const farmNotification = await notification(_id);
-  if (typeof weatherForecast7Days.Provinces[0]) {
+  console.log('weatherForecast7Days', weatherForecast7Days.Provinces[1]);
+  if (typeof weatherForecast7Days.Provinces) {
     weatherForecast7Days = await weatherforecast_7days('นนทบุรี');
   }
-  // console.log('weatherForecast7Days', weatherForecast7Days.Provinces);
+
   user.findById(_id, '-password', (error, userInfo) => {
     if (error) {
       return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
@@ -336,7 +337,7 @@ async function init_data(req, res, next) {
         feed: feed,
         notification: farmNotification,
         // ricePrice,
-        weatherForecast7Days: weatherForecast7Days.Provinces[0],
+        weatherForecast7Days: weatherForecast7Days.Provinces[1],
       });
     } else {
       return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
