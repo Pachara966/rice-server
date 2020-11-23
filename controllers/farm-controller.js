@@ -508,7 +508,10 @@ async function rice_price_predict(req, res, next) {
           type: obj[i].rice_price_type,
           name: obj[i].rice_price_name,
           month: obj[i].rice_price_predict[j].month,
-          price: obj[i].rice_price_predict[j].price,
+          price: {
+            Value: obj[i].rice_price_predict[j].price,
+            Unit: 'บาท/ตัน',
+          },
         };
         count++;
       }
@@ -560,7 +563,10 @@ async function rice_price_predict_interval(req, res, next) {
         type: ricePriceObj.rice_price_type,
         name: ricePriceObj.rice_price_name,
         month: ricePriceObj.rice_price_predict[i].month,
-        price: ricePriceObj.rice_price_predict[i].price,
+        price: {
+          Value: ricePriceObj.rice_price_predict[i].price,
+          Unit: 'บาท/ตัน',
+        },
       };
       count++;
     }
