@@ -312,8 +312,11 @@ async function init_data(req, res, next) {
   const feed = await generateFeed(_id);
   // return res.json(feed);
 
-  const weatherForecast7Days = await weatherforecast_7days(Province);
+  var weatherForecast7Days = await weatherforecast_7days(Province);
   const farmNotification = await notification(_id);
+  if (weatherForecast7Days.Provinces[0]) {
+    weatherForecast7Days = await weatherforecast_7days('นนทบุรี');
+  }
   // console.log('weatherForecast7Days', weatherForecast7Days.Provinces);
   user.findById(_id, '-password', (error, userInfo) => {
     if (error) {
