@@ -333,7 +333,7 @@ async function init_data(req, res, next) {
         feed: feed,
         notification: farmNotification,
         // ricePrice,
-        weatherForecast7Days: weatherForecast7Days.Provinces[0],
+        // weatherForecast7Days: weatherForecast7Days.Provinces[0],
       });
     } else {
       return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
