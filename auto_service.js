@@ -25,7 +25,7 @@ const bree = new Bree({
     },
     {
       name: 'changeFarmActivate',
-      timeout: '5m',
+      timeout: '1m',
       interval: 'at 5:30 am also at 5:30 pm ',
     },
     {

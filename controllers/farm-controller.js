@@ -574,14 +574,24 @@ async function rice_price_predict_interval(req, res, next) {
 async function farm_result_evaluation(req, res, next) {
   console.log('request farm result evaluation');
 
-  const { humidity, cost, product, price, profit } = req.body;
+  const { fid, cost, product, price, profit } = req.body;
+  var { humidity } = req.body;
+
+  if (humidity == 0 || typeof humidity === null) {
+    humidity = 15;
+  }
+
+  const data = await farm.findById({ _id: fid });
 
   const resultproduct = {
-    humidity,
-    cost,
-    product,
-    price,
-    profit,
+    province_id: data.location.province,
+    rice_id: data.varieties,
+    evalproduct: {
+      cost: { value: cost, status: data.evalproduct.cost.status },
+      product: { value: product, status: data.evalproduct.product.status },
+      price: { value: price, status: data.evalproduct.price.status },
+      profit: { value: profit, status: data.evalproduct.profit.status },
+    },
   };
 
   // const resultEvaluate = await ai.resultEvaluate(resultproduct);
@@ -589,6 +599,7 @@ async function farm_result_evaluation(req, res, next) {
   return res.json({
     status: 'success',
     resultproduct,
+    humidity,
   });
 }
 
