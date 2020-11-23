@@ -314,9 +314,7 @@ async function init_data(req, res, next) {
 
   const weatherForecast7Days = await weatherforecast_7days(Province);
   const farmNotification = await notification(_id);
-
   console.log('weatherForecast7Days', weatherForecast7Days.Provinces);
-
   user.findById(_id, '-password', (error, userInfo) => {
     if (error) {
       return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
@@ -335,7 +333,7 @@ async function init_data(req, res, next) {
         feed: feed,
         notification: farmNotification,
         // ricePrice,
-        // weatherForecast7Days: weatherForecast7Days.Provinces[0],
+        weatherForecast7Days: weatherForecast7Days.Provinces[0],
       });
     } else {
       return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
