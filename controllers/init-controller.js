@@ -314,10 +314,12 @@ async function init_data(req, res, next) {
 
   var weatherForecast7Days = await weatherforecast_7days(Province);
   const farmNotification = await notification(_id);
-  console.log('weatherForecast7Days', weatherForecast7Days.Provinces[1]);
-  if (typeof weatherForecast7Days.Provinces) {
-    weatherForecast7Days = await weatherforecast_7days('นนทบุรี');
-  }
+
+  // try {
+  //   console.log('weatherForecast7Days', weatherForecast7Days.Provinces[1]);
+  // } catch (error) {
+  //   weatherForecast7Days = await weatherforecast_7days('นนทบุรี');
+  // }
 
   user.findById(_id, '-password', (error, userInfo) => {
     if (error) {
@@ -337,7 +339,7 @@ async function init_data(req, res, next) {
         feed: feed,
         notification: farmNotification,
         // ricePrice,
-        weatherForecast7Days: weatherForecast7Days.Provinces[1],
+        weatherForecast7Days: weatherForecast7Days.Provinces[0],
       });
     } else {
       return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
