@@ -31,7 +31,7 @@ const bree = new Bree({
     {
       name: 'updateTimelineOrder',
       timeout: '10m',
-      interval: 'at 6:00 am also at 12:00 am also at 6:00 pm also at 12:00 pm',
+      interval: 'at 6:00 am also at 11:30 am also at 6:00 pm also at 11:30 pm',
     },
     // {
     //   name: 'test2',
