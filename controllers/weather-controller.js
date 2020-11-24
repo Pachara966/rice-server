@@ -1,7 +1,7 @@
 const { weatherforecast_7days } = require('../components/weatherforecast7days');
 
 async function weather_forecast_7days(req, res, next) {
-  console.log('Require weather forecast 7 days');
+  console.log('request weather forecast 7 days');
 
   let { Province } = req.body;
   const data = await weatherforecast_7days(Province);
