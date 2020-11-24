@@ -152,7 +152,7 @@ async function timeline(timelineOrder) {
 }
 
 async function farm_create(req, res, next) {
-  console.log('require create new farm');
+  console.log('request create new farm');
   const uid = req.body.uid;
   const name = req.body.name;
   const size = req.body.size;
@@ -179,9 +179,6 @@ async function farm_create(req, res, next) {
     console.log('New farm have been created');
   });
 
-  // console.log(uid);
-  // console.log(farmdata);
-
   user
     .updateOne(
       { _id: uid },
@@ -190,7 +187,7 @@ async function farm_create(req, res, next) {
       }
     )
     .then(async function (success) {
-      console.log(success);
+      // console.log(success);
       let ret = {
         farm: farmdata,
         detail: success,
@@ -209,6 +206,7 @@ async function farm_create(req, res, next) {
 }
 
 async function farm_create_tl(req, res, next) {
+  console.log('request farm create timeline');
   //Timeline
   const {
     uid,
@@ -270,7 +268,7 @@ async function farm_create_tl(req, res, next) {
       }
     )
     .then(async function (success) {
-      console.log(success);
+      // console.log(success);
       let ret = {
         farm: farmdata,
         detail: success,
@@ -289,14 +287,14 @@ async function farm_create_tl(req, res, next) {
 }
 
 async function varieties_get_name(req, res, next) {
-  console.log('get varirties id / name');
+  console.log('request varirties id / name');
 
   const v = await Varieties.find().select(['ID', 'rice_varieties_name']);
   res.send(v);
 }
 
 async function farm_information(req, res, next) {
-  console.log('farm information');
+  console.log('request farm information');
   const fid = req.body.fid;
   const f = await farm.findOne({ _id: fid });
 
@@ -314,7 +312,7 @@ async function farm_information(req, res, next) {
 async function farm_informationByname(req, res, next) {
   // read farm to profile
 
-  console.log('farm information');
+  console.log('request farm information');
   const uid = req.body.uid;
   const farmname = req.body.farmname;
   const u = await user.findOne({ _id: uid }).populate({
@@ -335,7 +333,7 @@ async function farm_informationByname(req, res, next) {
     varietie: v,
   };
   res.send(ret);
-  console.log(ret);
+  // console.log(ret);
 }
 
 async function farm_create_note(req, res, next) {
@@ -620,9 +618,6 @@ async function farm_result_evaluation(req, res, next) {
 
       ai.resultEvaluate(province_id, rice_id, JSON.stringify(evalproduct)).then(
         (evalproductResult) => {
-          console.log(evalproductResult);
-          console.log(evalproductResult.evalproduct);
-
           const resultproduct = {
             humidity: humidity,
             cost: evalproductResult.evalproduct.cost,

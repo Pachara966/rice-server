@@ -9,8 +9,6 @@ function predict_tl(province_id, rice_id, mode, start_date) {
     console.log(rice_id);
     console.log(mode);
     console.log(start_date);
-
-    //let url_callback = "http://192.168.1.101:3000/api/varieties/eval";
     request(
       {
         url: AIurl.concat('/predict'),
@@ -29,7 +27,6 @@ function predict_tl(province_id, rice_id, mode, start_date) {
         if (err) resolve('Error');
         if (resp) console.log('success from ai');
         if (body) {
-          // console.log(body);
           resolve(JSON.parse(body));
         }
       }
@@ -48,18 +45,6 @@ function update_tl(
   test_data
 ) {
   return new Promise((resolve) => {
-    // const payload = {
-    //   province_id: province_id,
-    //   rice_id: rice_id,
-    //   start_date: start_date, // From farmSchema
-    //   current_date: current_date,
-    //   next_day: next_day,
-    //   old_timeline: old_timeline,
-    //   test_mode: test_mode, // 0,1
-    //   test_data: test_data, // 0,1
-    // };
-    // console.log('payload', payload);
-
     request(
       {
         url: AIurl.concat('/update_timeline'),
@@ -83,7 +68,6 @@ function update_tl(
         if (err) resolve('Error');
         if (resp) console.log('success from ai');
         if (body) {
-          //console.log(body);
           resolve(body);
         }
       }
@@ -92,22 +76,12 @@ function update_tl(
 }
 
 function getFeed(date, ad_number) {
-  // var req = {
-  //   method: 'POST',
-  //   url: AIurl.concat('/update_Feed'),
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //   },
-  //   formData: { date: date, ad_number: ad_number },
-  // };
-  // console.log(req);
   return new Promise((resolve) => {
     request(
       {
         url: AIurl.concat('/update_Feed'),
         method: 'POST',
         headers: {
-          //'Content-Type': 'application/json',
           'Content-Type': 'multipart/form-data',
         },
         formData: {
@@ -121,8 +95,6 @@ function getFeed(date, ad_number) {
           console.log('success from ai');
         }
         if (body) {
-          // console.log('sdasdas', body);
-          // return resolve(body);
           resolve(body);
         }
       }

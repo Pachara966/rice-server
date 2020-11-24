@@ -5,8 +5,9 @@ const user = User.userModel;
 // user.getCollection('users._id').find({});
 
 async function user_register(req, res, next) {
-  console.log('request user register');
   const { name, phonenumber, password } = req.body;
+
+  console.log('request user register name : ', name);
 
   // Validation
   if (!name || !phonenumber || !password) {
@@ -124,7 +125,7 @@ async function user_update_information(req, res, next) {
 async function user_delete_user(req, res, next) {
   const { _id } = req.body;
 
-  console.log('request delete user ID');
+  console.log('request delete user ID :', _id);
 
   if (!_id) {
     return res.json({ status: 'fail', msg: 'ไม่มีข้อมูล id' });
