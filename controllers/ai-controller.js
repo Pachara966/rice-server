@@ -130,18 +130,20 @@ function getFeed(date, ad_number) {
   });
 }
 
-function rusultEvaluate(resultproduct) {
+function resultEvaluate(province_id, rice_id, evalproduct) {
   return new Promise((resolve) => {
     request(
       {
-        url: AIurl.concat('/rusult_evaluate'),
+        url: AIurl.concat('/update_evalproduct'),
         method: 'POST',
         headers: {
           'Content-Type': 'multipart/form-data',
         },
         json: true,
         formData: {
-          resultproduct: resultproduct,
+          province_id: province_id,
+          rice_id: rice_id,
+          evalproduct: evalproduct,
         },
       },
       function (err, resp, body) {
@@ -157,4 +159,4 @@ function rusultEvaluate(resultproduct) {
 module.exports.update_tl = update_tl;
 module.exports.predict_tl = predict_tl;
 module.exports.getFeed = getFeed;
-module.exports.rusultEvaluate = rusultEvaluate;
+module.exports.resultEvaluate = resultEvaluate;

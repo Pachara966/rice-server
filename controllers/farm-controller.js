@@ -152,6 +152,7 @@ async function timeline(timelineOrder) {
 }
 
 async function farm_create(req, res, next) {
+  console.log('require create new farm');
   const uid = req.body.uid;
   const name = req.body.name;
   const size = req.body.size;
@@ -174,7 +175,9 @@ async function farm_create(req, res, next) {
       activate: activate,
     };
   let farmdata = new farm(data);
-  await farmdata.save();
+  await farmdata.save().then(() => {
+    console.log('New farm have been created');
+  });
 
   // console.log(uid);
   // console.log(farmdata);
@@ -289,7 +292,6 @@ async function varieties_get_name(req, res, next) {
   console.log('get varirties id / name');
 
   const v = await Varieties.find().select(['ID', 'rice_varieties_name']);
-  console.log(v);
   res.send(v);
 }
 
@@ -311,7 +313,7 @@ async function farm_information(req, res, next) {
 
 async function farm_informationByname(req, res, next) {
   // read farm to profile
-  await connectDB.connect_db();
+
   console.log('farm information');
   const uid = req.body.uid;
   const farmname = req.body.farmname;
@@ -582,30 +584,74 @@ async function farm_result_evaluation(req, res, next) {
 
   const { fid, cost, product, price, profit } = req.body;
   var { humidity } = req.body;
-
+  var province_id = 0;
   if (humidity == 0 || typeof humidity === null) {
     humidity = 15;
   }
 
-  const data = await farm.findById({ _id: fid });
+  // const data = await farm.findById({ _id: fid });
+  await farm.findById({ _id: fid }).then((data) => {
+    if (data) {
+      if (data.location.province === null) {
+        province_id = 0;
+      }
 
-  const resultproduct = {
-    province_id: data.location.province,
-    rice_id: data.varieties,
-    evalproduct: {
-      cost: { value: cost, status: data.evalproduct.cost.status },
-      product: { value: product, status: data.evalproduct.product.status },
-      price: { value: price, status: data.evalproduct.price.status },
-      profit: { value: profit, status: data.evalproduct.profit.status },
-    },
-  };
+      const rice_id = data.varieties;
+      const evalproduct = {
+        evalproduct: {
+          cost: {
+            value: cost,
+            status: data.evalproduct.cost.status,
+          },
+          product: {
+            value: product,
+            status: data.evalproduct.product.status,
+          },
+          price: {
+            value: price,
+            status: data.evalproduct.price.status,
+          },
+          profit: {
+            value: profit,
+            status: data.evalproduct.profit.status,
+          },
+        },
+      };
 
-  // const resultEvaluate = await ai.resultEvaluate(resultproduct);
+      ai.resultEvaluate(province_id, rice_id, JSON.stringify(evalproduct)).then(
+        (evalproductResult) => {
+          console.log(evalproductResult);
+          console.log(evalproductResult.evalproduct);
 
-  return res.json({
-    status: 'success',
-    resultproduct,
-    humidity,
+          const resultproduct = {
+            humidity: humidity,
+            cost: evalproductResult.evalproduct.cost,
+            product: evalproductResult.evalproduct.product,
+            price: evalproductResult.evalproduct.price,
+            profit: evalproductResult.evalproduct.profit,
+          };
+
+          farm
+            .updateOne(
+              { _id: fid },
+              {
+                resultproduct,
+              }
+            )
+            .then(() => {
+              return res.json({
+                status: 'success',
+                resultproduct,
+              });
+            });
+        }
+      );
+    } else {
+      return res.json({
+        status: 'fail',
+        msg: 'ไม่มีฟาร์มที่เลือก',
+      });
+    }
   });
 }
 

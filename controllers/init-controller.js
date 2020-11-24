@@ -338,7 +338,6 @@ async function init_data(req, res, next) {
         farms: farms.farms,
         feed: feed,
         notification: farmNotification,
-        // ricePrice,
         weatherForecast7Days: weatherForecast7Days.Provinces[0],
       });
     } else {

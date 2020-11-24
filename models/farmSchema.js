@@ -16,59 +16,63 @@ const farmSchema = new schema({
       value: Number,
       status: {
         type: String,
-        enum: ['1', '2', '3'],
+        enum: ['0', '1', '2', '3'],
       },
     },
     product: {
       value: Number,
       status: {
         type: String,
-        enum: ['1', '2', '3'],
+        enum: ['0', '1', '2', '3'],
       },
     },
     price: {
       value: Number,
       status: {
         type: String,
-        enum: ['1', '2', '3'],
+        enum: ['0', '1', '2', '3'],
       },
     },
     profit: {
       value: Number,
       status: {
         type: String,
-        enum: ['1', '2', '3'],
+        enum: ['0', '1', '2', '3'],
       },
     },
   },
   resultproduct: {
-    humidity: { type: Number, default: 15 },
+    humidity: { type: Number, default: 0 },
     cost: {
-      value: Number,
+      value: { type: Number, default: 0 },
       status: {
         type: String,
-        enum: ['1', '2', '3'],
+        default: '0',
+        enum: ['0', '1', '2', '3'],
       },
     },
     product: {
-      value: Number,
+      value: { type: Number, default: 0 },
       status: {
         type: String,
-        enum: ['1', '2', '3'],
+        default: '0',
+        enum: ['0', '1', '2', '3'],
       },
     },
     price: {
-      value: Number,
+      value: { type: Number, default: 0 },
       status: {
         type: String,
-        enum: ['1', '2', '3'],
+        default: '0',
+        enum: ['0', '1', '2', '3'],
       },
     },
     profit: {
-      value: Number,
+      value: { type: Number, default: 0 },
       status: {
         type: String,
-        enum: ['1', '2', '3'],
+        default: '0',
+        enum: ['0', '1', '2', '3'],
       },
     },
   },
