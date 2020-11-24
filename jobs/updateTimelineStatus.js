@@ -22,7 +22,12 @@ async function updateTimelineStatus() {
 
   for (let i in farmID) {
     const farmData = await farm.find({ _id: farmID[i] });
-
+    console.log(
+      '\n\nFarm ID : ',
+      farmData[0]._id,
+      ' Farm name : ',
+      farmData[0].name
+    );
     if (farmData[0].timeline.length > 1 && farmData[0].activate !== 'end') {
       for (let j in farmData[0].timeline) {
         var dateDB = farmData[0].timeline[j].activitiesDate;
@@ -30,7 +35,7 @@ async function updateTimelineStatus() {
         var status = farmData[0].timeline[j].status;
         var tlid = farmData[0].timeline[j]._id;
         var fid = farmData[0]._id;
-        console.log('\nFarm ID : ', fid, ' Farm name : ', farmData[0].name);
+
         if (DateDB < toDay && status != '1') {
           // status = 2
           console.log('Date : ', DateDB, 'status : 2');
