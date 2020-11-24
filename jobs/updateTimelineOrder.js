@@ -24,13 +24,12 @@ async function updateTimelineOrder() {
   await connectDB.connect_db();
   const farmData = await farm.find({});
 
-  var nextday = '';
-  var timeline = [{}];
-  var newTimeline;
-  let count = 0;
-
   for (let i in farmData) {
-    console.log('farm ID ', farmData[i]._id);
+    var nextday = '';
+    var timeline = [{}];
+    var newTimeline;
+    let count = 0;
+    console.log('farm ID ', farmData[i]._id, 'is updating timeline order');
     if (
       typeof farmData[i].timeline !== null &&
       farmData[i].timeline.length > 1 &&
@@ -54,6 +53,7 @@ async function updateTimelineOrder() {
         evalproduct: farmData[i].evalproduct,
         timeline,
       };
+
       var province_id = farmData[i].location.province;
       var rice_id = farmData[i].varieties;
       var start_date =
@@ -74,6 +74,7 @@ async function updateTimelineOrder() {
         test_mode,
         test_data
       );
+
       var count1 = 0;
       var new_Timeline = [{}];
       for (let j in farmData[i].timeline) {
@@ -92,6 +93,7 @@ async function updateTimelineOrder() {
         { _id: farmData[i]._id },
         { $pullAll: { timeline } }
       );
+
       await farm
         .findOneAndUpdate(
           { _id: farmData[i]._id },

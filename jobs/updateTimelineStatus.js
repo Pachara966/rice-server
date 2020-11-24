@@ -18,18 +18,18 @@ async function updateTimelineStatus() {
 
   await connectDB.connect_db();
 
-  const farmData = await farm.find({});
+  const farmID = await farm.find().select(['_id']);
 
-  for (let i in farmData) {
-    if (farmData[i].timeline.length > 1 && farmData[i].activate !== 'end') {
-      for (let j in farmData[i].timeline) {
-        var dateDB = farmData[i].timeline[j].activitiesDate;
+  for (let i in farmID) {
+    const farmData = await farm.find({ _id: farmID[i] });
 
+    if (farmData[0].timeline.length > 1 && farmData[0].activate !== 'end') {
+      for (let j in farmData[0].timeline) {
+        var dateDB = farmData[0].timeline[j].activitiesDate;
         var DateDB = dateFormat(dateDB.setDate(dateDB.getDate()), 'isoDate');
-        var status = farmData[i].timeline[j].status;
-        var tlid = farmData[i].timeline[j]._id;
-        var fid = farmData[i]._id;
-
+        var status = farmData[0].timeline[j].status;
+        var tlid = farmData[0].timeline[j]._id;
+        var fid = farmData[0]._id;
         if (DateDB < toDay && status != '1') {
           // status = 2
           console.log('Date : ', DateDB, 'status : 2');

@@ -10,7 +10,7 @@ async function totalFarm() {
 
   await connectDB.connect_db();
 
-  const farmData = await farm.find();
+  const farmData = await farm.find().select(['_id']);
   console.log('Total farm : ', farmData.length);
 
   mongoose.connection.close();
