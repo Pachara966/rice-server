@@ -30,6 +30,7 @@ async function updateTimelineStatus() {
         var status = farmData[0].timeline[j].status;
         var tlid = farmData[0].timeline[j]._id;
         var fid = farmData[0]._id;
+        console.log('Farm ID : ', fid, ' Farm name : ', farmData[0].name);
         if (DateDB < toDay && status != '1') {
           // status = 2
           console.log('Date : ', DateDB, 'status : 2');
