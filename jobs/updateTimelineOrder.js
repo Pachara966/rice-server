@@ -29,7 +29,8 @@ async function updateTimelineOrder() {
     var timeline = [{}];
     var newTimeline;
     let count = 0;
-    console.log('farm ID ', farmData[i]._id, 'is updating timeline order');
+
+    console.log('\n\nfarm ID ', farmData[i]._id, 'is updating timeline order');
     if (
       typeof farmData[i].timeline !== null &&
       farmData[i].timeline.length > 1 &&
