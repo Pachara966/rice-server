@@ -15,17 +15,17 @@ const bree = new Bree({
   jobs: [
     {
       name: 'getFarm',
-      timeout: '1m',
+      // timeout: '1m',
       interval: '60m',
     },
     {
       name: 'updateTimelineStatus',
-      timeout: '10m',
+      timeout: '4m',
       interval: 'at 5:01 am also at 11:01 am also at 5:01 pm also at 11:01 pm',
     },
     {
       name: 'changeFarmActivate',
-      // timeout: '1m',
+      timeout: '1m',
       interval: 'at 5:30 am also at 5:30 pm ',
     },
     {
