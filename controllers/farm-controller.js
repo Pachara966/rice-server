@@ -616,6 +616,12 @@ async function farm_result_evaluation(req, res, next) {
         },
       };
 
+      let riceVarietiesName;
+
+      getRiceVaritiesName(rice_id).then((data) => {
+        riceVarietiesName = data;
+      });
+
       ai.resultEvaluate(province_id, rice_id, JSON.stringify(evalproduct)).then(
         (evalproductResult) => {
           const resultproduct = {
@@ -636,6 +642,7 @@ async function farm_result_evaluation(req, res, next) {
             .then(() => {
               return res.json({
                 status: 'success',
+                riceVarietiesName,
                 resultproduct,
               });
             });
@@ -648,6 +655,17 @@ async function farm_result_evaluation(req, res, next) {
       });
     }
   });
+}
+
+async function getRiceVaritiesName(rice_id) {
+  const data = await Varieties.findOne({ ID: rice_id }).select([
+    'rice_varieties_name',
+  ]);
+  var riceName = JSON.stringify(data);
+  riceName = trimObj(riceName);
+  var riceVaritiesNameObj = JSON.parse(riceName);
+
+  return riceVaritiesNameObj.rice_varieties_name;
 }
 
 async function farm_delete(req, res, next) {
