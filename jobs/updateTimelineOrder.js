@@ -72,7 +72,7 @@ async function updateTimelineOrder() {
         '.000Z';
       var next_day = nextday;
       var test_mode = 1;
-      var test_data = 2;
+      var test_data = 0;
       newTimeline = await _AI.update_tl(
         province_id,
         rice_id,
