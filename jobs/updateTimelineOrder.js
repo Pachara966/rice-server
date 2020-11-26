@@ -47,16 +47,20 @@ async function updateTimelineOrder() {
       farmData[0].activate !== 'end'
     ) {
       for (let j in farmData[0].timeline) {
-        var status = farmData[0].timeline[j].status;
-        if (status == '3') {
-          nextday = farmData[0].timeline[j].order;
-          break;
+        if (farmData[0].timeline[j].order !== 1) {
+          var status = farmData[0].timeline[j].status;
+          if (status == '3') {
+            nextday = farmData[0].timeline[j].order;
+            break;
+          }
         }
       }
       for (let j in farmData[0].timeline) {
-        var status = farmData[0].timeline[j].status;
-        if (status == '3' || status == '4') {
-          (timeline[count] = farmData[0].timeline[j]), count++;
+        if (farmData[0].timeline[j].order !== 1) {
+          var status = farmData[0].timeline[j].status;
+          if (status == '3' || status == '4') {
+            (timeline[count] = farmData[0].timeline[j]), count++;
+          }
         }
       }
       const old_timeline = {
