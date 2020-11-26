@@ -91,7 +91,11 @@ async function updateTimelineOrder() {
       var new_Timeline = [{}];
       for (let j in farmData[0].timeline) {
         var status = farmData[0].timeline[j].status;
-        if (status == '1' || status == '2') {
+        if (
+          status == '1' ||
+          status == '2' ||
+          farmData[0].timeline[j].order == 1
+        ) {
           new_Timeline[count1] = farmData[0].timeline[j];
           count1++;
         }

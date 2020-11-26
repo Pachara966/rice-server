@@ -20,7 +20,7 @@ const bree = new Bree({
     },
     {
       name: 'updateTimelineStatus',
-      timeout: '4m',
+      timeout: '2m',
       interval: 'at 5:01 am also at 11:01 am also at 5:01 pm also at 11:01 pm',
     },
     {
@@ -30,7 +30,7 @@ const bree = new Bree({
     },
     {
       name: 'updateTimelineOrder',
-      timeout: '2m',
+      timeout: '5m',
       interval: 'at 6:00 am also at 11:30 am also at 6:00 pm also at 11:30 pm',
     },
     // {
