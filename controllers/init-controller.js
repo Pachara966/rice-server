@@ -314,6 +314,7 @@ async function init_data(req, res, next) {
 
   var weatherForecast7Days = await weatherforecast_7days(Province);
   const farmNotification = await notification(_id);
+  console.log('Province name : ', Province);
 
   // try {
   //   console.log('weatherForecast7Days', weatherForecast7Days.Provinces[1]);
@@ -321,29 +322,55 @@ async function init_data(req, res, next) {
   //   weatherForecast7Days = await weatherforecast_7days('นนทบุรี');
   // }
 
-  user.findById(_id, '-password', (error, userInfo) => {
-    if (error) {
-      return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
-    }
-    if (userInfo) {
-      res.json({
-        status: 'success',
-        userData: {
-          uid: userInfo._id,
-          name: userInfo.name,
-          surname: userInfo.surname,
-          phonenumber: userInfo.phonenumber,
-          address: userInfo.address,
-        },
-        farms: farms.farms,
-        feed: feed,
-        notification: farmNotification,
-        weatherForecast7Days: weatherForecast7Days.Provinces[0],
-      });
-    } else {
-      return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
-    }
-  });
+  if (weatherForecast7Days.Provinces[0] !== null) {
+    user.findById(_id, '-password', (error, userInfo) => {
+      if (error) {
+        return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
+      }
+      if (userInfo) {
+        res.json({
+          status: 'success',
+          userData: {
+            uid: userInfo._id,
+            name: userInfo.name,
+            surname: userInfo.surname,
+            phonenumber: userInfo.phonenumber,
+            address: userInfo.address,
+          },
+          farms: farms.farms,
+          feed: feed,
+          notification: farmNotification,
+          weatherForecast7Days: weatherForecast7Days.Provinces[0],
+        });
+      } else {
+        return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
+      }
+    });
+  } else {
+    user.findById(_id, '-password', (error, userInfo) => {
+      if (error) {
+        return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
+      }
+      if (userInfo) {
+        res.json({
+          status: 'success',
+          userData: {
+            uid: userInfo._id,
+            name: userInfo.name,
+            surname: userInfo.surname,
+            phonenumber: userInfo.phonenumber,
+            address: userInfo.address,
+          },
+          farms: farms.farms,
+          feed: feed,
+          notification: farmNotification,
+          // weatherForecast7Days: weatherForecast7Days.Provinces[0],
+        });
+      } else {
+        return res.json({ status: 'fail', msg: 'ไม่พบข้อมูลผู้ใช้งาน' });
+      }
+    });
+  }
 }
 
 async function updateFeed(req, res, next) {
